@@ -1,0 +1,16 @@
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+node_modules/
+.env
+*.log
+__pycache__/
+*.pyc
+data/x-monitoring/*.json
+data/x-monitoring/*.txt
+data/hermes-updates/*.json
+data/hermes-updates/*.txt
+data/skills-discovery/*.json
