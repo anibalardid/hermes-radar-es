@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# add-tip.sh — Agrega un truco a TRUCOS_DATA en app.js
+# add-tip.sh — Agrega un truco a data/trucos.json
 # Uso: ./add-tip.sh "categoría" "Título" "Descripción" "código"
 # Categorías: Configuración, Automatización, Memoria y Skills, Plataformas, DevOps, Tips ocultos
 # Ejemplo: ./add-tip.sh "Configuración" "Mi truco" "Hace algo cool" "hermes config set key value"
@@ -12,33 +12,17 @@ TITLE="${2:?Falta título}"
 DESC="${3:?Falta descripción}"
 CODE="${4:?Falta código}"
 
-APP="app.js"
+FILE="data/trucos.json"
 
-# Buscar la categoría en TRUCOS_DATA
-CAT_LINE=$(grep -n "cat: '$CAT'" "$APP" | tail -1 | cut -d: -f1)
+command -v jq >/dev/null 2>&1 || { echo "❌ jq no está instalado. Instalá con: brew install jq"; exit 1; }
 
-if [ -z "$CAT_LINE" ]; then
-  echo "❌ Categoría '$CAT' no encontrada en TRUCOS_DATA"
-  echo "Categorías válidas: Configuración, Automatización, Memoria y Skills, Plataformas, DevOps, Tips ocultos"
-  exit 1
-fi
-
-# Encontrar la última entrada de esa categoría (siguiente cat: o ];)
-NEXT_CAT=$(awk "NR>$CAT_LINE /cat:/{print NR; exit}" "$APP")
-if [ -z "$NEXT_CAT" ]; then
-  NEXT_CAT=$(grep -n "^];" "$APP" | head -3 | tail -1 | cut -d: -f1)
-fi
-INSERT_LINE=$((NEXT_CAT - 1))
-
-# Escapar comillas simples en descripción y código
-ESC_DESC=$(echo "$DESC" | sed "s/'/\\\\'/g")
-ESC_CODE=$(echo "$CODE" | sed "s/'/\\\\'/g")
-
-ENTRY="  { cat: '$CAT', title: '$TITLE', desc: '$ESC_DESC', code: '$ESC_CODE' },"
-
-sed -i '' "${INSERT_LINE}a\\
-$ENTRY
-" "$APP"
+# Agregar el tip al final del array
+jq --arg cat "$CAT" \
+   --arg title "$TITLE" \
+   --arg desc "$DESC" \
+   --arg code "$CODE" \
+   '. += [{"cat": $cat, "title": $title, "desc": $desc, "code": $code}]' \
+   "$FILE" > "${FILE}.tmp" && mv "${FILE}.tmp" "$FILE"
 
 echo "✅ Truco agregado: $TITLE (cat: $CAT)"
-echo "   Recordá hacer commit: git add app.js && git commit -m 'feat: add tip $TITLE'"
+echo "   Recordá hacer commit: git add data/trucos.json && git commit -m 'feat: add tip $TITLE'"

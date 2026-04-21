@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# bump-version.sh — Incrementa la versión del sitio y hace commit
+# bump-version.sh — Incrementa la versión del sitio (semver)
 # Uso: ./bump-version.sh [major|minor|patch]
 #   patch: 0.1.0 → 0.1.1 (default)
 #   minor: 0.1.0 → 0.2.0
@@ -10,8 +10,10 @@ cd "$(dirname "$0")/.."
 
 BUMP="${1:-patch}"
 
-# Leer versión actual
-CURRENT=$(grep "HR_VERSION = " version.js | sed "s/.*'\\([^']*\\)'.*/\\1/")
+command -v jq >/dev/null 2>&1 || { echo "❌ jq no está instalado. Instalá con: brew install jq"; exit 1; }
+
+# Leer versión actual desde config.json
+CURRENT=$(jq -r '.HR_VER' data/config.json)
 
 IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT"
 
@@ -26,33 +28,26 @@ NEW_VERSION="$MAJOR.$MINOR.$PATCH"
 
 echo "Bumping: $CURRENT → $NEW_VERSION"
 
+# Actualizar config.json
+jq --arg v "$NEW_VERSION" '.HR_VER = $v' data/config.json > data/config.json.tmp && mv data/config.json.tmp data/config.json
+
 # Actualizar version.js
 sed -i '' "s/var HR_VERSION = '${CURRENT}'/var HR_VERSION = '${NEW_VERSION}'/" version.js
 
-# Actualizar HR_VER en app.js
-sed -i '' "s/const HR_VER = '${CURRENT}'/const HR_VER = '${NEW_VERSION}'/" app.js
-
 # Actualizar fallback en index.html
 sed -i '' "s/'${CURRENT}'/'${NEW_VERSION}'/g" index.html
-
-# Actualizar badge default en index.html
 sed -i '' "s/>v${CURRENT}</>v${NEW_VERSION}</g" index.html
 
-# Actualizar CHANGELOG.md — agregar entrada
+# Actualizar CHANGELOG.md
 TODAY=$(date +%Y-%m-%d)
 sed -i '' "3i\\
-\\
-## [${NEW_VERSION}] - ${TODAY}\\
-\\
-### Changed\\
-- Version bump to ${NEW_VERSION}
-" CHANGELOG.md
+\n## [${NEW_VERSION}] - ${TODAY}\n\n### Changed\n- Version bump to ${NEW_VERSION}\n" CHANGELOG.md
 
 echo ""
 echo "✅ Versión actualizada: v${NEW_VERSION}"
-echo "   Archivos modificados: version.js, app.js, index.html, CHANGELOG.md"
+echo "   Archivos modificados: data/config.json, version.js, index.html, CHANGELOG.md"
 echo ""
-echo "   Proximos pasos:"
+echo "   Próximos pasos:"
 echo "   1. Revisar cambios: git diff"
 echo "   2. Commit: git add -A && git commit -m 'chore: bump version to v${NEW_VERSION}'"
 echo "   3. Push: git push"

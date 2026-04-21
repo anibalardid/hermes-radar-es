@@ -1,0 +1,72 @@
+[
+  {
+    "id": "3jNp14bJpgs",
+    "title": "Hermes Agent Setup: el killer de OpenClaw está aquí",
+    "channel": "Wes Roth",
+    "views": "56K",
+    "desc": "Setup completo en VPS Hostinger, Telegram, CLI, gateway. El video de referencia más popular."
+  },
+  {
+    "id": "tP6yf22OJdI",
+    "title": "¿Acabo de matar el Agente Hermes a OpenClaw? (guía completa)",
+    "channel": "Alex Finn",
+    "views": "108K",
+    "desc": "Comparación detallada Hermes vs OpenClaw con demo. Amplia cobertura de funcionalidades."
+  },
+  {
+    "id": "uycgV-eulGE",
+    "title": "Tutorial completo de Hermes Agent",
+    "channel": "Metics Media",
+    "views": "21K",
+    "desc": "Paso a paso: instalación en VPS con Hostinger, configuración de Telegram y OpenRouter, demo en vivo."
+  },
+  {
+    "id": "tm4h8dG-xlI",
+    "title": "Cómo empezar con tu Agente Hermes (guía para principiantes)",
+    "channel": "Theo Vigneres",
+    "views": "6.6K",
+    "desc": "Guía desde cero: VPS, SSH, terminal, proveedores LLM, API keys, gateway Telegram."
+  },
+  {
+    "id": "k5HM4HUGt00",
+    "title": "El setup que todos están instalando",
+    "channel": "Sharbel A.",
+    "views": "23K",
+    "desc": "Instalación rápida, demo en vivo de auto-mejora, veredicto honesto vs OpenClaw."
+  },
+  {
+    "id": "P2LIFtrRr2U",
+    "title": "Hermes Agent: ¡Nueva alternativa GRATUITA a OpenClaw!",
+    "channel": "Julian Goldie SEO",
+    "views": "9.4K",
+    "desc": "Instalación, configuración de API keys, demo de coding, comparación con OpenClaw."
+  },
+  {
+    "id": "6M2tItdARew",
+    "title": "El Agente de IA que Nunca Olvida: Conoce Hermes Agent",
+    "channel": "Siggi",
+    "views": "—",
+    "desc": "Enfoque en el sistema de memoria que persiste entre sesiones y auto-mejora."
+  },
+  {
+    "id": "UVlK4lsvR4E",
+    "title": "Cómo instalar Hermes Agent en Windows (Setup + Skills)",
+    "channel": "AI Automation",
+    "views": "—",
+    "desc": "Setup completo en Windows vía WSL2, con configuración de skills personalizados."
+  },
+  {
+    "id": "8tpuky8HpXw",
+    "title": "¿Mejor que OpenClaw? Probando Hermes con Qwen 3",
+    "channel": "Onchain AI Garage",
+    "views": "16K",
+    "desc": "Prueba de rendimiento con el modelo Qwen 3."
+  },
+  {
+    "id": "3Pr9BPjxICE",
+    "title": "Cómo configurar el agente Hermes con OpenRouter",
+    "channel": "Jake's Tech",
+    "views": "11K",
+    "desc": "Guía detallada de configuración con OpenRouter como proveedor."
+  }
+]

@@ -1,46 +1,32 @@
 #!/usr/bin/env bash
-# add-news.sh — Agrega una entrada de novedades a VERSIONS_DATA en app.js
-# Uso: ./add-news.sh " vX.Y.Z" "fecha" "resumen" "detalle1" "detalle2" ...
-# Ejemplo: ./add-news.sh "0.11.0" "2026-05-01" "Nuevas tools y mejoras de performance" "+15 tools integradas" "Mejora 50% en velocidad"
+# add-news.sh — Agrega una entrada de novedades a data/versions.json
+# Uso: ./add-news.sh "vX.Y.Z" "fecha" "nombre" "highlight1" "highlight2" ...
+# Ejemplo: ./add-news.sh "v0.11.0" "1 mayo 2026" "The Next Release" "+15 tools integradas" "Mejora 50% en velocidad"
 
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-VER="${1:?Uso: add-news.sh VERSION FECHA RESUMEN [DETALLES...]}"
-DATE="${2:?Falta fecha (YYYY-MM-DD)}"
-SUMMARY="${3:?Falta resumen}"
+VER="${1:?Uso: add-news.sh VERSION FECHA NOMBRE HIGHLIGHTS...}"
+DATE="${2:?Falta fecha (ej: '1 mayo 2026')}"
+NAME="${3:?Falta nombre del release}"
 shift 3
 
-APP="app.js"
+FILE="data/versions.json"
 
-# Build features array
-FEATURES=""
-for detail in "$@"; do
-  if [ -n "$FEATURES" ]; then
-    FEATURES="$FEATURES,"
-  fi
-  FEATURES="$FEATURES'$detail'"
-done
+command -v jq >/dev/null 2>&1 || { echo "❌ jq no está instalado. Instalá con: brew install jq"; exit 1; }
 
-# Si no hay detalles, poner el resumen como feature
-if [ -z "$FEATURES" ]; then
-  FEATURES="'$SUMMARY'"
-fi
+# Build highlights JSON array from remaining args
+HIGHLIGHTS=$(printf '%s\n' "$@" | jq -R . | jq -s .)
 
-# Insertar al inicio de VERSIONS_DATA (después de la línea de apertura)
-OPEN_LINE=$(grep -n "^const VERSIONS_DATA" "$APP" | head -1 | cut -d: -f1)
+# Poner current=false en todas las entradas existentes, y agregar la nueva al inicio
+jq --arg ver "$VER" \
+   --arg date "$DATE" \
+   --arg name "$NAME" \
+   --argjson highlights "$HIGHLIGHTS" \
+   'map(.current = false) | [{"version": $ver, "tag": "", "date": $date, "name": $name, "current": true, "highlights": $highlights}] + .' \
+   "$FILE" > "${FILE}.tmp" && mv "${FILE}.tmp" "$FILE"
 
-ENTRY="  { version: 'v$VER', date: '$DATE', summary: '$SUMMARY', features: [$FEATURES] },"
-
-# Insertar después de la línea de apertura +1
-INSERT_LINE=$((OPEN_LINE + 1))
-
-sed -i '' "${INSERT_LINE}i\\
-$ENTRY
-" "$APP"
-
-# Actualizar versión del sitio
 echo ""
-echo "✅ Novedad agregada: v$VER ($DATE)"
-echo "   No olvides actualizar version.js y HR_VER en app.js si es un release nuevo."
-echo "   Recordá hacer commit: git add app.js && git commit -m 'feat: add news v$VER'"
+echo "✅ Novedad agregada: $VER ($DATE)"
+echo "   No olvides actualizar version.js y config.json si es un release nuevo."
+echo "   Recordá hacer commit: git add data/versions.json && git commit -m 'feat: add news $VER'"

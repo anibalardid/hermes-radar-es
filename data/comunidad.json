@@ -1,0 +1,150 @@
+{
+  "plugins": [
+    {
+      "name": "disk-cleanup",
+      "desc": "Limpieza automática de archivos efímeros (tests, temporales, logs). Reglas configurables por categoría.",
+      "badge": "built-in",
+      "url": "https://github.com/NousResearch/hermes-agent/tree/main/hermes_cli/plugins"
+    },
+    {
+      "name": "memory (Honcho)",
+      "desc": "Proveedor de memoria cross-session con modelado dialéctico de usuarios.",
+      "badge": "built-in",
+      "url": "https://github.com/NousResearch/hermes-agent/tree/main/hermes_cli/plugins"
+    },
+    {
+      "name": "context_engine",
+      "desc": "Motor de contexto intercambiable. Filtrado, resumen o inyección de contexto por dominio.",
+      "badge": "built-in",
+      "url": "https://github.com/NousResearch/hermes-agent/tree/main/hermes_cli/plugins"
+    },
+    {
+      "name": "example-dashboard",
+      "desc": "Plugin de ejemplo que demuestra cómo crear dashboards web.",
+      "badge": "built-in",
+      "url": "https://github.com/NousResearch/hermes-agent/tree/main/hermes_cli/plugins"
+    }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "desc": "Classic Hermes — dorado y kawaii",
+      "visual": "Bordes dorados, texto cornsilk, caras kawaii",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/hermes_cli/skin_engine.py"
+    },
+    {
+      "name": "ares",
+      "desc": "Tema dios de la guerra — carmesí y bronce",
+      "visual": "Bordes carmesí, acentos bronce, verbos agresivos",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/hermes_cli/skin_engine.py"
+    },
+    {
+      "name": "mono",
+      "desc": "Monocromo — escala de grises limpia",
+      "visual": "Todo en grises, ideal para grabaciones",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/hermes_cli/skin_engine.py"
+    },
+    {
+      "name": "slate",
+      "desc": "Azul frío — enfocado en desarrolladores",
+      "visual": "Bordes azul royal, calmo y profesional",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/hermes_cli/skin_engine.py"
+    },
+    {
+      "name": "daylight",
+      "desc": "Tema claro para terminales claras",
+      "visual": "Fondo claro, texto oscuro, acentos suaves",
+      "url": "https://github.com/NousResearch/hermes-agent/blob/main/hermes_cli/skin_engine.py"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Hermes WebUI",
+      "author": "nesquena",
+      "stars": "3.1K",
+      "desc": "La mejor forma de usar Hermes Agent desde la web o tu teléfono.",
+      "url": "https://github.com/nesquena/hermes-webui"
+    },
+    {
+      "name": "Hermes Workspace",
+      "author": "outsourc-e",
+      "stars": "1.9K",
+      "desc": "Workspace web nativo — chat, terminal, navegador de memoria, gestor de skills, panel inspector.",
+      "url": "https://github.com/outsourc-e/hermes-workspace"
+    },
+    {
+      "name": "Hermes Desktop (dodo)",
+      "author": "dodo-reach",
+      "stars": "511",
+      "desc": "Workspace nativo para Mac — SSH real, terminal real, datos de sesión reales.",
+      "url": "https://github.com/dodo-reach/hermes-desktop"
+    },
+    {
+      "name": "Hermes CyberUI",
+      "author": "anibalardid",
+      "stars": "4",
+      "desc": "Interfaz web cyberpunk para Hermes Agent. FastAPI + React, 14 páginas, tema oscuro futurista.",
+      "url": "https://github.com/anibalardid/hermes-cyberui"
+    },
+    {
+      "name": "Hermes Control Interface",
+      "author": "xaspx",
+      "stars": "445",
+      "desc": "Dashboard self-hosted — terminal, explorador de archivos, cron, métricas, panel de estado.",
+      "url": "https://github.com/xaspx/hermes-control-interface"
+    },
+    {
+      "name": "Hermes Telegram Mini App",
+      "author": "clawvader-tech",
+      "stars": "205",
+      "desc": "React SPA dashboard para Telegram Mini App v2.0 — 10 páginas, mobile-first.",
+      "url": "https://github.com/clawvader-tech/hermes-telegram-miniapp"
+    },
+    {
+      "name": "Pan UI",
+      "author": "Euraika-Labs",
+      "stars": "27",
+      "desc": "Workspace self-hosted con chat, skills, extensiones, memoria, perfiles.",
+      "url": "https://github.com/Euraika-Labs/pan-ui"
+    },
+    {
+      "name": "Hermes Desktop (fathah)",
+      "author": "fathah",
+      "stars": "331",
+      "desc": "Desktop companion para instalar, configurar y chatear con Hermes Agent.",
+      "url": "https://github.com/fathah/hermes-desktop"
+    }
+  ],
+  "integraciones": [
+    {
+      "name": "agentskills.io",
+      "desc": "Estándar abierto para skills de agentes. Compatible con Hermes, Claude Code, Cursor y más.",
+      "url": "https://agentskills.io"
+    },
+    {
+      "name": "Open WebUI",
+      "desc": "Integración via API server con streaming para interfaz web.",
+      "url": "https://github.com/open-webui/open-webui"
+    },
+    {
+      "name": "VS Code / Zed / JetBrains",
+      "desc": "ACP: registro de servidores MCP desde editores.",
+      "url": "https://hermes-agent.nousresearch.com/docs/mcp"
+    },
+    {
+      "name": "1Panel",
+      "desc": "Panel de control VPS con soporte nativo para desplegar agentes IA.",
+      "url": "https://github.com/1Panel-dev/1Panel"
+    },
+    {
+      "name": "Docker (oficial)",
+      "desc": "Imagen multi-arch (amd64 + arm64), usuario no-root.",
+      "url": "https://hub.docker.com/r/nousresearch/hermes-agent"
+    },
+    {
+      "name": "Nix",
+      "desc": "Flake completo, módulo NixOS con contenedor persistente.",
+      "url": "https://github.com/NousResearch/hermes-agent/tree/main/nix"
+    }
+  ]
+}

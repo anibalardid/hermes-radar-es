@@ -1,0 +1,190 @@
+[
+  {
+    "cat": "Herramientas integradas",
+    "desc": "Hermes incluye 47+ herramientas nativas que el modelo puede invocar directamente. No requieren instalación ni skills adicionales.",
+    "icon": "🔧",
+    "tools": [
+      {
+        "name": "terminal",
+        "desc": "Ejecutar comandos de shell",
+        "cat": "Terminal & Archivos",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/terminal"
+      },
+      {
+        "name": "process",
+        "desc": "Gestionar procesos en background",
+        "cat": "Terminal & Archivos",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/process"
+      },
+      {
+        "name": "read_file",
+        "desc": "Leer archivos con paginación",
+        "cat": "Terminal & Archivos",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/file-operations"
+      },
+      {
+        "name": "write_file",
+        "desc": "Escribir/reemplazar archivos completos",
+        "cat": "Terminal & Archivos",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/file-operations"
+      },
+      {
+        "name": "patch",
+        "desc": "Ediciones puntuales con find-and-replace",
+        "cat": "Terminal & Archivos",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/file-operations"
+      },
+      {
+        "name": "search_files",
+        "desc": "Buscar contenido o nombres de archivos (ripgrep)",
+        "cat": "Terminal & Archivos",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/file-operations"
+      },
+      {
+        "name": "browser_navigate",
+        "desc": "Navegar a URLs y obtener snapshots",
+        "cat": "Browser",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/browser"
+      },
+      {
+        "name": "browser_click",
+        "desc": "Clickear elementos en páginas web",
+        "cat": "Browser",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/browser"
+      },
+      {
+        "name": "browser_type",
+        "desc": "Escribir texto en campos input",
+        "cat": "Browser",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/browser"
+      },
+      {
+        "name": "browser_vision",
+        "desc": "Screenshot + análisis visual con IA",
+        "cat": "Browser",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/browser"
+      },
+      {
+        "name": "browser_snapshot",
+        "desc": "Snapshot del accessibility tree de la página",
+        "cat": "Browser",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/browser"
+      },
+      {
+        "name": "web_search",
+        "desc": "Búsqueda web general",
+        "cat": "Web",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/web"
+      },
+      {
+        "name": "web_extract",
+        "desc": "Extraer contenido de URLs",
+        "cat": "Web",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/web"
+      },
+      {
+        "name": "vision_analyze",
+        "desc": "Analizar imágenes con IA vision",
+        "cat": "Media",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/vision"
+      },
+      {
+        "name": "image_gen",
+        "desc": "Generar imágenes con IA",
+        "cat": "Media",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/image-gen"
+      },
+      {
+        "name": "text_to_speech",
+        "desc": "Convertir texto a voz",
+        "cat": "Media",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/tts"
+      },
+      {
+        "name": "execute_code",
+        "desc": "Ejecutar Python con acceso a todas las tools",
+        "cat": "Orquestación",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/execute-code"
+      },
+      {
+        "name": "delegate_task",
+        "desc": "Delegar a sub-agentes en paralelo",
+        "cat": "Orquestación",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/delegate-task"
+      },
+      {
+        "name": "todo",
+        "desc": "Gestionar lista de tareas de la sesión",
+        "cat": "Orquestación",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/todo"
+      },
+      {
+        "name": "clarify",
+        "desc": "Preguntar al usuario cuando hay ambigüedad",
+        "cat": "Orquestación",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/clarify"
+      },
+      {
+        "name": "memory",
+        "desc": "Memoria persistente entre sesiones",
+        "cat": "Memoria",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/memory"
+      },
+      {
+        "name": "session_search",
+        "desc": "Buscar en conversaciones pasadas",
+        "cat": "Memoria",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/session-search"
+      },
+      {
+        "name": "skill_manage",
+        "desc": "Crear, editar, eliminar skills",
+        "cat": "Memoria",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/skill-manage"
+      },
+      {
+        "name": "cronjob",
+        "desc": "Programar y gestionar tareas recurrentes",
+        "cat": "Automatización",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/cronjob"
+      },
+      {
+        "name": "send_message",
+        "desc": "Enviar mensajes a plataformas conectadas",
+        "cat": "Automatización",
+        "url": "https://hermes-agent.nousresearch.com/docs/tools/send-message"
+      }
+    ]
+  },
+  {
+    "cat": "Herramientas y plataformas externas",
+    "desc": "Proyectos y servicios que se integran con Hermes Agent, ampliando sus capacidades más allá de las tools nativas.",
+    "icon": "🔌",
+    "tools": [
+      {
+        "name": "Paperclip",
+        "desc": "Plataforma SaaS para correr Hermes como empleado gestionado en una company. Adapter oficial con soporte para 8 proveedores de inferencia, skills parsing, y más.",
+        "cat": "Plataformas",
+        "url": "https://github.com/NousResearch/hermes-paperclip-adapter",
+        "stars": "907",
+        "lang": "TypeScript"
+      },
+      {
+        "name": "OpenShell",
+        "desc": "Runtime seguro y privado para agentes IA autónomos. Fork de NVIDIA OpenShell mantenido por Nous Research.",
+        "cat": "Runtime",
+        "url": "https://github.com/NousResearch/openShell",
+        "stars": "570",
+        "lang": "Rust"
+      },
+      {
+        "name": "Hermes Self-Evolution",
+        "desc": "Mejora evolutiva automática para Hermes — optimiza skills, prompts y código usando DSPy + GEPA.",
+        "cat": "Evolución",
+        "url": "https://github.com/NousResearch/hermes-agent-self-evolution",
+        "stars": "2k",
+        "lang": "Python"
+      }
+    ]
+  }
+]

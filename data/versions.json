@@ -1,0 +1,90 @@
+[
+  {
+    "version": "v0.10.0",
+    "tag": "v2026.4.16",
+    "date": "16 abril 2026",
+    "name": "The Tool Gateway Release",
+    "current": true,
+    "highlights": [
+      "Nous Tool Gateway: suscriptores de Nous Portal pueden usar búsqueda web (Firecrawl), generación de imágenes (FAL/FLUX 2 Pro), texto-a-voz (OpenAI TTS) y automatización de navegador sin claves API adicionales",
+      "Configuración <code>use_gateway</code> por herramienta",
+      "El runtime prefiere el gateway cuando existen claves API directas",
+      "Reemplaza <code>HERMES_ENABLE_NOUS_MANAGED_TOOLS</code> con detección basada en suscripción",
+      "180+ commits con correcciones en core, gateway, CLI y sistema de herramientas"
+    ]
+  },
+  {
+    "version": "v0.9.0",
+    "tag": "v2026.4.13",
+    "date": "13 abril 2026",
+    "name": "The Everywhere Release",
+    "highlights": [
+      "Local Web Dashboard — nueva interfaz web para gestionar Hermes",
+      "Fast Mode (<code>/fast</code>) para procesamiento prioritario en OpenAI y Anthropic",
+      "iMessage via BlueBubbles — integración completa con ecosistema Apple",
+      "WeChat y WeCom Callback Mode — cobertura del ecosistema chino",
+      "Termux/Android — ejecutar Hermes nativamente en Android",
+      "16 plataformas de mensajería soportadas",
+      "487 commits, 269 PRs mergeados, 167 issues resueltas, 24 contribuidores"
+    ]
+  },
+  {
+    "version": "v0.8.0",
+    "tag": "v2026.4.8",
+    "date": "8 abril 2026",
+    "name": "The Intelligence Release",
+    "highlights": [
+      "Background Process Auto-Notifications (<code>notify_on_complete</code>)",
+      "Xiaomi MiMo v2 Pro gratuito en Nous Portal",
+      "Live Model Switching (<code>/model</code>) en todas las plataformas",
+      "Self-Optimized GPT/Codex Tool-Use Guidance",
+      "Google AI Studio (Gemini) como proveedor nativo",
+      "Approval Buttons en Slack y Telegram",
+      "MCP OAuth 2.1 PKCE + escaneo de malware OSV",
+      "209 PRs mergeados, 82 issues resueltas"
+    ]
+  },
+  {
+    "version": "v0.7.0",
+    "tag": "v2026.4.3",
+    "date": "3 abril 2026",
+    "name": "The Resilience Release",
+    "highlights": [
+      "Pluggable Memory Provider Interface — memoria como sistema de plugins extensible",
+      "Same-Provider Credential Pools — rotación automática de claves API",
+      "Camofox Anti-Detection Browser Backend — navegación stealth",
+      "Inline Diff Previews — diffs visuales en operaciones de archivos",
+      "Secret Exfiltration Blocking — bloqueo de exfiltración de secretos",
+      "168 PRs, 46 issues resueltas"
+    ]
+  },
+  {
+    "version": "v0.6.0",
+    "tag": "v2026.3.30",
+    "date": "30 marzo 2026",
+    "name": "The Multi-Instance Release",
+    "highlights": [
+      "Profiles: instancias múltiples aisladas con config, memoria y skills separados",
+      "MCP Server Mode (<code>hermes mcp serve</code>) para exponer conversaciones a clientes MCP",
+      "Docker Container oficial",
+      "Ordered Fallback Provider Chain — failover automático entre proveedores",
+      "Feishu/Lark y WeCom Platform Support",
+      "95 PRs, 16 issues resueltas"
+    ]
+  },
+  {
+    "version": "v0.5.0",
+    "tag": "v2026.3.28",
+    "date": "28 marzo 2026",
+    "name": "The Hardening Release",
+    "highlights": [
+      "Nous Portal ahora soporta 400+ modelos",
+      "Hugging Face como proveedor de inferencia de primera clase",
+      "Telegram Private Chat Topics — conversaciones basadas en proyectos",
+      "Native Modal SDK backend (reemplazo de swe-rex)",
+      "Plugin lifecycle hooks (<code>pre_llm_call</code>, <code>post_llm_call</code>, etc.)",
+      "Nix flake — build reproducible, módulo NixOS",
+      "50+ correcciones de seguridad y confiabilidad"
+    ]
+  }
+]

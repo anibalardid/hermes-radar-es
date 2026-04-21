@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# add-tool.sh — Agrega una herramienta a HERRAMIENTAS_DATA en app.js
+# add-tool.sh — Agrega una herramienta a data/herramientas.json
 # Uso: ./add-tool.sh "nombre" "descripción" "categoría" "url" [tipo]
 #   tipo: "native" (default) o "external"
 # Ejemplo nativa:  ./add-tool.sh "nueva_tool" "Hace algo" "Categoría" "https://docs..."
@@ -14,36 +14,37 @@ CAT="${3:?Falta categoría}"
 URL="${4:?Falta URL}"
 TYPE="${5:-native}"
 
-APP="app.js"
+FILE="data/herramientas.json"
+
+command -v jq >/dev/null 2>&1 || { echo "❌ jq no está instalado. Instalá con: brew install jq"; exit 1; }
 
 if [ "$TYPE" = "external" ]; then
-  # Herramientas externas (con url, stars, lang)
+  # Herramientas externas (grupo 1, índice 1 en el array)
+  GROUP_INDEX=1
   STARS="${STARS:-}"
   LANG="${LANG:-}"
-  
-  # Buscar la sección de herramientas externas (segundo grupo)
-  # Insertar antes del cierre del segundo grupo
-  LINE=$(grep -n "cat: 'Herramientas y plataformas externas'" "$APP" | head -1 | cut -d: -f1)
-  END_LINE=$(awk "NR>$LINE /^    ]/{print NR; exit}" "$APP")
-  
-  ENTRY="      { name: '$NAME', desc: '$DESC', cat: '$CAT', url: '$URL', stars: '${STARS}', lang: '${LANG}' },"
-  
-  sed -i '' "${END_LINE}i\\
-$ENTRY
-" "$APP"
-  
+
+  jq --arg gi "$GROUP_INDEX" \
+     --arg name "$NAME" \
+     --arg desc "$DESC" \
+     --arg cat "$CAT" \
+     --arg url "$URL" \
+     --arg stars "$STARS" \
+     --arg lang "$LANG" \
+     '.[$gi | tonumber].tools += [{"name": $name, "desc": $desc, "cat": $cat, "url": $url, "stars": $stars, "lang": $lang}]' \
+     "$FILE" > "${FILE}.tmp" && mv "${FILE}.tmp" "$FILE"
 else
-  # Herramientas nativas (primer grupo)
-  # Insertar antes del cierre del primer grupo de tools
-  LINE=$(grep -n "cat: 'Herramientas integradas'" "$APP" | head -1 | cut -d: -f1)
-  END_LINE=$(awk "NR>$LINE /^    \]/{print NR; exit}" "$APP")
-  
-  ENTRY="      { name: '$NAME', desc: '$DESC', cat: '$CAT', url: '$URL' },"
-  
-  sed -i '' "${END_LINE}i\\
-$ENTRY
-" "$APP"
+  # Herramientas nativas (grupo 0)
+  GROUP_INDEX=0
+
+  jq --arg gi "$GROUP_INDEX" \
+     --arg name "$NAME" \
+     --arg desc "$DESC" \
+     --arg cat "$CAT" \
+     --arg url "$URL" \
+     '.[$gi | tonumber].tools += [{"name": $name, "desc": $desc, "cat": $cat, "url": $url}]' \
+     "$FILE" > "${FILE}.tmp" && mv "${FILE}.tmp" "$FILE"
 fi
 
 echo "✅ Herramienta agregada: $NAME ($TYPE)"
-echo "   Recordá hacer commit: git add app.js && git commit -m 'feat: add tool $NAME'"
+echo "   Recordá hacer commit: git add data/herramientas.json && git commit -m 'feat: add tool $NAME'"

@@ -1,0 +1,352 @@
+[
+  {
+    "cat": "software-development",
+    "label": "Desarrollo",
+    "icon": "💻",
+    "skills": [
+      {
+        "name": "plan",
+        "desc": "Modo planificación: inspecciona contexto y crea planes markdown detallados",
+        "badge": "bundled",
+        "gh": "software-development"
+      },
+      {
+        "name": "github-pr-workflow",
+        "desc": "Ciclo completo de PRs: crear branches, commitear, abrir PRs, monitorear CI",
+        "badge": "bundled",
+        "gh": "github"
+      },
+      {
+        "name": "github-issues",
+        "desc": "Crear, gestionar y cerrar issues en GitHub",
+        "badge": "bundled",
+        "gh": "github"
+      },
+      {
+        "name": "github-repo-management",
+        "desc": "Clonar, fork, configurar repos, gestionar secrets y workflows",
+        "badge": "bundled",
+        "gh": "github"
+      },
+      {
+        "name": "github-code-review",
+        "desc": "Review de código: analizar diffs, dejar comentarios inline, aprobar/rechazar PRs",
+        "badge": "bundled",
+        "gh": "github"
+      },
+      {
+        "name": "test-driven-development",
+        "desc": "Enforzar ciclo RED-GREEN-REFACTOR en desarrollo",
+        "badge": "bundled",
+        "gh": "software-development"
+      },
+      {
+        "name": "systematic-debugging",
+        "desc": "Investigación de causa raíz en 4 fases",
+        "badge": "bundled",
+        "gh": "software-development"
+      },
+      {
+        "name": "writing-plans",
+        "desc": "Crear planes de implementación completos con subtareas",
+        "badge": "bundled",
+        "gh": "software-development"
+      },
+      {
+        "name": "requesting-code-review",
+        "desc": "Pipeline de verificación pre-commit: seguridad, linting, tests",
+        "badge": "bundled",
+        "gh": "software-development"
+      }
+    ]
+  },
+  {
+    "cat": "autonomous-ai-agents",
+    "label": "Agentes IA",
+    "icon": "🤖",
+    "skills": [
+      {
+        "name": "claude-code",
+        "desc": "Delegar tareas de código a Claude Code",
+        "badge": "bundled",
+        "gh": "autonomous-ai-agents"
+      },
+      {
+        "name": "codex",
+        "desc": "Delegar tareas de código a OpenAI Codex CLI",
+        "badge": "bundled",
+        "gh": "autonomous-ai-agents"
+      },
+      {
+        "name": "opencode",
+        "desc": "Delegar tareas de código a OpenCode CLI",
+        "badge": "bundled",
+        "gh": "autonomous-ai-agents"
+      },
+      {
+        "name": "hermes-agent",
+        "desc": "Guía completa de uso y extensión de Hermes Agent",
+        "badge": "bundled",
+        "gh": "autonomous-ai-agents"
+      },
+      {
+        "name": "hermes-multiagent",
+        "desc": "Orquestación multi-agente con 17 agentes especializados",
+        "badge": "bundled",
+        "gh": "autonomous-ai-agents"
+      },
+      {
+        "name": "subagent-driven-development",
+        "desc": "Delegar tareas a sub-agentes para implementación paralela",
+        "badge": "bundled",
+        "gh": "software-development"
+      }
+    ]
+  },
+  {
+    "cat": "research",
+    "label": "Investigación",
+    "icon": "🔬",
+    "skills": [
+      {
+        "name": "arxiv",
+        "desc": "Buscar y recuperar papers académicos de arXiv",
+        "badge": "bundled",
+        "gh": "research"
+      },
+      {
+        "name": "blogwatcher",
+        "desc": "Monitorear blogs y feeds RSS por actualizaciones",
+        "badge": "bundled",
+        "gh": "feeds"
+      },
+      {
+        "name": "polymarket",
+        "desc": "Consultar datos de mercados de predicción Polymarket",
+        "badge": "bundled",
+        "gh": "research"
+      }
+    ]
+  },
+  {
+    "cat": "productivity",
+    "label": "Productividad",
+    "icon": "📝",
+    "skills": [
+      {
+        "name": "google-workspace",
+        "desc": "Gmail, Calendar, Drive, Sheets, Docs integrados",
+        "badge": "bundled",
+        "gh": "productivity"
+      },
+      {
+        "name": "notion",
+        "desc": "Gestión de páginas, bases de datos y bloques en Notion",
+        "badge": "bundled",
+        "gh": "productivity"
+      },
+      {
+        "name": "linear",
+        "desc": "Gestión de issues y proyectos via Linear API",
+        "badge": "bundled",
+        "gh": "productivity"
+      },
+      {
+        "name": "powerpoint",
+        "desc": "Creación y edición de presentaciones .pptx",
+        "badge": "bundled",
+        "gh": "productivity"
+      },
+      {
+        "name": "ocr-and-documents",
+        "desc": "Extracción de texto de PDFs y documentos escaneados",
+        "badge": "bundled",
+        "gh": "productivity"
+      },
+      {
+        "name": "nano-pdf",
+        "desc": "Editar PDFs con instrucciones en lenguaje natural",
+        "badge": "bundled",
+        "gh": "productivity"
+      },
+      {
+        "name": "obsidian",
+        "desc": "Leer, buscar y crear notas en el vault de Obsidian",
+        "badge": "bundled",
+        "gh": "note-taking"
+      }
+    ]
+  },
+  {
+    "cat": "creative",
+    "label": "Creativo",
+    "icon": "🎨",
+    "skills": [
+      {
+        "name": "excalidraw",
+        "desc": "Diagramas estilo hand-drawn en formato Excalidraw",
+        "badge": "bundled",
+        "gh": "creative"
+      },
+      {
+        "name": "p5js",
+        "desc": "Arte generativo e interactivo con p5.js",
+        "badge": "bundled",
+        "gh": "creative"
+      },
+      {
+        "name": "manim-video",
+        "desc": "Animaciones matemáticas tipo 3Blue1Brown",
+        "badge": "bundled",
+        "gh": "creative"
+      },
+      {
+        "name": "ascii-art",
+        "desc": "Generación de ASCII art con pyfiglet, cowsay",
+        "badge": "bundled",
+        "gh": "creative"
+      },
+      {
+        "name": "songwriting-and-ai-music",
+        "desc": "Composición de canciones y generación musical con IA",
+        "badge": "bundled",
+        "gh": "creative"
+      }
+    ]
+  },
+  {
+    "cat": "mlops",
+    "label": "ML / IA",
+    "icon": "🧠",
+    "skills": [
+      {
+        "name": "axolotl",
+        "desc": "Fine-tuning de LLMs con Axolotl (LoRA/QLoRA, DPO/KTO/ORPO/GRPO)",
+        "badge": "bundled",
+        "gh": "mlops/training"
+      },
+      {
+        "name": "llama-cpp",
+        "desc": "Inferencia LLM con llama.cpp (CPU, Apple Silicon, GPU)",
+        "badge": "bundled",
+        "gh": "mlops/inference"
+      },
+      {
+        "name": "serving-llms-vllm",
+        "desc": "Serving de LLMs con vLLM (PagedAttention, continuous batching)",
+        "badge": "bundled",
+        "gh": "mlops/inference"
+      },
+      {
+        "name": "evaluating-llms-harness",
+        "desc": "Evaluación de LLMs en 60+ benchmarks académicos",
+        "badge": "bundled",
+        "gh": "mlops/evaluation"
+      },
+      {
+        "name": "fine-tuning-with-trl",
+        "desc": "Fine-tuning con RL usando TRL (SFT, DPO, GRPO)",
+        "badge": "bundled",
+        "gh": "mlops/training"
+      }
+    ]
+  },
+  {
+    "cat": "integrations",
+    "label": "Integraciones",
+    "icon": "🔌",
+    "skills": [
+      {
+        "name": "native-mcp",
+        "desc": "Cliente MCP integrado para conectar servidores externos",
+        "badge": "bundled",
+        "gh": "mcp"
+      },
+      {
+        "name": "openhue",
+        "desc": "Control de luces Philips Hue, habitaciones y escenas",
+        "badge": "bundled",
+        "gh": "smart-home"
+      },
+      {
+        "name": "himalaya",
+        "desc": "Gestión de emails vía IMAP/SMTP",
+        "badge": "bundled",
+        "gh": "email"
+      },
+      {
+        "name": "imessage",
+        "desc": "Enviar y recibir iMessages/SMS vía CLI en macOS",
+        "badge": "bundled",
+        "gh": "apple"
+      },
+      {
+        "name": "dogfood",
+        "desc": "QA exploratorio sistemático de aplicaciones web",
+        "badge": "bundled",
+        "gh": "dogfood"
+      }
+    ]
+  },
+  {
+    "cat": "optional",
+    "label": "Skills opcionales",
+    "icon": "📦",
+    "skills": [
+      {
+        "name": "blackbox",
+        "desc": "Delegar tareas a Blackbox AI CLI (multi-modelo con juez)",
+        "badge": "optional",
+        "gh": "autonomous-ai-agents"
+      },
+      {
+        "name": "honcho",
+        "desc": "Memoria cross-session con Honcho (modelado dialéctico)",
+        "badge": "optional",
+        "gh": "autonomous-ai-agents"
+      },
+      {
+        "name": "solana",
+        "desc": "Consultas blockchain Solana con precios USD",
+        "badge": "optional",
+        "gh": "blockchain"
+      },
+      {
+        "name": "base",
+        "desc": "Consultas blockchain Base (Ethereum L2) con precios USD",
+        "badge": "optional",
+        "gh": "blockchain"
+      },
+      {
+        "name": "docker-management",
+        "desc": "Gestión de contenedores, imágenes, volumes, Compose",
+        "badge": "optional",
+        "gh": "devops"
+      },
+      {
+        "name": "1password",
+        "desc": "Integración con 1Password CLI para gestión de secretos",
+        "badge": "optional",
+        "gh": "security"
+      },
+      {
+        "name": "sherlock",
+        "desc": "Búsqueda OSINT de usuarios en 400+ redes sociales",
+        "badge": "optional",
+        "gh": "red-teaming"
+      },
+      {
+        "name": "blender-mcp",
+        "desc": "Control de Blender desde Hermes (3D, materiales, animaciones)",
+        "badge": "optional",
+        "gh": "mcp"
+      },
+      {
+        "name": "fastmcp",
+        "desc": "Crear, testear y desplegar servidores MCP con FastMCP",
+        "badge": "optional",
+        "gh": "mcp"
+      }
+    ]
+  }
+]

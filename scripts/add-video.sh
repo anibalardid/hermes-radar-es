@@ -1,29 +1,30 @@
 #!/usr/bin/env bash
-# add-video.sh — Agrega un video de YouTube a app.js (VIDEOS_DATA)
-# Uso: ./add-video.sh "Título del video" "VIDEO_ID" "Descripción" "Canal" "Duración"
-# Ejemplo: ./add-video.sh "Hermes Agent Tutorial" "dQw4w9WgXcQ" "Tutorial completo" "Hermes Dev" "12:34"
+# add-video.sh — Agrega un video de YouTube a data/videos.json
+# Uso: ./add-video.sh "Título del video" "VIDEO_ID" "Canal" "Vistas" "Descripción"
+# Ejemplo: ./add-video.sh "Hermes Agent Tutorial" "dQw4w9WgXcQ" "Hermes Dev" "12K" "Tutorial completo"
 
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-TITLE="${1:?Uso: add-video.sh TITULO VIDEO_ID DESCRIPCION CANAL DURACION}"
+TITLE="${1:?Uso: add-video.sh TITULO VIDEO_ID CANAL VISTAS DESCRIPCION}"
 VID_ID="${2:?Falta VIDEO_ID de YouTube}"
-DESC="${3:-Video sobre Hermes Agent}"
-CHANNEL="${4:-Unknown}"
-DURATION="${5:-??}"
+CHANNEL="${3:?Falta canal}"
+VIEWS="${4:-}"
+DESC="${5:-Video sobre Hermes Agent}"
 
-APP="app.js"
+FILE="data/videos.json"
 
-# Buscar la posición del cierre de VIDEOS_DATA
-LINE=$(grep -n "^];" "$APP" | head -3 | tail -1)
+# Verificar que jq está instalado
+command -v jq >/dev/null 2>&1 || { echo "❌ jq no está instalado. Instalá con: brew install jq"; exit 1; }
 
-# Preparar la entrada
-ENTRY="  { id: '$VID_ID', title: '$TITLE', channel: '$CHANNEL', duration: '$DURATION', desc: '$DESC' },"
-
-# Insertar antes del cierre
-sed -i '' "${LINE}i\\
-$ENTRY
-" "$APP"
+# Agregar el video al inicio del array
+jq --arg id "$VID_ID" \
+   --arg title "$TITLE" \
+   --arg channel "$CHANNEL" \
+   --arg views "$VIEWS" \
+   --arg desc "$DESC" \
+   '. += [{"id": $id, "title": $title, "channel": $channel, "views": $views, "desc": $desc}]' \
+   "$FILE" > "${FILE}.tmp" && mv "${FILE}.tmp" "$FILE"
 
 echo "✅ Video agregado: $TITLE ($VID_ID)"
-echo "   Recordá hacer commit: git add app.js && git commit -m 'feat: add video $VID_ID'"
+echo "   Recordá hacer commit: git add data/videos.json && git commit -m 'feat: add video $VID_ID'"

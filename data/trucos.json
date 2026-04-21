@@ -1,0 +1,134 @@
+[
+  {
+    "cat": "Configuración",
+    "title": "Cambia de modelo al vuelo",
+    "desc": "Usa <code>/model</code> en cualquier conversación para cambiar de modelo sin reiniciar. También podés configurar un modelo diferente por perfil.",
+    "code": "# En conversación\n/model anthropic/claude-opus-4\n\n# En config.yaml\nmodel: openai/gpt-4o"
+  },
+  {
+    "cat": "Configuración",
+    "title": "Profiles para instancias separadas",
+    "desc": "Creá profiles aislados con su propia config, memoria, sesiones y skills. Ideal para separar trabajo personal de profesional.",
+    "code": "# Crear un nuevo profile\nhermes profile create trabajo\n\n# Listar profiles\nhermes profile list\n\n# Usar un profile específico\nhermes chat --profile trabajo"
+  },
+  {
+    "cat": "Configuración",
+    "title": "Fallback de proveedores",
+    "desc": "Configurá una cadena de proveedores para que Hermes cambie automáticamente si el principal falla.",
+    "code": "# config.yaml\nprovider_chain:\n  - openrouter\n  - anthropic\n  - openai\n\n# Hermes prueba en orden y usa el primero disponible"
+  },
+  {
+    "cat": "Configuración",
+    "title": "Configurá el sistema de aprobación",
+    "desc": "Hermes puede pedirte confirmación antes de ejecutar comandos peligrosos. Configurá qué requiere aprobación.",
+    "code": "# config.yaml\napprovals:\n  terminal: ask          # Pregunta antes de ejecutar\n  write_file: auto       # Escribe sin preguntar\n  patch: ask             # Pregunta antes de editar archivos\n  web_search: auto       # Busca sin preguntar\n  delegate_task: ask     # Pregunta antes de delegar"
+  },
+  {
+    "cat": "Configuración",
+    "title": "Variables de entorno sensibles",
+    "desc": "Nunca pongas API keys directamente en config.yaml. Usá variables de entorno y <code>.env</code> para proteger tus credenciales.",
+    "code": "# .env (NO commitear esto)\nANTHROPIC_API_KEY=sk-ant-...\nOPENAI_API_KEY=sk-...\nOPENROUTER_API_KEY=sk-or-...\n\n# config.yaml referencia las env vars\nanthropic:\n  api_key: ${ANTHROPIC_API_KEY}"
+  },
+  {
+    "cat": "Automatización",
+    "title": "Background processes con notificación",
+    "desc": "Ejecutá tareas largas en background y recibí notificación cuando terminen. Perfecto para tests, builds y deployments.",
+    "code": "# En terminal de Hermes\nexecute_code background=true notify_on_complete=true\ntask = \"pytest tests/ -v\"\n\n# Recibirás una notificación cuando termine"
+  },
+  {
+    "cat": "Automatización",
+    "title": "Cron jobs para tareas recurrentes",
+    "desc": "Programá tareas que se ejecuten solas: resúmenes diarios, monitoreo de precios, limpieza de logs, etc.",
+    "code": "# Crear un cron job\ncronjob create --schedule \"0 9 * * *\" \\\n  --name \"resumen-diario\" \\\n  --prompt \"Resumir las novedades del día\"\n\n# Listar cron jobs\ncronjob list\n\n# Ejecutar manualmente\ncronjob run --job_id resumen-diario"
+  },
+  {
+    "cat": "Automatización",
+    "title": "Webhooks para eventos externos",
+    "desc": "Conectá Hermes a servicios externos vía webhooks. Cada vez que llegue un evento, Hermes reacciona automáticamente.",
+    "code": "# Crear webhook subscription\nwebhook create \\\n  --url /hooks/github \\\n  --event push \\\n  --prompt \"Se hizo push en {repo}. Resumí los cambios.\"\n\n# Hermes recibe el POST y ejecuta el prompt"
+  },
+  {
+    "cat": "Automatización",
+    "title": "Pipeline con sub-agentes",
+    "desc": "Delegá tareas complejas a múltiples sub-agentes que trabajan en paralelo usando <code>delegate_task</code>.",
+    "code": "# Ejemplo: delegar 3 tareas en paralelo\ndelegate_task tasks=[\n  { goal: \"Buscar info sobre X en la web\", toolsets: [\"web\"] },\n  { goal: \"Analizar código del repo\", toolsets: [\"terminal\", \"file\"] },\n  { goal: \"Generar documentación\", toolsets: [\"terminal\", \"file\"] }\n]"
+  },
+  {
+    "cat": "Memoria y Skills",
+    "title": "Crea skills personalizadas",
+    "desc": "Hermes genera skills automáticamente, pero podés crear las tuyas manualmente en <code>~/.hermes/skills/</code>. Son archivos markdown con YAML frontmatter.",
+    "code": "# ~/.hermes/skills/mi-skill/SKILL.md\n---\nname: mi-skill\ndescription: Descripción de mi skill personalizado\n---\n\n# Mi Skill\n\nPasos:\n1. Hacer X\n2. Verificar Y\n3. Completar Z\n\n## Notas\n- Siempre verificar antes de proceder"
+  },
+  {
+    "cat": "Memoria y Skills",
+    "title": "Memoria persistente entre sesiones",
+    "desc": "Hermes recuerda lo que aprende. Guardá hechos clave con <code>memory</code> y buscalos en sesiones futuras con <code>session_search</code>.",
+    "code": "# Guardar un dato en memoria\nmemory add --target user \\\n  --content \"Prefiero respuestas concisas\"\n\n# Buscar en sesiones pasadas\nsession_search \"docker networking\"\n\n# Ver la memoria guardada\nmemory --action list"
+  },
+  {
+    "cat": "Memoria y Skills",
+    "title": "Instalá skills de la comunidad",
+    "desc": "Explorá y probá skills creadas por otros usuarios. Instalalas con un solo comando.",
+    "code": "# Instalar skill oficial opcional\nhermes skills install official/crypto/solana\n\n# Instalar skill comunitaria\nhermes skills install community/mi-skill\n\n# Listar skills instaladas\nhermes skills list\n\n# Desinstalar\nhermes skills uninstall solana"
+  },
+  {
+    "cat": "Memoria y Skills",
+    "title": "Compartí skills entre profiles",
+    "desc": "Las skills globales están disponibles para todos los profiles. Las de profile solo para ese contexto.",
+    "code": "# Skills globales (todos los profiles)\n~/.hermes/skills/mi-skill/SKILL.md\n\n# Skills de un profile específico\n~/.hermes/profiles/trabajo/skills/mi-skill/SKILL.md\n\n# En config.yaml, podés habilitar/deshabilitar\nskills:\n  enabled: [\"mi-skill\", \"plan\"]\n  disabled: [\"red-teaming\"]"
+  },
+  {
+    "cat": "Plataformas",
+    "title": "Gateway de mensajería multi-plataforma",
+    "desc": "Hermes puede estar conectado a múltiples plataformas simultáneamente. Configurá las que necesites.",
+    "code": "# config.yaml\ntelegram:\n  token: \"TU_TOKEN\"\n  allowed_users: [12345]\n\ndiscord:\n  token: \"TU_TOKEN\"\n\nslack:\n  bot_token: \"xoxb-...\"\n\n# Iniciar gateway\nhermes gateway start"
+  },
+  {
+    "cat": "Plataformas",
+    "title": "MCP Server Mode para editores",
+    "desc": "Expón Hermes como servidor MCP para integrarse con VS Code, Zed y otros editores que soporten ACP.",
+    "code": "# Iniciar servidor MCP\nhermes mcp serve\n\n# Desde VS Code, registrar el servidor MCP\n# Hermes se integra nativamente con editores via ACP"
+  },
+  {
+    "cat": "Plataformas",
+    "title": "Paperclip: Hermes como empleado virtual",
+    "desc": "Conectá Hermes a <a href=\"https://paperclip.ing\" target=\"_blank\" rel=\"noopener\">Paperclip</a> para correrlo como empleado gestionado en una company.",
+    "code": "# Instalar el adapter\nnpm install -g hermes-paperclip-adapter\n\n# Configurar\npaperclip-adapter init\n\n# Ejecutar\npaperclip-adapter start\n\n# Docs: github.com/NousResearch/hermes-paperclip-adapter"
+  },
+  {
+    "cat": "DevOps",
+    "title": "Docker para deployment en producción",
+    "desc": "La imagen oficial de Docker soporta CLI y gateway, con usuario no-root por defecto.",
+    "code": "# docker-compose.yml\nservices:\n  hermes:\n    image: nousresearch/hermes-agent:latest\n    volumes:\n      - ./hermes-data:/home/hermes\n    env_file: .env\n    command: hermes gateway start\n\n# Ejecutar\ndocker compose up -d"
+  },
+  {
+    "cat": "DevOps",
+    "title": "Backup y restore completo",
+    "desc": "Respaldá toda tu configuración, memoria y skills con un solo comando.",
+    "code": "# Crear backup\nhermes backup --output mi-backup.tar.gz\n\n# Restaurar desde backup\nhermes import mi-backup.tar.gz\n\n# Diagnosticar problemas\nhermes doctor\nhermes debug share  # Compartir reporte de diagnóstico"
+  },
+  {
+    "cat": "DevOps",
+    "title": "Watch patterns para procesos en background",
+    "desc": "Configurá patrones de texto que disparan notificaciones durante un proceso en ejecución.",
+    "code": "# Recibe notificación cuando aparezca \"ERROR\" o \"listening\"\nexecute_code background=true\nwatch_patterns = [\"ERROR\", \"Traceback\", \"listening on port\"]\n\n# Útil para detectar errores sin esperar al final"
+  },
+  {
+    "cat": "Tips ocultos",
+    "title": "Ejecutá código Python inline",
+    "desc": "Con <code>execute_code</code> podés correr Python directamente en la sesión de Hermes, con acceso a todas las herramientas.",
+    "code": "# Ejecutar Python con acceso a tools\nexecute_code:\n  from hermes_tools import terminal, read_file\n  result = terminal(\"git log --oneline -5\")\n  print(result)\n\n# Ideal para procesar datos entre llamadas a tools"
+  },
+  {
+    "cat": "Tips ocultos",
+    "title": "Comandos del sistema sin salir de Hermes",
+    "desc": "Usá <code>!</code> al inicio de un mensaje para ejecutar un comando de shell directo, sin que Hermes lo procese como prompt.",
+    "code": "# Ejecutar comando de shell directamente\n!git status\n!cat ~/.hermes/config.yaml\n!ps aux | grep hermes\n\n# Útil para debugging rápido sin abrir otra terminal"
+  },
+  {
+    "cat": "Tips ocultos",
+    "title": "Modo verbose para debugging",
+    "desc": "Si algo no funciona como esperás, activá el modo verbose para ver exactamente qué está haciendo Hermes internally.",
+    "code": "# Activar verbose logging\nhermes chat --verbose\n\n# O en config.yaml\nlogging:\n  level: debug\n  file: ~/.hermes/hermes.log\n\n# Ver logs en tiempo real\n!tail -f ~/.hermes/hermes.log"
+  }
+]
