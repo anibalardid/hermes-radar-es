@@ -1,5 +1,5 @@
 // ─── VERSION (keep in sync with version.js) ───
-const HR_VER = '26.04';
+const HR_VER = '0.1.0';
 
 // ═══════════════════════════════════════════════════════════════
 // HERMES RADAR — SPA Router + Content
@@ -274,6 +274,68 @@ profiles:
     model: openai/gpt-5.4
     memory:
       directory: ~/.hermes/profiles/trabajo/memory</code></pre>
+<h4>Configuración gratuita y de bajo costo</h4>
+<p>Hermes no requiere modelos costosos para funcionar. Hay dos opciones populares para arrancar sin gastar plata:</p>
+
+<h5>🖥️ Ollama — Modelos locales, costo cero</h5>
+<p><a href="https://ollama.com" target="_blank" rel="noopener">Ollama</a> corre modelos directamente en tu computadora. Sin API keys, sin costo, sin depender de internet.</p>
+<pre><code># 1. Instalar Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# 2. Descargar un modelo (recomendados para empezar)
+ollama pull llama3.2          # 3B - Liviano, rápido
+ollama pull mistral:7b        # 7B - Balance calidad/velocidad
+ollama pull devstral:24b      # 24B - Excelente para código
+
+# 3. Configurar Hermes con Ollama
+# ~/.hermes/config.yaml
+provider: ollama
+model: ollama/llama3.2
+ollama:
+  base_url: http://localhost:11434
+
+# 4. ¡Listo! Hermes ya funciona sin costo
+hermes chat</code></pre>
+<p><strong>Requisitos mínimos:</strong> 8 GB RAM para 7B, 16 GB para modelos de código. Solo funciona en Mac/Linux/WSL2.</p>
+
+<h5>🌐 OpenRouter — Un proveedor, cientos de modelos</h5>
+<p><a href="https://openrouter.ai" target="_blank" rel="noopener">OpenRouter</a> es un proxy que te da acceso a modelos de Anthropic, OpenAI, Google, Meta y más con una sola API key. Muchos modelos tienen tier gratuito.</p>
+<pre><code># 1. Obtener API key (gratuito en openrouter.ai)
+#    Registrate en https://openrouter.ai → Settings → API Keys
+
+# 2. Configurar Hermes con OpenRouter
+# ~/.hermes/config.yaml
+provider: openrouter
+model: anthropic/claude-sonnet-4    # Cambiá el modelo cuando quieras
+openrouter:
+  api_key: ${OPENROUTER_API_KEY}    # Usá .env, nunca hardcodear
+
+# 3. Modelos gratuitos o de bajo costo en OpenRouter
+#   Gratuitos:    meta-llama/llama-3.2-3b-instruct:free
+#                  google/gemini-2.0-flash-exp:free
+#                  mistralai/mistral-small-3.1-24b-instruct:free
+#   Low-cost:      deepseek/deepseek-chat (~$0.14/M) 
+#                  anthropic/claude-haiku-4 (~$1/M input)
+#                  google/gemini-2.0-flash (~$0.1/M)
+
+# 4. ¡Listo! Cambiá de modelo al vuelo con /model
+hermes chat
+/model deepseek/deepseek-chat    # Cambio en vivo</code></pre>
+<p><strong>Ventaja principal:</strong> Con OpenRouter probás modelos gratuitos y si necesitás más potencia, escalás sin cambiar configuración.</p>
+
+<h4>Comparación rápida</h4>
+<div class="table-wrapper"><table>
+  <thead><tr><th></th><th>Ollama (local)</th><th>OpenRouter (cloud)</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Costo</strong></td><td>Gratis (usa tu hardware)</td><td>Gratis a $$/según modelo</td></tr>
+    <tr><td><strong>Privacidad</strong></td><td>100% local, nada sale de tu PC</td><td>Los prompts van a los proveedores</td></tr>
+    <tr><td><strong>Setup</strong></td><td>Instalar Ollama + descargar modelo</td><td>Crear cuenta + API key</td></tr>
+    <tr><td><strong>Requisitos</strong></td><td>8-32 GB RAM según modelo</td><td>Internet estable</td></tr>
+    <tr><td><strong>Calidad código</strong></td><td>Buena (7B+) o excelente (24B+)</td><td>Excelente (Claude/GPT/Gemini)</td></tr>
+    <tr><td><strong>Velocidad</strong></td><td>Depende de tu hardware</td><td>Rápida (servidores potentes)</td></tr>
+    <tr><td><strong>Offline</strong></td><td>✅ Sí</td><td>❌ No</td></tr>
+  </tbody>
+</table></div>
 <h4>Comandos esenciales de gestión</h4>
 <div class="table-wrapper"><table>
   <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
@@ -596,31 +658,31 @@ const HERRAMIENTAS_DATA = [
     desc: 'Hermes incluye 47+ herramientas nativas que el modelo puede invocar directamente. No requieren instalación ni skills adicionales.',
     icon: '🔧',
     tools: [
-      { name: 'terminal', desc: 'Ejecutar comandos de shell', cat: 'Terminal & Archivos' },
-      { name: 'process', desc: 'Gestionar procesos en background', cat: 'Terminal & Archivos' },
-      { name: 'read_file', desc: 'Leer archivos con paginación', cat: 'Terminal & Archivos' },
-      { name: 'write_file', desc: 'Escribir/reemplazar archivos completos', cat: 'Terminal & Archivos' },
-      { name: 'patch', desc: 'Ediciones puntuales con find-and-replace', cat: 'Terminal & Archivos' },
-      { name: 'search_files', desc: 'Buscar contenido o nombres de archivos (ripgrep)', cat: 'Terminal & Archivos' },
-      { name: 'browser_navigate', desc: 'Navegar a URLs y obtener snapshots', cat: 'Browser' },
-      { name: 'browser_click', desc: 'Clickear elementos en páginas web', cat: 'Browser' },
-      { name: 'browser_type', desc: 'Escribir texto en campos input', cat: 'Browser' },
-      { name: 'browser_vision', desc: 'Screenshot + análisis visual con IA', cat: 'Browser' },
-      { name: 'browser_snapshot', desc: 'Snapshot del accessibility tree de la página', cat: 'Browser' },
-      { name: 'web_search', desc: 'Búsqueda web general', cat: 'Web' },
-      { name: 'web_extract', desc: 'Extraer contenido de URLs', cat: 'Web' },
-      { name: 'vision_analyze', desc: 'Analizar imágenes con IA vision', cat: 'Media' },
-      { name: 'image_gen', desc: 'Generar imágenes con IA', cat: 'Media' },
-      { name: 'text_to_speech', desc: 'Convertir texto a voz', cat: 'Media' },
-      { name: 'execute_code', desc: 'Ejecutar Python con acceso a todas las tools', cat: 'Orquestación' },
-      { name: 'delegate_task', desc: 'Delegar a sub-agentes en paralelo', cat: 'Orquestación' },
-      { name: 'todo', desc: 'Gestionar lista de tareas de la sesión', cat: 'Orquestación' },
-      { name: 'clarify', desc: 'Preguntar al usuario cuando hay ambigüedad', cat: 'Orquestación' },
-      { name: 'memory', desc: 'Memoria persistente entre sesiones', cat: 'Memoria' },
-      { name: 'session_search', desc: 'Buscar en conversaciones pasadas', cat: 'Memoria' },
-      { name: 'skill_manage', desc: 'Crear, editar, eliminar skills', cat: 'Memoria' },
-      { name: 'cronjob', desc: 'Programar y gestionar tareas recurrentes', cat: 'Automatización' },
-      { name: 'send_message', desc: 'Enviar mensajes a plataformas conectadas', cat: 'Automatización' },
+      { name: 'terminal', desc: 'Ejecutar comandos de shell', cat: 'Terminal & Archivos', url: 'https://hermes-agent.nousresearch.com/docs/tools/terminal' },
+      { name: 'process', desc: 'Gestionar procesos en background', cat: 'Terminal & Archivos', url: 'https://hermes-agent.nousresearch.com/docs/tools/process' },
+      { name: 'read_file', desc: 'Leer archivos con paginación', cat: 'Terminal & Archivos', url: 'https://hermes-agent.nousresearch.com/docs/tools/file-operations' },
+      { name: 'write_file', desc: 'Escribir/reemplazar archivos completos', cat: 'Terminal & Archivos', url: 'https://hermes-agent.nousresearch.com/docs/tools/file-operations' },
+      { name: 'patch', desc: 'Ediciones puntuales con find-and-replace', cat: 'Terminal & Archivos', url: 'https://hermes-agent.nousresearch.com/docs/tools/file-operations' },
+      { name: 'search_files', desc: 'Buscar contenido o nombres de archivos (ripgrep)', cat: 'Terminal & Archivos', url: 'https://hermes-agent.nousresearch.com/docs/tools/file-operations' },
+      { name: 'browser_navigate', desc: 'Navegar a URLs y obtener snapshots', cat: 'Browser', url: 'https://hermes-agent.nousresearch.com/docs/tools/browser' },
+      { name: 'browser_click', desc: 'Clickear elementos en páginas web', cat: 'Browser', url: 'https://hermes-agent.nousresearch.com/docs/tools/browser' },
+      { name: 'browser_type', desc: 'Escribir texto en campos input', cat: 'Browser', url: 'https://hermes-agent.nousresearch.com/docs/tools/browser' },
+      { name: 'browser_vision', desc: 'Screenshot + análisis visual con IA', cat: 'Browser', url: 'https://hermes-agent.nousresearch.com/docs/tools/browser' },
+      { name: 'browser_snapshot', desc: 'Snapshot del accessibility tree de la página', cat: 'Browser', url: 'https://hermes-agent.nousresearch.com/docs/tools/browser' },
+      { name: 'web_search', desc: 'Búsqueda web general', cat: 'Web', url: 'https://hermes-agent.nousresearch.com/docs/tools/web' },
+      { name: 'web_extract', desc: 'Extraer contenido de URLs', cat: 'Web', url: 'https://hermes-agent.nousresearch.com/docs/tools/web' },
+      { name: 'vision_analyze', desc: 'Analizar imágenes con IA vision', cat: 'Media', url: 'https://hermes-agent.nousresearch.com/docs/tools/vision' },
+      { name: 'image_gen', desc: 'Generar imágenes con IA', cat: 'Media', url: 'https://hermes-agent.nousresearch.com/docs/tools/image-gen' },
+      { name: 'text_to_speech', desc: 'Convertir texto a voz', cat: 'Media', url: 'https://hermes-agent.nousresearch.com/docs/tools/tts' },
+      { name: 'execute_code', desc: 'Ejecutar Python con acceso a todas las tools', cat: 'Orquestación', url: 'https://hermes-agent.nousresearch.com/docs/tools/execute-code' },
+      { name: 'delegate_task', desc: 'Delegar a sub-agentes en paralelo', cat: 'Orquestación', url: 'https://hermes-agent.nousresearch.com/docs/tools/delegate-task' },
+      { name: 'todo', desc: 'Gestionar lista de tareas de la sesión', cat: 'Orquestación', url: 'https://hermes-agent.nousresearch.com/docs/tools/todo' },
+      { name: 'clarify', desc: 'Preguntar al usuario cuando hay ambigüedad', cat: 'Orquestación', url: 'https://hermes-agent.nousresearch.com/docs/tools/clarify' },
+      { name: 'memory', desc: 'Memoria persistente entre sesiones', cat: 'Memoria', url: 'https://hermes-agent.nousresearch.com/docs/tools/memory' },
+      { name: 'session_search', desc: 'Buscar en conversaciones pasadas', cat: 'Memoria', url: 'https://hermes-agent.nousresearch.com/docs/tools/session-search' },
+      { name: 'skill_manage', desc: 'Crear, editar, eliminar skills', cat: 'Memoria', url: 'https://hermes-agent.nousresearch.com/docs/tools/skill-manage' },
+      { name: 'cronjob', desc: 'Programar y gestionar tareas recurrentes', cat: 'Automatización', url: 'https://hermes-agent.nousresearch.com/docs/tools/cronjob' },
+      { name: 'send_message', desc: 'Enviar mensajes a plataformas conectadas', cat: 'Automatización', url: 'https://hermes-agent.nousresearch.com/docs/tools/send-message' },
     ]
   },
   {
@@ -914,14 +976,17 @@ function renderHerramientas() {
 
     group.tools.forEach(t => {
       if (t.url) {
+        const isGithub = t.url.includes('github.com');
+        const icon = isGithub ? '🔗' : '📄';
+        const suffix = isGithub ? ' ↗' : ' →';
         html += `
             <div class="card" style="cursor:pointer" onclick="window.open('${t.url}','_blank')">
               <div class="card-title" style="display:flex;justify-content:space-between;align-items:center">
-                <span>${t.icon || '🔗'} ${t.name} ↗</span>
-                <span style="font-size:.75rem;color:var(--muted)">${t.stars || ''} ⭐ · ${t.lang || ''}</span>
+                <span>${icon} ${t.name}${suffix}</span>
+                ${t.stars ? `<span style="font-size:.75rem;color:var(--muted)">${t.stars} ⭐ · ${t.lang || ''}</span>` : ''}
               </div>
               <div class="card-desc">${t.desc}</div>
-              <div class="card-meta"><span class="badge badge-info">${t.cat}</span></div>
+              <div class="card-meta"><span class="badge ${isGithub ? 'badge-info' : 'badge-accent'}">${t.cat}</span></div>
             </div>`;
       } else {
         html += `
