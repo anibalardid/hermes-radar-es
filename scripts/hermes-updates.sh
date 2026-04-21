@@ -2,7 +2,7 @@
 # Hermes Updates Monitor - Checks for new Hermes Agent versions
 set -euo pipefail
 
-EXPORT_DIR="$HOME/projects/hermes-radar-es/data/hermes-updates"
+EXPORT_DIR="$HOME/.hermes/profiles/hermes-radar/home/projects/hermes-radar-es/data/hermes-updates"
 
 echo "=== Hermes Updates Started: $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
 

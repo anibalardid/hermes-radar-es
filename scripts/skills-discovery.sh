@@ -2,7 +2,7 @@
 # Skills Discovery - Finds new Hermes skills, plugins, and themes
 set -euo pipefail
 
-EXPORT_DIR="$HOME/projects/hermes-radar-es/data/skills-discovery"
+EXPORT_DIR="$HOME/.hermes/profiles/hermes-radar/home/projects/hermes-radar-es/data/skills-discovery"
 
 echo "=== Skills Discovery Started: $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
 

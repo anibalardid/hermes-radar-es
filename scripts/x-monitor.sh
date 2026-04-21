@@ -3,7 +3,7 @@
 # Requires: AUTH_TOKEN and CT0 env vars (set in profile .env)
 set -euo pipefail
 
-EXPORT_DIR="$HOME/projects/hermes-radar-es/data/x-monitoring"
+EXPORT_DIR="$HOME/.hermes/profiles/hermes-radar/home/projects/hermes-radar-es/data/x-monitoring"
 
 if [ -z "${AUTH_TOKEN:-}" ] || [ -z "${CT0:-}" ]; then
   echo "ERROR: AUTH_TOKEN and CT0 must be set as environment variables"
