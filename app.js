@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Sync version badge
   const badge = document.getElementById('version-badge');
   if (badge && DATA.config) badge.textContent = 'v' + DATA.config.HR_VER;
-  
+
   initTheme();
   document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
   document.getElementById('nav-toggle').addEventListener('click', () => {
@@ -106,10 +106,30 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
   window.addEventListener('hashchange', () => navigate(location.hash));
   navigate(location.hash || '#/');
-  
-  // Init disclaimer
+
   initDisclaimer();
+  initNewsBanner();
 });
+
+// ─── News Banner logic ───
+function initNewsBanner() {
+  const banner = document.getElementById('news-banner');
+  if (!banner) return;
+  const closeBtn = document.getElementById('news-close');
+  const textEl = document.getElementById('news-text');
+  if (!DATA.radar || !DATA.radar.length) return;
+  const current = DATA.radar.find(r => r.current) || DATA.radar[0];
+  if (!current) return;
+  const text = current.name + ' — ' + current.date;
+  textEl.textContent = text;
+  const seenKey = 'hr-banner-seen-' + current.version;
+  if (localStorage.getItem(seenKey) === '1') return;
+  banner.style.display = '';
+  closeBtn.addEventListener('click', () => {
+    banner.classList.add('hidden');
+    localStorage.setItem(seenKey, '1');
+  });
+}
 
 // ─── Disclaimer Modal ───
 function initDisclaimer() {
@@ -133,13 +153,15 @@ function initDisclaimer() {
 // ═══════════════════════════════════════════════════════════════
 
 function renderHome() {
+  const latestUpdate = DATA.radar ? (DATA.radar.find(r => r.current) || DATA.radar[0]) : null;
+  const badgeText = latestUpdate ? `${latestUpdate.version} · ${latestUpdate.name}` : 'Actualizado abril 2026 · v0.10.0';
   return `
     <div class="container">
       <section class="hero">
-        <div class="hero-badge">
+        <a href="#/novedades" class="hero-badge" style="text-decoration:none;color:inherit">
           <span class="dot"></span>
-          Actualizado abril 2026 · v0.10.0
-        </div>
+          ${badgeText}
+        </a>
         <h1>la base de conocimiento<br>de <span class="accent">hermes agent</span><br>en español.</h1>
         <p class="hero-desc">
           Handbook, skills, herramientas, videos, plugins, novedades y trucos.
@@ -148,7 +170,7 @@ function renderHome() {
         </p>
         <div class="hero-actions">
           <a href="#/handbook" class="btn btn-primary">Leer el handbook →</a>
-          <a href="#/novedades" class="btn btn-outline">Novedades v0.10.0</a>
+          <a href="#/novedades" class="btn btn-outline">Ver novedades</a>
         </div>
         <div class="stats-grid">
           <div class="stat-card"><div class="stat-value">108K+</div><div class="stat-label">Estrellas GitHub</div></div>
@@ -184,7 +206,7 @@ function renderFeaturedSection() {
         <a href="#/videos" class="card" style="text-decoration:none;color:inherit">
           <div class="card-header"><span class="card-icon">🎬</span><div><div class="card-title">Videos útiles</div><div class="card-desc">Tutoriales, demos y reviews con subtítulos traducidos automáticamente.</div></div></div>
         </a>
-        <a href="#/novedades" class="card" style="text-decoration:none;color:inherit">
+        <a href="#/novedades" class="card featured-card" style="text-decoration:none;color:inherit">
           <div class="card-header"><span class="card-icon">🆕</span><div><div class="card-title">Novedades por versión</div><div class="card-desc">Changelog detallado desde v0.5.0 hasta v0.10.0.</div></div></div>
         </a>
         <a href="#/comunidad" class="card" style="text-decoration:none;color:inherit">
