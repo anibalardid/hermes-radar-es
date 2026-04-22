@@ -8,151 +8,151 @@
         "name": "terminal",
         "desc": "Ejecutar comandos de shell",
         "cat": "Terminal & Archivos",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/terminal"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "process",
         "desc": "Gestionar procesos en background",
         "cat": "Terminal & Archivos",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/process"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "read_file",
         "desc": "Leer archivos con paginación",
         "cat": "Terminal & Archivos",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/file-operations"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "write_file",
         "desc": "Escribir/reemplazar archivos completos",
         "cat": "Terminal & Archivos",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/file-operations"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "patch",
         "desc": "Ediciones puntuales con find-and-replace",
         "cat": "Terminal & Archivos",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/file-operations"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "search_files",
         "desc": "Buscar contenido o nombres de archivos (ripgrep)",
         "cat": "Terminal & Archivos",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/file-operations"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "browser_navigate",
         "desc": "Navegar a URLs y obtener snapshots",
         "cat": "Browser",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/browser"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "browser_click",
         "desc": "Clickear elementos en páginas web",
         "cat": "Browser",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/browser"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "browser_type",
         "desc": "Escribir texto en campos input",
         "cat": "Browser",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/browser"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "browser_vision",
         "desc": "Screenshot + análisis visual con IA",
         "cat": "Browser",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/browser"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "browser_snapshot",
         "desc": "Snapshot del accessibility tree de la página",
         "cat": "Browser",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/browser"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "web_search",
         "desc": "Búsqueda web general",
         "cat": "Web",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/web"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "web_extract",
         "desc": "Extraer contenido de URLs",
         "cat": "Web",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/web"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "vision_analyze",
         "desc": "Analizar imágenes con IA vision",
         "cat": "Media",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/vision"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "image_gen",
         "desc": "Generar imágenes con IA",
         "cat": "Media",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/image-gen"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "text_to_speech",
         "desc": "Convertir texto a voz",
         "cat": "Media",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/tts"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "execute_code",
         "desc": "Ejecutar Python con acceso a todas las tools",
         "cat": "Orquestación",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/execute-code"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "delegate_task",
         "desc": "Delegar a sub-agentes en paralelo",
         "cat": "Orquestación",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/delegate-task"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "todo",
         "desc": "Gestionar lista de tareas de la sesión",
         "cat": "Orquestación",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/todo"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "clarify",
         "desc": "Preguntar al usuario cuando hay ambigüedad",
         "cat": "Orquestación",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/clarify"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "memory",
         "desc": "Memoria persistente entre sesiones",
         "cat": "Memoria",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/memory"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "session_search",
         "desc": "Buscar en conversaciones pasadas",
         "cat": "Memoria",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/session-search"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "skill_manage",
         "desc": "Crear, editar, eliminar skills",
         "cat": "Memoria",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/skill-manage"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "cronjob",
         "desc": "Programar y gestionar tareas recurrentes",
         "cat": "Automatización",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/cronjob"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       },
       {
         "name": "send_message",
         "desc": "Enviar mensajes a plataformas conectadas",
         "cat": "Automatización",
-        "url": "https://hermes-agent.nousresearch.com/docs/tools/send-message"
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/tools"
       }
     ]
   },

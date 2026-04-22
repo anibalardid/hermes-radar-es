@@ -229,8 +229,8 @@ function renderHandbook() {
           <div class="toc">
             <div class="toc-title">Contenido</div>
             <ul class="toc-list">
-              ${sections.map(s => `<li><a href="#hb-${s.id}">${s.title}</a></li>`).join('')}
-              <li><a href="#hb-${linksSection.id}">${linksSection.title}</a></li>
+              ${sections.map(s => `<li><a href="javascript:void(0)" onclick="document.getElementById('hb-${s.id}').scrollIntoView({behavior:'smooth',block:'start'})">${s.title}</a></li>`).join('')}
+              <li><a href="javascript:void(0)" onclick="document.getElementById('hb-${linksSection.id}').scrollIntoView({behavior:'smooth',block:'start'})">${linksSection.title}</a></li>
             </ul>
           </div>
           ${sections.map(s => `<h2 id="hb-${s.id}">${s.title}</h2>${s.content}`).join('')}
@@ -328,10 +328,11 @@ function renderHerramientas() {
         const isGithub = t.url.includes('github.com');
         const icon = isGithub ? '🔗' : '📄';
         const suffix = isGithub ? ' ↗' : ' →';
+        const linkLabel = isGithub ? '' : 'Docs';
         html += `
             <div class="card" style="cursor:pointer" onclick="window.open('${t.url}','_blank')">
               <div class="card-title" style="display:flex;justify-content:space-between;align-items:center">
-                <span>${icon} ${t.name}${suffix}</span>
+                <span>${icon} ${t.name}${linkLabel ? ' <span style="font-size:.75rem;opacity:.7">(' + linkLabel + ')</span>' : ''}${suffix}</span>
                 ${t.stars ? `<span style="font-size:.75rem;color:var(--muted)">${t.stars} ⭐ · ${t.lang || ''}</span>` : ''}
               </div>
               <div class="card-desc">${t.desc}</div>
