@@ -29,7 +29,8 @@ const routes = {
 };
 
 function navigate(hash) {
-  const path = hash.replace('#', '') || '/';
+  const rawPath = hash.replace('#', '') || '/';
+  const path = rawPath.split('?')[0];
   const main = document.getElementById('main-content');
   document.querySelectorAll('.nav-link, .mobile-nav .nav-link').forEach(link => {
     link.classList.toggle('active', link.getAttribute('data-section') === getSection(path));
