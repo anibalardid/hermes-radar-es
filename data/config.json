@@ -1,5 +1,5 @@
 {
-  "HR_VER": "0.1.3",
+  "HR_VER": "0.1.4",
   "SKILLS_BASE": "https://github.com/NousResearch/hermes-agent/blob/main/skills",
   "OPT_SKILLS_BASE": "https://github.com/NousResearch/hermes-agent/blob/main/optional-skills"
 }

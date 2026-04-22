@@ -1,9 +1,21 @@
 [
   {
+    "version": "v0.1.4",
+    "date": "22 abril 2026",
+    "name": "Descubrimiento de videos en español",
+    "current": true,
+    "highlights": [
+      "Nuevo cron hermes-radar-youtube: monitorea YouTube y descubre videos en español/subtítulos",
+      "Agregados 2 videos nuevos en español: tutorial de Metics Media y review de Kilian Párraga",
+      "Script youtube-monitor.sh con filtrado por idioma, subtítulos y heuristics en español",
+      "Bump de versión a v0.1.4"
+    ]
+  },
+  {
     "version": "v0.1.2",
     "date": "22 abril 2026",
     "name": "Descubrimientos de la comunidad",
-    "current": true,
+    "current": false,
     "highlights": [
       "Nueva sección de novedades del sitio separada de los releases de Hermes Agent",
       "Agregados proyectos comunitarios: Hermes HUD UI, Scarf (macOS), Hermes Studio, Pyrate UI, Hermes Dashboard (3 variantes)",
