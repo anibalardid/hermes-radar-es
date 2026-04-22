@@ -3,6 +3,15 @@
 # Requires: AUTH_TOKEN and CT0 env vars (set in profile .env)
 set -euo pipefail
 
+# Load credentials from profile .env if available
+PROFILE_ENV="$HOME/.hermes/profiles/hermes-radar/.env"
+if [ -f "$PROFILE_ENV" ]; then
+  set -a
+  # shellcheck source=/dev/null
+  . "$PROFILE_ENV"
+  set +a
+fi
+
 BASE_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 EXPORT_DIR="$BASE_DIR/data/x-monitoring"
 

@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Hermes Radar will be documented in this file.
+n## [0.1.1] - 2026-04-22nn### Changedn- Version bump to 0.1.1nAll notable changes to Hermes Radar will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
