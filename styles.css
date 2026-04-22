@@ -1179,10 +1179,10 @@ tr:hover td { background: var(--accent-subtle); }
   }
 }
 
-/* ─── Trucos grid (3 cols on desktop, responsive) ─── */
+/* ─── Trucos grid (responsive: 4 cols wide, 3 medium, 2 narrow, 1 mobile) ─── */
 .trucos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 1rem;
 }
 
