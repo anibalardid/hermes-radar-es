@@ -1,0 +1,42 @@
+[
+  {
+    "version": "v0.1.2",
+    "date": "22 abril 2026",
+    "name": "Descubrimientos de la comunidad",
+    "current": true,
+    "highlights": [
+      "Nueva sección de novedades del sitio separada de los releases de Hermes Agent",
+      "Agregados proyectos comunitarios: Hermes HUD UI, Scarf (macOS), Hermes Studio, Pyrate UI, Hermes Dashboard (3 variantes)",
+      "Agregados plugins comunitarios: Lossless Context Management (LCM), ClawMem, Icarus, Hermes Web Search Plus, Notifications",
+      "Actualizado cron hermes-radar-site-update para bump automático de versión patch",
+      "Script x-monitor.sh ahora carga credenciales desde .env del profile automáticamente"
+    ]
+  },
+  {
+    "version": "v0.1.1",
+    "date": "22 abril 2026",
+    "name": "Credenciales y auto-bump",
+    "highlights": [
+      "Fix: scripts de cron ahora usan paths relativos al repo en lugar de hardcodeados",
+      "Credenciales X/Twitter añadidas al profile .env (AUTH_TOKEN y CT0)",
+      "Skin comunitaria hermes-skins (251 estrellas) agregada a la sección Comunidad",
+      "Bump de versión a v0.1.1"
+    ]
+  },
+  {
+    "version": "v0.1.0",
+    "date": "21 abril 2026",
+    "name": "Lanzamiento inicial",
+    "highlights": [
+      "Sitio completo con SPA, hash routing, tema dark/light con toggle",
+      "Secciones: Inicio, Handbook, Skills, Herramientas, Videos, Comunidad, Novedades, Trucos",
+      "Handbook con 11 secciones y tabla de decisiones por perfil",
+      "85+ skills categorizadas con links a GitHub",
+      "47 herramientas nativas documentadas + 3 plataformas externas",
+      "Changelog de Hermes Agent v0.5.0 a v0.10.0",
+      "10 videos tutoriales y 22 trucos categorizados",
+      "Plugins built-in, skins nativos, proyectos comunitarios e integraciones",
+      "Avisos de seguridad y modal de descargo de responsabilidad"
+    ]
+  }
+]

@@ -1228,3 +1228,32 @@ tr:hover td { background: var(--accent-subtle); }
   background: #f8f9fa;
   border-color: #e2e8f0;
 }
+
+/* ─── Tab Navigation ─── */
+.tab-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.tab-link {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.tab-link:hover {
+  color: var(--text);
+  background: var(--bg-inset);
+}
+
+.tab-link.active {
+  color: var(--accent-text);
+  background: var(--accent-subtle);
+}

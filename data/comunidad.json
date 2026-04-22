@@ -25,6 +25,56 @@
       "url": "https://github.com/NousResearch/hermes-agent/tree/main/hermes_cli/plugins"
     }
   ],
+  "community_plugins": [
+    {
+      "name": "hermes-lcm",
+      "desc": "Lossless Context Management plugin para Hermes Agent. Gestión de contexto basada en DAG.",
+      "badge": "comunidad",
+      "url": "https://github.com/stephenschoettler/hermes-lcm",
+      "author": "stephenschoettler",
+      "stars": "258"
+    },
+    {
+      "name": "ClawMem",
+      "desc": "Capa de memoria on-device para agentes IA. Compatible con Hermes, Claude Code y OpenClaw.",
+      "badge": "comunidad",
+      "url": "https://github.com/yoloshii/ClawMem",
+      "author": "yoloshii",
+      "stars": "130"
+    },
+    {
+      "name": "icarus-plugin",
+      "desc": "Self-memory y modelos de reemplazo para agentes Hermes. Recuerda tu workflow.",
+      "badge": "comunidad",
+      "url": "https://github.com/esaradev/icarus-plugin",
+      "author": "esaradev",
+      "stars": "98"
+    },
+    {
+      "name": "hermes-web-search-plus",
+      "desc": "Búsqueda web multi-proveedor para Hermes Agent (Serper, Tavily, Exa, Q).",
+      "badge": "comunidad",
+      "url": "https://github.com/robbyczgw-cla/hermes-web-search-plus",
+      "author": "robbyczgw-cla",
+      "stars": "42"
+    },
+    {
+      "name": "hermes-notification",
+      "desc": "Notificaciones nativas del sistema (banner + sonido) cuando contesta la IA.",
+      "badge": "comunidad",
+      "url": "https://github.com/itgoyo/hermes-notification",
+      "author": "itgoyo",
+      "stars": "7"
+    },
+    {
+      "name": "hermes-cloudflare",
+      "desc": "Cloudflare Browser Rendering plugin para crawling, scraping y screenshot.",
+      "badge": "comunidad",
+      "url": "https://github.com/raulvidis/hermes-cloudflare",
+      "author": "raulvidis",
+      "stars": "6"
+    }
+  ],
   "skins": [
     {
       "name": "default",
@@ -119,6 +169,41 @@
       "stars": "331",
       "desc": "Desktop companion para instalar, configurar y chatear con Hermes Agent.",
       "url": "https://github.com/fathah/hermes-desktop"
+    },
+    {
+      "name": "Hermes HUD UI",
+      "author": "joeynyc",
+      "stars": "1.1K",
+      "desc": "Monitor de consciencia web para Hermes — el agente IA con memoria persistente.",
+      "url": "https://github.com/joeynyc/hermes-hudui"
+    },
+    {
+      "name": "Scarf",
+      "author": "awizemann",
+      "stars": "258",
+      "desc": "GUI nativo de macOS para el agente IA Hermes — multi-ventana, multi-servidor.",
+      "url": "https://github.com/awizemann/scarf"
+    },
+    {
+      "name": "Hermes Studio",
+      "author": "JPeetz",
+      "stars": "45",
+      "desc": "Web UI & dashboard para Hermes Agent — chat, memoria, skills, terminal.",
+      "url": "https://github.com/JPeetz/Hermes-Studio"
+    },
+    {
+      "name": "Pyrate UI",
+      "author": "pyrate-llama",
+      "stars": "32",
+      "desc": "Interface web glassmorphic para Hermes Agent — tu asistente IA self-hosted.",
+      "url": "https://github.com/pyrate-llama/hermes-ui"
+    },
+    {
+      "name": "Hermes Desktop Windows",
+      "author": "acegraphx",
+      "stars": "15",
+      "desc": "Port nativo Windows (WPF) de Hermes Desktop — workspace SSH para Windows.",
+      "url": "https://github.com/acegraphx/hermes-desktop-win"
     }
   ],
   "integraciones": [
@@ -151,6 +236,11 @@
       "name": "Nix",
       "desc": "Flake completo, módulo NixOS con contenedor persistente.",
       "url": "https://github.com/NousResearch/hermes-agent/tree/main/nix"
+    },
+    {
+      "name": "Awesome Hermes Agent",
+      "desc": "Curated list de skills, tools, integraciones y recursos para Hermes Agent.",
+      "url": "https://github.com/0xNyk/awesome-hermes-agent"
     }
   ]
 }

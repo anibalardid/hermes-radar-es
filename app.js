@@ -57,6 +57,7 @@ async function loadData() {
     herramientas: 'data/herramientas.json',
     trucos: 'data/trucos.json',
     versions: 'data/versions.json',
+    radar: 'data/radar.json',
     videos: 'data/videos.json',
     comunidad: 'data/comunidad.json',
   };
@@ -419,6 +420,25 @@ function renderComunidad() {
         </div>
 
         <div class="category-section">
+          <div class="category-label">🔌 Plugins de la comunidad</div>
+          <div class="cards-grid">
+            ${DATA.comunidad.community_plugins ? DATA.comunidad.community_plugins.map(p => `
+              <div class="card">
+                <div class="card-title">${p.name}</div>
+                <div class="card-desc">${p.desc}</div>
+                <div class="card-meta">
+                  <span class="badge badge-info">${p.badge}</span>
+                  <a href="${p.url}" target="_blank" rel="noopener" class="badge badge-muted" style="text-decoration:none">${p.author} · ${p.stars} ⭐ ↗</a>
+                </div>
+              </div>
+            `).join('') : ''}
+          </div>
+          <div class="content-narrow mt-2">
+            <blockquote><strong>Plugins de terceros no están auditados por Nous Research.</strong> Revisá siempre el código antes de habilitarlos.</blockquote>
+          </div>
+        </div>
+
+        <div class="category-section">
           <div class="category-label">🎨 Skins / Themes del CLI</div>
           <div class="cards-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))">
             ${DATA.comunidad.skins.map(s => `
@@ -469,30 +489,68 @@ function renderComunidad() {
     </div>`;
 }
 
-// ─── Novedades ───
-function renderNovedades() {
+// ─── Changelog del sitio (radar) ───
+function renderRadar() {
+  if (!DATA.radar) return '<div class="container"><section class="section"><p>Cargando...</p></section></div>';
   return `
     <div class="container">
       <section class="section">
         <div class="section-header">
-          <div class="section-label">Novedades</div>
-          <h1 class="section-title">Historial de versiones</h1>
-          <p class="section-desc">Cada release de Hermes Agent con sus features principales y cambios. Actualizado a v0.10.0.</p>
+          <div class="section-label">Changelog del sitio</div>
+          <h1 class="section-title">Cambios de Hermes Radar</h1>
+          <p class="section-desc">Historial de actualizaciones de esta pagina web. Actualizado a v${DATA.config ? DATA.config.HR_VER : '?'}</p>
         </div>
         <div class="content-narrow">
           <div class="timeline">
-            ${DATA.versions.map(v => `
-              <div class="timeline-item${v.current ? ' current' : ''}">
-                <div class="timeline-title">${v.version} — "${v.name}"</div>
-                <div class="timeline-date">${v.date} · ${v.tag}</div>
+            ${DATA.radar.map(r => `
+              <div class="timeline-item${r.current ? ' current' : ''}">
+                <div class="timeline-title">${r.version} — "${r.name}"</div>
+                <div class="timeline-date">${r.date}</div>
                 <div class="timeline-body">
-                  <ul>${v.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+                  <ul>${r.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
                 </div>
               </div>
             `).join('')}
           </div>
         </div>
       </section>
+    </div>`;
+}
+
+// ─── Novedades (Hermes Agent releases) ───
+function renderNovedades() {
+  const tab = window.location.hash.includes('tab=radar') ? 'radar' : 'hermes';
+  return `
+    <div class="container">
+      <section class="section">
+        <div class="section-header">
+          <div class="section-label">Novedades</div>
+          <h1 class="section-title">Historial de versiones</h1>
+          <p class="section-desc">Dos timelines separadas: releases de Hermes Agent y cambios de esta pagina.</p>
+        </div>
+        <div class="content-narrow">
+          <div class="tab-nav">
+            <a href="#/novedades?tab=hermes" class="tab-link ${tab === 'hermes' ? 'active' : ''}">Hermes Agent</a>
+            <a href="#/novedades?tab=radar" class="tab-link ${tab === 'radar' ? 'active' : ''}">Hermes Radar (sitio)</a>
+          </div>
+          ${tab === 'hermes' ? renderNovedadesHermes() : renderRadar()}
+        </div>
+      </section>
+    </div>`;
+}
+
+function renderNovedadesHermes() {
+  return `
+    <div class="timeline">
+      ${DATA.versions.map(v => `
+        <div class="timeline-item${v.current ? ' current' : ''}">
+          <div class="timeline-title">${v.version} — "${v.name}"</div>
+          <div class="timeline-date">${v.date} · ${v.tag}</div>
+          <div class="timeline-body">
+            <ul>${v.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+          </div>
+        </div>
+      `).join('')}
     </div>`;
 }
 
