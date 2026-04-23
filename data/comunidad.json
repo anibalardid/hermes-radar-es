@@ -199,6 +199,20 @@
       "url": "https://github.com/pyrate-llama/hermes-ui"
     },
     {
+      "name": "hermes-arxiv-agent",
+      "author": "genggng",
+      "stars": "41",
+      "desc": "Skill para buscar y leer papers de arXiv directamente desde Hermes Agent.",
+      "url": "https://github.com/genggng/hermes-arxiv-agent"
+    },
+    {
+      "name": "hermes-agent-rs",
+      "author": "Lumio-Research",
+      "stars": "19",
+      "desc": "Version de Hermes Agent reescrita en Rust. Focalizado en performance y bajo uso de memoria.",
+      "url": "https://github.com/Lumio-Research/hermes-agent-rs"
+    },
+    {
       "name": "Hermes Desktop Windows",
       "author": "acegraphx",
       "stars": "15",
@@ -241,6 +255,11 @@
       "name": "Awesome Hermes Agent",
       "desc": "Curated list de skills, tools, integraciones y recursos para Hermes Agent.",
       "url": "https://github.com/0xNyk/awesome-hermes-agent"
+    },
+    {
+      "name": "Hermes Kanban Bridge",
+      "desc": "Plugin obsidian para convertir Hermes en project manager autonomo. Gestiona boards, track blockers, y run rituals via REST bridge local.",
+      "url": "https://github.com/ShaneRobinett/hermes-kanban-bridge"
     }
   ]
 }
