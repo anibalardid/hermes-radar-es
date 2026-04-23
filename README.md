@@ -2,6 +2,8 @@
 
 Base de conocimiento y novedades de Hermes Agent en español.
 
+🌐 **Sitio web**: [anibalardid.github.io/hermes-radar-es](https://anibalardid.github.io/hermes-radar-es/)
+
 ## Secciones
 
 - **Inicio** — Hero con stats y acceso rápido a todas las secciones
