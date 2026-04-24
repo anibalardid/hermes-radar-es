@@ -20,3 +20,13 @@ curl -s "https://api.github.com/search/repositories?q=hermes-workspace+OR+hermes
   > "$EXPORT_DIR/gh_projects.json" 2>/dev/null || echo "WARN: projects search failed"
 
 echo "=== Skills Discovery Complete: $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
+
+# Merge datos al sitio e intentar push si hay cambios
+cd "$BASE_DIR" && python3 scripts/merge-data.py skills
+CHANGES=$(git diff --name-only || true)
+if echo "$CHANGES" | grep -q "comunidad.json"; then
+  git add data/comunidad.json data/skills-discovery/ 2>/dev/null || true
+  git commit -m "data: sync community plugins/projects/skins from discovery" || true
+  git push origin main || true
+  echo "[skills-discovery] Comunidad sync pushed"
+fi
