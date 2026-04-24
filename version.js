@@ -1,1 +1,1 @@
-var HR_VERSION = '0.1.5';
+var HR_VERSION = '0.1.7';
