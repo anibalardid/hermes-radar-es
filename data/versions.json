@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.11.0",
+    "tag": "v2026.4.23",
+    "date": "23 abril 2026",
+    "name": "v0.11.0",
+    "current": true,
+    "highlights": [
+      "New Ink-based TUI — <code>hermes --tui</code> is now a full React/Ink rewrite of the interactive CLI, with a Python JSON-RPC backend (<code>tui_gateway</code>). Sticky composer, live streaming with OSC-52 clipboard support, stable picker keys, status bar with per-turn stopwatch and git branch, <code>/clear</code> confirm, light-theme preset, and a ",
+      "Transport ABC + Native AWS Bedrock — Format conversion and HTTP transport were extracted from <code>run_agent.py</code> into a pluggable <code>agent/transports/</code> layer. <code>AnthropicTransport</code>, <code>ChatCompletionsTransport</code>, <code>ResponsesApiTransport</code>, and <code>BedrockTransport</code> each own their own format convers",
+      "Five new inference paths — Native NVIDIA NIM (#11774), Arcee AI (#9276), Step Plan (#13893), Google Gemini CLI OAuth (#11270), and Vercel ai-gateway with pricing + dynamic discovery (#13223 — @jerilynzheng). Plus Gemini routed through the native AI Studio API for better performance (#12674).",
+      "GPT-5.5 over Codex OAuth — OpenAI's new GPT-5.5 reasoning model is now available through your ChatGPT Codex OAuth, with live model discovery wired into the model picker so new OpenAI releases show up without catalog updates. (#14720)",
+      "QQBot — 17th supported platform — Native QQBot adapter via QQ Official API v2, with QR scan-to-configure setup wizard, streaming cursor, emoji reactions, and DM/group policy gating that matches WeCom/Weixin parity. (#9364, #11831)",
+      "Plugin surface expanded — Plugins can now register slash commands (<code>register_command</code>), dispatch tools directly (<code>dispatch_tool</code>), block tool execution from hooks (<code>pre_tool_call</code> can veto), rewrite tool results (<code>transform_tool_result</code>), transform terminal output (<code>transform_terminal_output</code>),",
+      "<code>/steer</code> — mid-run agent nudges — <code>/steer <prompt></code> injects a note that the running agent sees after its next tool call, without interrupting the turn or breaking prompt cache. For when you want to course-correct an agent in-flight. (#12116)"
+    ]
+  },
+  {
     "version": "v0.10.0",
     "tag": "v2026.4.16",
     "date": "16 abril 2026",
     "name": "The Tool Gateway Release",
-    "current": true,
+    "current": false,
     "highlights": [
       "Nous Tool Gateway: suscriptores de Nous Portal pueden usar búsqueda web (Firecrawl), generación de imágenes (FAL/FLUX 2 Pro), texto-a-voz (OpenAI TTS) y automatización de navegador sin claves API adicionales",
       "Configuración <code>use_gateway</code> por herramienta",
@@ -26,7 +42,8 @@
       "Termux/Android — ejecutar Hermes nativamente en Android",
       "16 plataformas de mensajería soportadas",
       "487 commits, 269 PRs mergeados, 167 issues resueltas, 24 contribuidores"
-    ]
+    ],
+    "current": false
   },
   {
     "version": "v0.8.0",
@@ -42,7 +59,8 @@
       "Approval Buttons en Slack y Telegram",
       "MCP OAuth 2.1 PKCE + escaneo de malware OSV",
       "209 PRs mergeados, 82 issues resueltas"
-    ]
+    ],
+    "current": false
   },
   {
     "version": "v0.7.0",
@@ -56,7 +74,8 @@
       "Inline Diff Previews — diffs visuales en operaciones de archivos",
       "Secret Exfiltration Blocking — bloqueo de exfiltración de secretos",
       "168 PRs, 46 issues resueltas"
-    ]
+    ],
+    "current": false
   },
   {
     "version": "v0.6.0",
@@ -70,7 +89,8 @@
       "Ordered Fallback Provider Chain — failover automático entre proveedores",
       "Feishu/Lark y WeCom Platform Support",
       "95 PRs, 16 issues resueltas"
-    ]
+    ],
+    "current": false
   },
   {
     "version": "v0.5.0",
@@ -85,6 +105,7 @@
       "Plugin lifecycle hooks (<code>pre_llm_call</code>, <code>post_llm_call</code>, etc.)",
       "Nix flake — build reproducible, módulo NixOS",
       "50+ correcciones de seguridad y confiabilidad"
-    ]
+    ],
+    "current": false
   }
 ]
