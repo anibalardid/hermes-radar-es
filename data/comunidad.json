@@ -241,6 +241,14 @@
       "url": "https://github.com/HermesBotApp/hermes-api-legacy",
       "author": "HermesBotApp",
       "stars": "6"
+    },
+    {
+      "name": "memory-plugin",
+      "desc": "Ladybug memory plugin for Hermes Agent",
+      "badge": "comunidad",
+      "url": "https://github.com/Ladybug-Memory/hermes-memory-plugin",
+      "author": "Ladybug-Memory",
+      "stars": "7"
     }
   ],
   "skins": [
