@@ -249,6 +249,22 @@
       "url": "https://github.com/Ladybug-Memory/hermes-memory-plugin",
       "author": "Ladybug-Memory",
       "stars": "7"
+    },
+    {
+      "name": "remnic",
+      "desc": "Local-first memory plugin for AI agents including OpenClaw, Hermes, Codex, Claude Code and more. LLM-powered extraction, plain markdown storage, hybrid search via QMD. Gives agents persistent long-term memory across conversations.",
+      "badge": "comunidad",
+      "url": "https://github.com/joshuaswarren/remnic",
+      "author": "joshuaswarren",
+      "stars": "66"
+    },
+    {
+      "name": "local-rig-accounting",
+      "desc": "Hermes Agent plugin: transparent per-token cost accounting for local LLM inference rigs",
+      "badge": "comunidad",
+      "url": "https://github.com/GumbyEnder/hermes-local-rig-accounting",
+      "author": "GumbyEnder",
+      "stars": "10"
     }
   ],
   "skins": [
@@ -458,6 +474,14 @@
       "url": "https://github.com/hxsteric/mercury",
       "author": "hxsteric",
       "stars": "8"
+    },
+    {
+      "name": "waifu-sprites",
+      "desc": "Lightweight web-based display server and TTS engine for local AI agents. Sprite rendering, expression controls, agent hook integration, and Hermes Agent symlink compatibility. Single source of truth for waifu UI.",
+      "badge": "comunidad",
+      "url": "https://github.com/waifuai/waifu-sprites",
+      "author": "waifuai",
+      "stars": "9"
     }
   ],
   "integraciones": [
