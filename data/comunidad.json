@@ -265,6 +265,22 @@
       "url": "https://github.com/GumbyEnder/hermes-local-rig-accounting",
       "author": "GumbyEnder",
       "stars": "10"
+    },
+    {
+      "name": "agent-analytics-plugin",
+      "desc": "Hermes dashboard plugin for Agent Analytics — account connection, project selection, and read-only analytics inside Hermes.",
+      "badge": "comunidad",
+      "url": "https://github.com/Agent-Analytics/agent-analytics-hermes-plugin",
+      "author": "Agent-Analytics",
+      "stars": "11"
+    },
+    {
+      "name": "chronos-forge",
+      "desc": "Chronos Forge theme + Hermes Command Center plugin for Hermes Agent. Theme-agnostic dashboard cockpit.",
+      "badge": "comunidad",
+      "url": "https://github.com/joeynyc/hermes-chronos-forge",
+      "author": "joeynyc",
+      "stars": "8"
     }
   ],
   "skins": [
@@ -482,6 +498,14 @@
       "url": "https://github.com/waifuai/waifu-sprites",
       "author": "waifuai",
       "stars": "9"
+    },
+    {
+      "name": "agent-analytics-plugin",
+      "desc": "Hermes dashboard plugin for Agent Analytics — account connection, project selection, and read-only analytics inside Hermes.",
+      "badge": "comunidad",
+      "url": "https://github.com/Agent-Analytics/agent-analytics-hermes-plugin",
+      "author": "Agent-Analytics",
+      "stars": "11"
     }
   ],
   "integraciones": [
