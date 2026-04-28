@@ -1,9 +1,20 @@
 [
   {
+    "version": "v0.1.9",
+    "date": "28 abril 2026",
+    "name": "15 features avanzados de Hermes Agent",
+    "current": true,
+    "highlights": [
+      "Nueva categoría 'Features avanzados que casi nadie usa' en Trucos con 15 features traducidos",
+      "Features incluidos: /personality, /insights, /snapshot, /branch, /rollback, /btw, /steer, /yolo, /fast, /reasoning, modelos auxiliares, gateway multi-plataforma, /voice, cron+webhooks, skills como slash commands",
+      "Traducción y adaptación del post viral de @sharbel en X"
+    ]
+  },
+  {
     "version": "v0.1.4",
     "date": "22 abril 2026",
     "name": "Descubrimiento de videos en español",
-    "current": true,
+    "current": false,
     "highlights": [
       "Nuevo cron hermes-radar-youtube: monitorea YouTube y descubre videos en español/subtítulos",
       "Agregados 2 videos nuevos en español: tutorial de Metics Media y review de Kilian Párraga",
