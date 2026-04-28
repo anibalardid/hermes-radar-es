@@ -27,7 +27,7 @@
     "cat": "Configuración",
     "title": "Variables de entorno sensibles",
     "desc": "Nunca pongas API keys directamente en config.yaml. Usá variables de entorno y <code>.env</code> para proteger tus credenciales.",
-    "code": "# .env (NO commitear esto)\nANTHROPIC_API_KEY=sk-ant-...\nOPENAI_API_KEY=sk-...\nOPENROUTER_API_KEY=sk-or-...\n\n# config.yaml referencia las env vars\nanthropic:\n  api_key: ${ANTHROPIC_API_KEY}"
+    "code": "# .env (NO commitear esto)\nANTHROPIC_API_KEY=sk-ant...\n\n# config.yaml referencia las env vars\nanthropic:\n  api_key: ${ANTHROPIC_API_KEY}"
   },
   {
     "cat": "Automatización",
@@ -130,5 +130,95 @@
     "title": "Modo verbose para debugging",
     "desc": "Si algo no funciona como esperás, activá el modo verbose para ver exactamente qué está haciendo Hermes internally.",
     "code": "# Activar verbose logging\nhermes chat --verbose\n\n# O en config.yaml\nlogging:\n  level: debug\n  file: ~/.hermes/hermes.log\n\n# Ver logs en tiempo real\n!tail -f ~/.hermes/hermes.log"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "/personality + SOUL.md",
+    "desc": "Hermes lee un archivo llamado SOUL.md al iniciar. Lo que pongas ahí define la voz de tu agente para siempre: cómo habla, qué refuse, para quién escribe. Usá /personality para cambiar entre personas nombradas en plena conversación.",
+    "code": "# Crear ~/.hermes/SOUL.md\n---\nname: Experto\ndescription: Escribes como un experto senior en X\n---\n\n# Tu prompt base\nVas a responder como un experto senior con 10+ años de experiencia...\n\n# En plena conversación\n/personality Experto"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "MEMORY.md + USER.md",
+    "desc": "Dos archivos persistentes que Hermes lee en cada sesión. MEMORY.md es la libreta del agente sobre tus proyectos. USER.md es lo que sabe de vos: tu rol, tu tono, tus preferencias. Indexado con FTS5 para buscar memorias de hace semanas.",
+    "code": "# MEMORY.md - sobre tus proyectos\n- Proyecto X usa API v2\n- Repo principal: github.com/...\n\n# USER.md - sobre ti\n- Rol: developer indie\n- Preferencias: respuestas concisas\n- Stack: Python, JS, Hermes"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "/insights [días]",
+    "desc": "Analytics de cada sesión que has corrido. Qué proyectos gastaron más tokens, qué proveedores costaron cuánto, en qué se trabó el agente, a qué volvés siempre.",
+    "code": "# Último mes de un vistazo\n/insights 30\n\n# Última semana\n/insights 7\n\n# Total general\n/insights"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "/snapshot",
+    "desc": "Guardá el estado completo de Hermes antes de algo riesgoso. Experimentá, rompé cosas, /snapshot restore <id> para volver al estado anterior.",
+    "code": "# Guardar estado actual\n/snapshot save\n\n# Listar snapshots\n/snapshot list\n\n# Restaurar un snapshot\n/snapshot restore <id>\n\n# Restaurar el último\n/snapshot restore latest"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "/branch (alias /fork)",
+    "desc": "Branché la sesión actual para explorar un camino diferente sin perder el original. Como git para conversaciones. Probá un enfoque más arriesgado sin perder tu buen contexto.",
+    "code": "# Crear branch paralelo\n/branch\n\n# Listar branches\n/branch list\n\n# Cambiar a otro branch\n/branch switch <id>"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "/rollback",
+    "desc": "Checkpoints del filesystem. ¿El agente hizo una edición destructiva y rompió tu código? No alcances por git, simplemente /rollback. Hermes guarda checkpoints de cada archivo que tocó.",
+    "code": "# Listar checkpoints\n/rollback list\n\n# Restaurar un checkpoint\n/rollback <id>\n\n# Restaurar el último\n/rollback latest"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "/btw",
+    "desc": "Pregunta efímera que usa el contexto de sesión pero no llama herramientas y no se persiste. El comando de 'check rápido sin contaminar mi hilo principal'.",
+    "code": "# Preguntar algo rapido\n/btw ¿este código está bien?\n\n# Another example\n/btw cómo harías esto en Python?"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "/steer y /queue",
+    "desc": "Vas 3 tool calls adentro de una tarea larga y te dá cuenta que el agente usa la API de prod cuando debería usar staging. No mates la ejecución. /steer dice qué hacer en la próxima llamada sin interrumpir.",
+    "code": "# Cambiar comportamiento para próxima tool call\n/steer usar la API de staging, no prod\n\n# Encolar siguiente acción\n/queue optimizar este query"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "/yolo, /fast, /reasoning",
+    "desc": "Tres power toggles: /yolo salta todas las aprobaciones (usar con cuidado), /fast cambia a procesamiento rápido de OpenAI o modo fast de Anthropic, /reasoning configura el nivel de esfuerzo para modelos o-style.",
+    "code": "# Skip aproba de comandos peligrosos\n/yolo\n\n# Modo rápido (baja latencia)\n/fast\n\n# Nivel de razonamiento\n/reasoning medium  # none/low/medium/high"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "/model [--provider] [--global]",
+    "desc": "Hermes es provider-agnóstico. Un comando cambia el modelo sin reiniciar. Anthropic Opus 4.7, OpenAI Codex, OpenRouter, NVIDIA NIM, Kimi, Gemini, Bedrock, y más.",
+    "code": "# Cambiar a Opus 4.7\n/model anthropic:claude-opus-4-7\n\n# Cambiar a un modelo más barato\n/model openrouter:kimi-k2.6\n\n# Cambiar globalmente\n/model --global openai:gpt-4o"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "Modelos auxiliares",
+    "desc": "El agente no solo responde prompts. También comprime contexto, resume sesiones, genera títulos, corre tareas de visión. Asigná un modelo diferente a cada tarea secundaria.",
+    "code": "# config.yaml\nauxiliary_models:\n  compression: anthropic:claude-haiku-4-5\n  summarization: openai:gpt-4o\n  title_generation: anthropic:claude-haiku-4-5"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "Gateway de 17 plataformas",
+    "desc": "Telegram, Discord, Slack, WhatsApp, Signal, Email, SMS, Matrix, Feishu, WeCom, DingTalk, Home Assistant, QQBot, CLI y voz. Un solo proceso Hermes maneja todas.",
+    "code": "# Iniciar gateway\nhermes gateway start\n\n# Configurar plataformas en config.yaml"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "/voice",
+    "desc": "Voz en tiempo real en CLI, Telegram DMs, Discord channels. Escribí /voice y hablá. Útil cuando caminas, manejás, o estás lejos del teclado.",
+    "code": "# Iniciar modo voz\n/voice start\n\n# Detener modo voz\n/voice stop"
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "Cron + webhooks",
+    "desc": "Hermes tiene un scheduler incorporado. Programá en lenguaje natural y decile dónde entregar el resultado. Combiná con webhooks para el inverso: servicios externos empujan payloads.",
+    "code": "# Crear cron job\ncronjob create --schedule \"0 9 * * *\" --prompt \"Resumen diario\"\n\n# Crear webhook subscription\nwebhook create --url /hooks/github --event push --prompt \"Nuevo commit\""
+  },
+  {
+    "cat": "Features avanzados que casi nadie usa",
+    "title": "Skills son slash commands",
+    "desc": "Hermes viene con 100+ skills y cada una es un slash command. Escribí / y se autocompleta. También podés crear los tuyos propios.",
+    "code": "# Skills incorporados - escribí / y autocompleta\n/architecture-diagram  # Diagramas SVG\n/excalidraw           # Diagramas a mano\n/test-driven-development\n/systematic-debugging\n/linear\n/imessage\n/youtube-content\n\n# Crear tu propio skill\nhermes skill create mi-skill"
   }
 ]
