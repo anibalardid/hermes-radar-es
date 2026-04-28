@@ -281,6 +281,14 @@
       "url": "https://github.com/joeynyc/hermes-chronos-forge",
       "author": "joeynyc",
       "stars": "8"
+    },
+    {
+      "name": "feishu-plugin",
+      "desc": "Hermes Feishu plugin aligned with the official OpenClaw Lark/Feishu interaction model.",
+      "badge": "comunidad",
+      "url": "https://github.com/hellowind777/hermes-feishu-plugin",
+      "author": "hellowind777",
+      "stars": "8"
     }
   ],
   "skins": [
@@ -506,6 +514,22 @@
       "url": "https://github.com/Agent-Analytics/agent-analytics-hermes-plugin",
       "author": "Agent-Analytics",
       "stars": "11"
+    },
+    {
+      "name": "achievements",
+      "desc": "Achievement system for the Hermes Dashboard, generated from real Hermes session history.",
+      "badge": "comunidad",
+      "url": "https://github.com/PCinkusz/hermes-achievements",
+      "author": "PCinkusz",
+      "stars": "9"
+    },
+    {
+      "name": "dashboard-theme-porcelain",
+      "desc": "A porcelain-themed dashboard theme for Hermes Agent",
+      "badge": "comunidad",
+      "url": "https://github.com/thedavidweng/hermes-dashboard-theme-porcelain",
+      "author": "thedavidweng",
+      "stars": "9"
     }
   ],
   "integraciones": [
