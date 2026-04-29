@@ -29,8 +29,8 @@ echo "=== X Monitor Started: $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
 TEK_FILE="$EXPORT_DIR/teknium_raw.txt"
 SEARCH_FILE="$EXPORT_DIR/search_raw.txt"
 
-bird user-tweets @Teknium -n 20 > "$TEK_FILE" 2>/dev/null || { echo "WARN: bird user-tweets fallo"; }
-bird search "hermes agent" -n 20 > "$SEARCH_FILE" 2>/dev/null || { echo "WARN: bird search fallo"; }
+bird user-tweets @Teknium -n 20 > "$TEK_FILE" || echo "WARN: bird user-tweets failed with exit $?"
+bird search "hermes agent" -n 20 > "$SEARCH_FILE" || echo "WARN: bird search failed with exit $?"
 
 # --- 2. Extraer IDs de tweets ---
 extract_ids() {

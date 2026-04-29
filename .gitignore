@@ -15,3 +15,4 @@ data/x-monitoring/*.txt
 data/hermes-updates/*.json
 data/hermes-updates/*.txt
 data/skills-discovery/*.json
+data/youtube-monitoring/searches_raw.json

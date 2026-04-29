@@ -52,8 +52,12 @@ case "${1:-all}" in
   skills)
     bash scripts/skills-discovery.sh >> data/cron.log 2>&1 && mark_job_run "3cf83981ce35" "ok" || mark_job_run "3cf83981ce35" "error"
     ;;
+  deploy)
+    # Usa --skip-audit para entorno cron (no interactivo)
+    bash scripts/deploy.sh "chore: nightly site deploy $(date +%Y-%m-%d)" --skip-audit >> data/cron.log 2>&1 && mark_job_run "site-update" "ok" || mark_job_run "site-update" "error"
+    ;;
   *)
-    echo "Uso: $0 [all|x|updates|youtube|skills]"
+    echo "Uso: $0 [all|x|updates|youtube|skills|deploy]"
     exit 1
     ;;
 esac
