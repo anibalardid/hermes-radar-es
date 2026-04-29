@@ -12,6 +12,7 @@ __pycache__/
 *.pyc
 data/x-monitoring/*.json
 data/x-monitoring/*.txt
+data/x-monitoring/.last_check.sum
 data/hermes-updates/*.json
 data/hermes-updates/*.txt
 data/skills-discovery/*.json
