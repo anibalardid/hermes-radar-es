@@ -289,6 +289,22 @@
       "url": "https://github.com/hellowind777/hermes-feishu-plugin",
       "author": "hellowind777",
       "stars": "8"
+    },
+    {
+      "name": "labyrinth",
+      "desc": "Read-only observability plugin for Hermes Agent: journeys, crossings, guideposts, and reports.",
+      "badge": "comunidad",
+      "url": "https://github.com/stainlu/hermes-labyrinth",
+      "author": "stainlu",
+      "stars": "204"
+    },
+    {
+      "name": "plugins",
+      "desc": "Hermes Dashboard plugins — Honcha Memory, and more",
+      "badge": "comunidad",
+      "url": "https://github.com/GumbyEnder/hermes-plugins",
+      "author": "GumbyEnder",
+      "stars": "9"
     }
   ],
   "skins": [
@@ -530,6 +546,22 @@
       "url": "https://github.com/thedavidweng/hermes-dashboard-theme-porcelain",
       "author": "thedavidweng",
       "stars": "9"
+    },
+    {
+      "name": "Republic",
+      "desc": "Daedalus — a Hermes Agent dashboard theme in the visual language of The Designers Republic and Marathon (Kurppa Hosk × Bungie, 2026). Near-black, bone, radioactive yellow.",
+      "badge": "comunidad",
+      "url": "https://github.com/JustinPerea/Republic",
+      "author": "JustinPerea",
+      "stars": "12"
+    },
+    {
+      "name": "chronos-forge",
+      "desc": "Chronos Forge theme + Hermes Command Center plugin for Hermes Agent. Theme-agnostic dashboard cockpit.",
+      "badge": "comunidad",
+      "url": "https://github.com/joeynyc/hermes-chronos-forge",
+      "author": "joeynyc",
+      "stars": "10"
     }
   ],
   "integraciones": [
