@@ -88,10 +88,13 @@ if [ "$found_tek" -gt 0 ] || [ "$found_search" -gt 0 ]; then
     echo "## Nuevos tweets busqueda"
     echo "$NEW_SEARCH" | tr ' ' '\n' | grep '.' || true
   } > "$EXPORT_DIR/last_run_report.md"
-  echo "=== EXIT 1 (hay novedades) ==="
-  exit 1
+  
+  # Guardar flag para que crons puedan chequear sin revisar exit code
+  echo "found=$found_tek:$found_search" > "$EXPORT_DIR/.last_check.sum"
+  echo "=== X Monitor Complete: $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
+  echo "Nuevos tweets: $found_tek @Teknium + $found_search busqueda"
 fi
 
 echo "Sin novedades."
-echo "=== EXIT 0 (ok) ==="
+echo "=== X Monitor Complete: $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
 exit 0
