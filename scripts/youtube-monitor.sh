@@ -140,7 +140,13 @@ done
 
 # 4. Guardar
 echo "$all_entries" > "$RAW_FILE"
-echo "$filtered" | jq 'unique_by(.id) | sort_by(.upload_date) | reverse' > "$OUTPUT_FILE"
+count=$(echo "$filtered" | jq 'length')
+if [ "$count" -gt 0 ]; then
+  echo "$filtered" | jq 'unique_by(.id) | sort_by(.upload_date) | reverse' > "$OUTPUT_FILE"
+  echo "[youtube-monitor] Saved $count discoveries to $OUTPUT_FILE"
+else
+  echo "[youtube-monitor] No new Spanish content found; preserving existing $OUTPUT_FILE"
+fi
 
 count=$(echo "$filtered" | jq 'length')
 echo "=== YouTube Monitor Complete: $(date -u +%Y-%m-%dT%H:%M:%SZ) ==="
