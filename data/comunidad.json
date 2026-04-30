@@ -562,6 +562,14 @@
       "url": "https://github.com/joeynyc/hermes-chronos-forge",
       "author": "joeynyc",
       "stars": "10"
+    },
+    {
+      "name": "plugins",
+      "desc": "Hermes Dashboard plugins — Honcha Memory, and more",
+      "badge": "comunidad",
+      "url": "https://github.com/GumbyEnder/hermes-plugins",
+      "author": "GumbyEnder",
+      "stars": "20"
     }
   ],
   "integraciones": [
