@@ -319,6 +319,11 @@
       "desc": "Custom skins (visual themes) para el CLI de Hermes. 251 estrellas. Comunidad.",
       "visual": "Temas visuales custom para el CLI de Hermes",
       "url": "https://github.com/joeynyc/hermes-skins"
+    },
+    {
+      "name": "skinwalker",
+      "url": "https://github.com/nosleepcassette/skinwalker",
+      "author": "nosleepcassette"
     }
   ],
   "projects": [
