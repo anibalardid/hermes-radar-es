@@ -493,10 +493,15 @@ function renderComunidad() {
           </div>
           ${DATA.comunidad.projects.map(p => `
             <div class="list-item">
-              <div class="list-item-icon">⭐</div>
+              <div class="list-item-icon">${p.swarm ? '🤖' : '⭐'}</div>
               <div class="list-item-content">
-                <div class="list-item-title"><a href="${p.url}" target="_blank" rel="noopener">${p.name}</a> <span class="badge badge-muted">${p.stars}</span></div>
+                <div class="list-item-title">
+                  <a href="${p.url}" target="_blank" rel="noopener">${p.name}</a>
+                  <span class="badge badge-muted">${p.stars}</span>
+                  ${p.swarm ? '<span class="badge badge-accent">🤖 Swarm</span>' : ''}
+                </div>
                 <div class="list-item-desc">por ${p.author} — ${p.desc}</div>
+                ${p.swarm_features ? `<div class="list-item-features" style="margin-top:0.4rem;font-size:0.8rem;opacity:0.8">${p.swarm_features.map(f => `• ${f}`).join(' · ')}</div>` : ''}
               </div>
             </div>
           `).join('')}

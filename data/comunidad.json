@@ -428,11 +428,19 @@
       "url": "https://github.com/nesquena/hermes-webui"
     },
     {
-      "name": "Hermes Workspace",
+      "name": "Hermes Workspace + Swarm",
       "author": "outsourc-e",
       "stars": "1.9K",
-      "desc": "Workspace web nativo — chat, terminal, navegador de memoria, gestor de skills, panel inspector.",
-      "url": "https://github.com/outsourc-e/hermes-workspace"
+      "desc": "Workspace web nativo + Swarm multi-agente v2.1 — Orchestrator Chat, Multi-Agent Control Plane, Kanban TaskBoard, Reports + Inbox, TUI View integrado.",
+      "url": "https://github.com/outsourc-e/hermes-workspace",
+      "swarm": true,
+      "swarm_features": [
+        "Unlimited Hermes Agents con 1 Orchestrator",
+        "Multi-Agent Control Plane",
+        "Kanban TaskBoard",
+        "Reports + Inbox",
+        "TUI View integrado"
+      ]
     },
     {
       "name": "Pyrate UI",

@@ -1,9 +1,22 @@
 [
   {
+    "version": "v0.1.10",
+    "date": "1 mayo 2026",
+    "name": "Hermes Workspace Swarm v2.1 — Multi-agente listo para producción",
+    "current": true,
+    "highlights": [
+      "@outsourc-e lanzó Hermes Workspace Swarm v2.1: gestión de múltiples Hermes Agents con Orchestrator, Kanban TaskBoard, Reports + Inbox y TUI View.",
+      "Features: Unlimited Hermes Agents, 1 Orchestrator, 0 Humans, Multi-Agent Control Plane.",
+      "Hermes Workspace actualizado a Swarm mode: los 12 agentes de swarm hicieron dogfooding antes del release.",
+      "Cheatsheet oficial añadido a la sección Handbook.",
+      "Bump de versión a v0.1.10"
+    ]
+  },
+  {
     "version": "v0.1.9",
     "date": "28 abril 2026",
     "name": "15 features avanzados de Hermes Agent",
-    "current": true,
+    "current": false,
     "highlights": [
       "Nueva categoría 'Features avanzados que casi nadie usa' en Trucos con 15 features traducidos",
       "Features incluidos: /personality, /insights, /snapshot, /branch, /rollback, /btw, /steer, /yolo, /fast, /reasoning, modelos auxiliares, gateway multi-plataforma, /voice, cron+webhooks, skills como slash commands",
