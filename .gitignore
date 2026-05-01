@@ -17,3 +17,6 @@ data/hermes-updates/*.json
 data/hermes-updates/*.txt
 data/skills-discovery/*.json
 data/youtube-monitoring/searches_raw.json
+data/youtube-monitoring/discoveries.json
+data/x-monitoring/.last_search.ids
+data/x-monitoring/.last_teknium.ids
