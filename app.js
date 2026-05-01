@@ -250,6 +250,10 @@ function renderHandbook() {
           <p class="section-desc">Todo lo que necesitás saber para empezar: qué es, cómo funciona, cómo instalarlo y cómo sacarle provecho.</p>
         </div>
         <div class="content-narrow">
+          <div class="callout" style="margin-bottom: 1.5rem;">
+            <img src="hermes-cheatsheet.jpg" alt="Hermes Agent Cheatsheet" style="max-width:100%; border-radius:8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
+            <p style="margin-top:0.75rem; font-size:0.875rem; opacity:0.7;">Referencia rápida de Hermes Agent — Crédito: comunidad de X/Twitter</p>
+          </div>
           <div class="toc">
             <div class="toc-title">Contenido</div>
             <ul class="toc-list">
