@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.12.0",
+    "tag": "v2026.4.30",
+    "date": "30 abril 2026",
+    "name": "v0.12.0",
+    "current": true,
+    "highlights": [
+      "Autonomous Curator — <code>hermes curator</code> runs as a background agent on the gateway's cron ticker (7-day cycle default). It grades your skill library, consolidates related skills, prunes dead ones, and writes per-run reports to <code>logs/curator/run.json</code> + <code>REPORT.md</code>. Archived skills are classified consolidated-vs-pruned ",
+      "Self-improvement loop — substantially upgraded — The background review fork (the core of Hermes' self-improvement: after each turn it decides what memories/skills to save or update) is now class-first (rubric-based rather than free-form), active-update biased (prefers the skill the agent just loaded), handles <code>references/</code>/<code>template",
+      "Skill integrations — major expansion — ComfyUI v5 with official CLI + REST + hardware-gated local install, moved from optional to built-in by default (#17610, #17631, #17734). TouchDesigner-MCP bundled by default, expanded with GLSL, post-FX, audio, geometry, and 9 new reference docs (#16753, #16624, #16768 — @kshitijk4poor + @SHL0MS). Humanizer sk",
+      "LM Studio — first-class provider — upgraded from a custom-endpoint alias to a full-blown native provider: dedicated auth, <code>hermes doctor</code> checks, reasoning transport, live <code>/models</code> listing. (Salvage of @kshitijk4poor's #17061.) (#17102)",
+      "Four more new inference providers — GMI Cloud (first-class, salvage of #11955 — @isaachuangGMICLOUD), Azure AI Foundry with auto-detection, MiniMax OAuth with PKCE browser flow (salvage #15203), Tencent Tokenhub (salvage of #16860). (#16663, #15845, #17524, #16960)",
+      "Pluggable gateway platforms + Microsoft Teams — the gateway is now a plugin host. Drop-in messaging adapters live outside the core, and Microsoft Teams is the first plugin-shipped platform. (Salvage of #17664.) (#17751, #17828)",
+      "Tencent 元宝 (Yuanbao) — 18th messaging platform — native gateway adapter with text + media delivery. (#16298, #17424)"
+    ]
+  },
+  {
     "version": "v0.11.0",
     "tag": "v2026.4.23",
     "date": "23 abril 2026",
     "name": "v0.11.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "New Ink-based TUI — <code>hermes --tui</code> is now a full React/Ink rewrite of the interactive CLI, with a Python JSON-RPC backend (<code>tui_gateway</code>). Sticky composer, live streaming with OSC-52 clipboard support, stable picker keys, status bar with per-turn stopwatch and git branch, <code>/clear</code> confirm, light-theme preset, and a ",
       "Transport ABC + Native AWS Bedrock — Format conversion and HTTP transport were extracted from <code>run_agent.py</code> into a pluggable <code>agent/transports/</code> layer. <code>AnthropicTransport</code>, <code>ChatCompletionsTransport</code>, <code>ResponsesApiTransport</code>, and <code>BedrockTransport</code> each own their own format convers",
