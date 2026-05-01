@@ -251,7 +251,9 @@ function renderHandbook() {
         </div>
         <div class="content-narrow">
           <div class="callout" style="margin-bottom: 1.5rem;">
-            <img src="hermes-cheatsheet.jpg" alt="Hermes Agent Cheatsheet" style="max-width:100%; border-radius:8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
+            <a href="hermes-cheatsheet.jpg" target="_blank" rel="noopener">
+              <img src="hermes-cheatsheet.jpg" alt="Hermes Agent Cheatsheet" style="max-width:100%; border-radius:8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
+            </a>
             <p style="margin-top:0.75rem; font-size:0.875rem; opacity:0.7;">Referencia rápida de Hermes Agent — Crédito: comunidad de X/Twitter</p>
           </div>
           <div class="toc">
