@@ -254,7 +254,7 @@ function renderHandbook() {
             <a href="hermes-cheatsheet.jpg" target="_blank" rel="noopener">
               <img src="hermes-cheatsheet.jpg" alt="Hermes Agent Cheatsheet" style="max-width:100%; border-radius:8px; box-shadow: 0 4px 24px rgba(0,0,0,0.4);">
             </a>
-            <p style="margin-top:0.75rem; font-size:0.875rem; opacity:0.7;">Referencia rápida de Hermes Agent — Crédito: comunidad de X/Twitter</p>
+            <p style="margin-top:0.75rem; font-size:0.875rem; opacity:0.7;">Referencia rápida de Hermes Agent — Creado por <a href="https://x.com/EtherCoins" target="_blank" rel="noopener">@EtherCoins</a></p>
           </div>
           <div class="toc">
             <div class="toc-title">Contenido</div>
