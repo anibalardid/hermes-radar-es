@@ -305,6 +305,14 @@
       "url": "https://github.com/GumbyEnder/hermes-plugins",
       "author": "GumbyEnder",
       "stars": "9"
+    },
+    {
+      "name": "waifu-sprites",
+      "desc": "Codex Pets for hermes-agent. Dashboard plugin with multi-pet support.",
+      "badge": "comunidad",
+      "url": "https://github.com/waifuai/waifu-sprites",
+      "author": "waifuai",
+      "stars": "11"
     }
   ],
   "skins": [
@@ -588,6 +596,14 @@
       "url": "https://github.com/GumbyEnder/hermes-plugins",
       "author": "GumbyEnder",
       "stars": "20"
+    },
+    {
+      "name": "TokenTracker",
+      "desc": "Track token usage across 13 AI agent CLIs — Claude Code, Codex, Cursor, Gemini, Kiro, OpenCode, OpenClaw, Every Code, Hermes, GitHub Copilot, Kimi Code, CodeBuddy, oh-my-pi. Local-first, zero-config, with a beautiful dashboard, native macOS menu bar app, and 4 desktop widgets.",
+      "badge": "comunidad",
+      "url": "https://github.com/mm7894215/TokenTracker",
+      "author": "mm7894215",
+      "stars": "375"
     }
   ],
   "integraciones": [
