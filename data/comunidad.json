@@ -604,6 +604,14 @@
       "url": "https://github.com/mm7894215/TokenTracker",
       "author": "mm7894215",
       "stars": "375"
+    },
+    {
+      "name": "war-room",
+      "desc": "UI layer for the native Hermes orchestration features",
+      "badge": "comunidad",
+      "url": "https://github.com/Naroh091/hermes-war-room",
+      "author": "Naroh091",
+      "stars": "55"
     }
   ],
   "integraciones": [
