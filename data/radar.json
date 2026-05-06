@@ -1,9 +1,21 @@
 [
   {
+    "version": "v0.1.12",
+    "date": "6 mayo 2026",
+    "name": "Masterclass 4h de Mani Kanasani",
+    "current": true,
+    "highlights": [
+      "Nuevo video: 'Master HERMES AGENT in 4 HOURS' por Mani Kanasani — masterclass completa de 4 horas construyendo un sistema de ventas automatizado con Hermes Agent, Supabase, Resend y Apify.",
+      "Incluye arquitectura Mission Control, cron jobs, SDR auto-mejorable, pipeline de campañas y Skill Builder.",
+      "El video está en inglés con subtítulos traducibles automáticamente al español.",
+      "Bump de versión a v0.1.12"
+    ]
+  },
+  {
     "version": "v0.1.10",
     "date": "1 mayo 2026",
     "name": "Hermes Workspace Swarm v2.1 — Multi-agente listo para producción",
-    "current": true,
+    "current": false,
     "highlights": [
       "@outsourc-e lanzó Hermes Workspace Swarm v2.1: gestión de múltiples Hermes Agents con Orchestrator, Kanban TaskBoard, Reports + Inbox y TUI View.",
       "Features: Unlimited Hermes Agents, 1 Orchestrator, 0 Humans, Multi-Agent Control Plane.",
