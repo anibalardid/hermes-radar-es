@@ -313,6 +313,22 @@
       "url": "https://github.com/waifuai/waifu-sprites",
       "author": "waifuai",
       "stars": "11"
+    },
+    {
+      "name": "maestro",
+      "desc": "Conductor for cross-agent coding workflows: structured memory, handoffs, plan-approve-execute coordination, and an evidence-based trust substrate across external CLIs (Codex, Claude Code, Hermes).",
+      "badge": "comunidad",
+      "url": "https://github.com/ReinaMacCredy/maestro",
+      "author": "ReinaMacCredy",
+      "stars": "151"
+    },
+    {
+      "name": "hermesworld",
+      "desc": "HermesWorld dashboard plugin for Hermes Agent",
+      "badge": "comunidad",
+      "url": "https://github.com/outsourc-e/hermesworld",
+      "author": "outsourc-e",
+      "stars": "19"
     }
   ],
   "skins": [
