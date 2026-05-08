@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.13.0",
+    "tag": "v2026.5.7",
+    "date": "7 mayo 2026",
+    "name": "v0.13.0",
+    "current": true,
+    "highlights": [
+      "Multi-agent Kanban — delegate to an AI team that actually finishes — Spin up a durable board, drop tasks on it, and let multiple Hermes workers pick them up, hand off, and close them out. Heartbeats, reclaim, zombie detection, retry budgets, and a hallucination gate keep the team honest. One install, many kanbans. (#17805, #19653, #20232, #20332, #",
+      "<code>/goal</code> — the agent doesn't forget what you asked it to do — Lock the agent onto a target and it stays on task across turns. The Ralph loop as a first-class primitive. (#18262, #18275, #21287)",
+      "Show it a video — new <code>video_analyze</code> tool for native video understanding on Gemini and compatible multimodal models. (@alt-glitch) (#19301)",
+      "Clone a voice — xAI Custom Voices lands as a TTS provider with voice cloning support. (@alt-glitch) (#18776)",
+      "Hermes speaks your language — static gateway + CLI messages translate to 7 locales: Chinese, Japanese, German, Spanish, French, Ukrainian, and Turkish. Docs site gains a Chinese (zh-Hans) locale. (#20231, #20329, #20467, #20474, #20430, #20431)",
+      "Google Chat — the 20th messaging platform — plus a generic platform-plugin hooks surface so third-party adapters drop in without touching core (IRC and Teams migrated). (#21306, #21331)",
+      "Sessions survive restarts — gateway bounces mid-agent, <code>/update</code> restarts, source-file reloads — conversations auto-resume when the gateway comes back. (#21192)"
+    ]
+  },
+  {
     "version": "v0.12.0",
     "tag": "v2026.4.30",
     "date": "30 abril 2026",
     "name": "v0.12.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "Autonomous Curator — <code>hermes curator</code> runs as a background agent on the gateway's cron ticker (7-day cycle default). It grades your skill library, consolidates related skills, prunes dead ones, and writes per-run reports to <code>logs/curator/run.json</code> + <code>REPORT.md</code>. Archived skills are classified consolidated-vs-pruned ",
       "Self-improvement loop — substantially upgraded — The background review fork (the core of Hermes' self-improvement: after each turn it decides what memories/skills to save or update) is now class-first (rubric-based rather than free-form), active-update biased (prefers the skill the agent just loaded), handles <code>references/</code>/<code>template",
