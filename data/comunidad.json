@@ -329,6 +329,14 @@
       "url": "https://github.com/outsourc-e/hermesworld",
       "author": "outsourc-e",
       "stars": "19"
+    },
+    {
+      "name": "web-search-plus",
+      "desc": "Flagship multi-provider search and extraction stack for OpenClaw, Hermes Agent, MCP clients, and native plugins.",
+      "badge": "comunidad",
+      "url": "https://github.com/robbyczgw-cla/web-search-plus",
+      "author": "robbyczgw-cla",
+      "stars": "20"
     }
   ],
   "skins": [
@@ -628,6 +636,14 @@
       "url": "https://github.com/Naroh091/hermes-war-room",
       "author": "Naroh091",
       "stars": "55"
+    },
+    {
+      "name": "hermesworld",
+      "desc": "HermesWorld dashboard plugin for Hermes Agent",
+      "badge": "comunidad",
+      "url": "https://github.com/outsourc-e/hermesworld",
+      "author": "outsourc-e",
+      "stars": "21"
     }
   ],
   "integraciones": [
