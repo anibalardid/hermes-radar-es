@@ -644,6 +644,14 @@
       "url": "https://github.com/outsourc-e/hermesworld",
       "author": "outsourc-e",
       "stars": "21"
+    },
+    {
+      "name": "desktop-os1",
+      "desc": "Hermes Desktop - OS1 Edition: native macOS workspace for Hermes Agent on Orgo cloud computers and SSH hosts",
+      "badge": "comunidad",
+      "url": "https://github.com/nickvasilescu/hermes-desktop-os1",
+      "author": "nickvasilescu",
+      "stars": "26"
     }
   ],
   "integraciones": [
