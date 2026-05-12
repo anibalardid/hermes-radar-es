@@ -337,6 +337,14 @@
       "url": "https://github.com/robbyczgw-cla/web-search-plus",
       "author": "robbyczgw-cla",
       "stars": "20"
+    },
+    {
+      "name": "model-router",
+      "desc": "Automatic cost-aware model routing plugin for Hermes Agent",
+      "badge": "comunidad",
+      "url": "https://github.com/open-world-project/model-router",
+      "author": "open-world-project",
+      "stars": "17"
     }
   ],
   "skins": [
@@ -652,6 +660,14 @@
       "url": "https://github.com/nickvasilescu/hermes-desktop-os1",
       "author": "nickvasilescu",
       "stars": "26"
+    },
+    {
+      "name": "Hermes-Dashboard-Themes",
+      "desc": "Readable custom dashboard themes for Hermes Agent.",
+      "badge": "comunidad",
+      "url": "https://github.com/yakuzadevopps/Hermes-Dashboard-Themes",
+      "author": "yakuzadevopps",
+      "stars": "23"
     }
   ],
   "integraciones": [
