@@ -345,6 +345,22 @@
       "url": "https://github.com/open-world-project/model-router",
       "author": "open-world-project",
       "stars": "17"
+    },
+    {
+      "name": "cronalytics",
+      "desc": "Hermes Agent plugin for cron observability. Turn hidden automation into visible spend.",
+      "badge": "comunidad",
+      "url": "https://github.com/8bit64k/cronalytics",
+      "author": "8bit64k",
+      "stars": "33"
+    },
+    {
+      "name": "otel",
+      "desc": "OTel Plugin for Hermes Agent",
+      "badge": "comunidad",
+      "url": "https://github.com/briancaffey/hermes-otel",
+      "author": "briancaffey",
+      "stars": "16"
     }
   ],
   "skins": [
@@ -668,6 +684,14 @@
       "url": "https://github.com/yakuzadevopps/Hermes-Dashboard-Themes",
       "author": "yakuzadevopps",
       "stars": "23"
+    },
+    {
+      "name": "hermesd",
+      "desc": "TUI monitoring dashboard for Hermes AI agent",
+      "badge": "comunidad",
+      "url": "https://github.com/mudrii/hermesd",
+      "author": "mudrii",
+      "stars": "42"
     }
   ],
   "integraciones": [
