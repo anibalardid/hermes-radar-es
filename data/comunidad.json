@@ -361,6 +361,14 @@
       "url": "https://github.com/briancaffey/hermes-otel",
       "author": "briancaffey",
       "stars": "16"
+    },
+    {
+      "name": "yantrikdb-plugin",
+      "desc": "YantrikDB memory provider for NousResearch/hermes-agent — self-maintaining memory with canonicalization, contradiction tracking, recency ranking, and explainable recall.",
+      "badge": "comunidad",
+      "url": "https://github.com/yantrikos/yantrikdb-hermes-plugin",
+      "author": "yantrikos",
+      "stars": "18"
     }
   ],
   "skins": [
