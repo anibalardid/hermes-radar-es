@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.14.0",
+    "tag": "v2026.5.16",
+    "date": "16 mayo 2026",
+    "name": "v0.14.0",
+    "current": true,
+    "highlights": [
+      "xAI Grok via SuperGrok OAuth — and grok-4.3 jumps to a 1M context window — If you pay for SuperGrok, you can now use Grok inside Hermes by signing in with your xAI account — no API key, no separate billing. The wire-through also bumps grok-4.3 to a 1M token context window, so you can drop whole codebases or research corpora into a single prompt. In",
+      "OpenAI-compatible local proxy for OAuth providers — Run <code>hermes proxy</code> and you get a <code>http://localhost:port</code> endpoint that speaks the OpenAI API but is backed by whichever OAuth provider you're signed into — Claude Pro, ChatGPT Pro, SuperGrok. Now any tool that expects an OpenAI-compatible endpoint (Codex CLI, Aider, Cline, Co",
+      "<code>x_search</code> — first-class X (Twitter) search tool — The agent can now search X directly without installing a skill or wiring up a custom integration. Search the timeline, find threads, surface specific posts — straight from the chat. Auth with either your X OAuth login or an API key, whichever you have. (#26763)",
+      "Microsoft Teams — end-to-end — Hermes can now read messages from Teams and post back. The full Microsoft Graph stack lands together: auth + client foundation, a webhook listener that receives Teams events, a pipeline plugin runtime, and outbound delivery. Wire up the bot once, then chat to your agent from any Teams channel, DM, or group. (salvages ",
+      "Debloating wave — lighter installs, less you don't use — A clean <code>pip install hermes-agent</code> used to pull down everything: every messaging adapter SDK, every image-gen SDK, every voice/TTS provider, whether you used them or not. Now those heavy backends (Slack / Matrix / Feishu / DingTalk adapters, hindsight client, codex app-server, Pixv",
+      "<code>pip install hermes-agent && hermes</code> — Hermes Agent is now a real PyPI package. No more cloning the repo or running shell installers — one pip command and you're running. The wheel ships with the Ink TUI bundle and the shell launcher, so the full experience comes out of the box. (salvage of #26350) (#26593, #26148)",
+      "Cross-session 1h Claude prompt cache — When you use Claude through Anthropic, OpenRouter, or Nous Portal, the prompt prefix (system prompt, skills, memory) now caches for an hour across sessions. Start a <code>/new</code> session and the first response comes back faster and cheaper because the cache is still warm from your last session. Background "
+    ]
+  },
+  {
     "version": "v0.13.0",
     "tag": "v2026.5.7",
     "date": "7 mayo 2026",
     "name": "v0.13.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "Multi-agent Kanban — delegate to an AI team that actually finishes — Spin up a durable board, drop tasks on it, and let multiple Hermes workers pick them up, hand off, and close them out. Heartbeats, reclaim, zombie detection, retry budgets, and a hallucination gate keep the team honest. One install, many kanbans. (#17805, #19653, #20232, #20332, #",
       "<code>/goal</code> — the agent doesn't forget what you asked it to do — Lock the agent onto a target and it stays on task across turns. The Ralph loop as a first-class primitive. (#18262, #18275, #21287)",
