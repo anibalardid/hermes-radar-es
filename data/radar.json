@@ -1,9 +1,22 @@
 [
   {
+    "version": "v0.1.13",
+    "date": "21 mayo 2026",
+    "name": "276 casos de uso reales de Hermes Agent — artículo en X por @InduTripat82427",
+    "current": true,
+    "highlights": [
+      "Artículo en X compilando 276 casos de uso reales de Hermes Agents, con 89K vistas y 750+ likes en 1 día.",
+      "Cubre categorías: research & inteligencia, creación de contenido, productividad personal, desarrollo, business ops, seguridad.",
+      "La comunidad lo llama 'el momento Linux de la IA autónoma': agentes en producción a escala real, no hype.",
+      "Incluye stacks comunes (Firecrawl + Browserbase + Google Workspace + GitHub + Obsidian) y patrones de automatización 24/7.",
+      "Ref: https://x.com/indutripat82427/status/2057017304144298383"
+    ]
+  },
+  {
     "version": "v0.1.12",
     "date": "6 mayo 2026",
     "name": "Masterclass 4h de Mani Kanasani",
-    "current": true,
+    "current": false,
     "highlights": [
       "Nuevo video: 'Master HERMES AGENT in 4 HOURS' por Mani Kanasani — masterclass completa de 4 horas construyendo un sistema de ventas automatizado con Hermes Agent, Supabase, Resend y Apify.",
       "Incluye arquitectura Mission Control, cron jobs, SDR auto-mejorable, pipeline de campañas y Skill Builder.",
