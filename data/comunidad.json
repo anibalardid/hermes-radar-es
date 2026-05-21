@@ -28,7 +28,7 @@
   "community_plugins": [
     {
       "name": "kanban",
-      "desc": "A dedicated Obsidian plugin + Hermes skill that turns Hermes into an autonomous project executor using Kanban boards inside your Obsidian vault.",
+      "desc": "Plugin Obsidian + skill Hermes que convierte a Hermes en ejecutor autónomo de proyectos con Kanban.",
       "badge": "comunidad",
       "url": "https://github.com/GumbyEnder/hermes-kanban",
       "author": "GumbyEnder",
@@ -36,7 +36,7 @@
     },
     {
       "name": "skill-factory",
-      "desc": " A meta-skill plugin for Nous Research's Hermes AI agent that watches your workflows and automatically turns them into reusable skills.  Every time you work with Hermes and solve something — setting up a project, debugging code, creating a PR — that   workflow disappears at the end of the session. You have to explain it again next time.",
+      "desc": "Plugin que observa tus workflows y los convierte automáticamente en skills reutilizables.",
       "badge": "comunidad",
       "url": "https://github.com/Romanescu11/hermes-skill-factory",
       "author": "Romanescu11",
@@ -84,7 +84,7 @@
     },
     {
       "name": "papersgpt-for-zotero",
-      "desc": "A powerful Zotero AI and MCP plugin with ChatGPT, Gemini 3.1, Claude, DeepSeek V4, Grok, OpenRouter, Kimi 2.5, GLM 5, SiliconFlow, GPT-oss, Gemma 4, Qwen 3.5",
+      "desc": "Plugin multi-modelo para Zotero con ChatGPT, Claude, Gemini, DeepSeek y más.",
       "badge": "comunidad",
       "url": "https://github.com/papersgpt/papersgpt-for-zotero",
       "author": "papersgpt",
@@ -124,7 +124,7 @@
     },
     {
       "name": "enso-os",
-      "desc": "The first AI plugin that speaks first. Code-enforced learning + active forgetting + PAC (Proactive Accountability Challenge). Works with Claude Code, Gemini CLI, Hermes, OpenClaw.",
+      "desc": "Plugin de IA que habla primero. Aprendizaje forzado por código, olvido activo y PAC.",
       "badge": "comunidad",
       "url": "https://github.com/amazinglvxw/enso-os",
       "author": "amazinglvxw",
@@ -140,7 +140,7 @@
     },
     {
       "name": "metro-mcp",
-      "desc": "🚇 A plugin-based MCP server for React Native runtime debugging, inspection, and automation. Connects to Metro bundler via Chrome DevTools Protocol — no app code changes needed for most features.",
+      "desc": "Servidor MCP para debugging e inspección de React Native via Metro + Chrome DevTools Protocol.",
       "badge": "comunidad",
       "url": "https://github.com/steve228uk/metro-mcp",
       "author": "steve228uk",
@@ -156,7 +156,7 @@
     },
     {
       "name": "agent-rs",
-      "desc": "Hermes Agent rewritten in Rust: production-grade multi-platform AI agent runtime with gateway adapters, tool orchestration, MCP, memory plugins, and cost-safe autonomous loops.",
+      "desc": "Hermes Agent reescrito en Rust: runtime multi-plataforma con MCP, memoria y loops autónomos.",
       "badge": "comunidad",
       "url": "https://github.com/Lumio-Research/hermes-agent-rs",
       "author": "Lumio-Research",
@@ -204,7 +204,7 @@
     },
     {
       "name": "weather-plugin",
-      "desc": "Hermes Agent weather plugin — NWS-grade model imagery, NEXRAD radar, and verified meteorological calculations. Pure Rust stack.",
+      "desc": "Plugin meteorológico con imágenes satelitales NWS, radar NEXRAD y cálculos verificados.",
       "badge": "comunidad",
       "url": "https://github.com/FahrenheitResearch/hermes-weather-plugin",
       "author": "FahrenheitResearch",
@@ -220,7 +220,7 @@
     },
     {
       "name": "evey-bridge-plugin",
-      "desc": "Claude Code plugin for bridging with Evey (hermes-agent). Auto-checks messages, Mother Mode loop, quick status.",
+      "desc": "Bridge entre Claude Code y Evey (hermes-agent). Auto-checks, Mother Mode loop, status.",
       "badge": "comunidad",
       "url": "https://github.com/42-evey/evey-bridge-plugin",
       "author": "42-evey",
@@ -228,7 +228,7 @@
     },
     {
       "name": "api-legacy",
-      "desc": "Hermes-api is the official api of the hermes-core application. Create and run your own Discord bot plugins and give your guild a personal touch within a minute. ",
+      "desc": "Plugin oficial de Discord bots. Creá y ejecutá tus propios bots en minutos.",
       "badge": "comunidad",
       "url": "https://github.com/HermesBotApp/hermes-api-legacy",
       "author": "HermesBotApp",
@@ -244,7 +244,7 @@
     },
     {
       "name": "remnic",
-      "desc": "Local-first memory plugin for AI agents including OpenClaw, Hermes, Codex, Claude Code and more. LLM-powered extraction, plain markdown storage, hybrid search via QMD. Gives agents persistent long-term memory across conversations.",
+      "desc": "Memoria local-first para agentes IA. Extracción LLM, almacenamiento markdown, búsqueda híbrida.",
       "badge": "comunidad",
       "url": "https://github.com/joshuaswarren/remnic",
       "author": "joshuaswarren",
@@ -260,7 +260,7 @@
     },
     {
       "name": "agent-analytics-plugin",
-      "desc": "Hermes dashboard plugin for Agent Analytics — account connection, project selection, and read-only analytics inside Hermes.",
+      "desc": "Dashboard plugin para Agent Analytics — conexión de cuenta, proyectos y métricas en Hermes.",
       "badge": "comunidad",
       "url": "https://github.com/Agent-Analytics/agent-analytics-hermes-plugin",
       "author": "Agent-Analytics",
@@ -308,7 +308,7 @@
     },
     {
       "name": "maestro",
-      "desc": "Conductor for cross-agent coding workflows: structured memory, handoffs, plan-approve-execute coordination, and an evidence-based trust substrate across external CLIs (Codex, Claude Code, Hermes).",
+      "desc": "Orquestador cross-agent: memoria estructurada, handoffs, y coordinación plan-aprobar-ejecutar.",
       "badge": "comunidad",
       "url": "https://github.com/ReinaMacCredy/maestro",
       "author": "ReinaMacCredy",
@@ -356,7 +356,7 @@
     },
     {
       "name": "yantrikdb-plugin",
-      "desc": "YantrikDB memory provider for NousResearch/hermes-agent — self-maintaining memory with canonicalization, contradiction tracking, recency ranking, and explainable recall.",
+      "desc": "Memoria self-maintaining con canonicalización, detección de contradicciones y ranking.",
       "badge": "comunidad",
       "url": "https://github.com/yantrikos/yantrikdb-hermes-plugin",
       "author": "yantrikos",
@@ -390,7 +390,7 @@
   "projects": [
     {
       "name": "web-ui",
-      "desc": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics & channel configuration (Telegram, Discord, Slack, WhatsApp)",
+      "desc": "Dashboard web para Hermes Agent — chat multi-plataforma, sesiones, cron jobs y canales.",
       "badge": "comunidad",
       "url": "https://github.com/EKKOLearnAI/hermes-web-ui",
       "author": "EKKOLearnAI",
@@ -440,7 +440,7 @@
     },
     {
       "name": "ClawFleet",
-      "desc": "Deploy a fleet of AI agents (OpenClaw, Hermes) on your machine in 10 minutes — use your ChatGPT subscription, no cloud bills. Open-source fleet manager with browser dashboard.",
+      "desc": "Deployá una flota de agentes IA en 10 minutos usando tu subscripción de ChatGPT, sin costos cloud.",
       "badge": "comunidad",
       "url": "https://github.com/clawfleet/ClawFleet",
       "author": "clawfleet",
@@ -492,7 +492,7 @@
       "name": "Hermes Workspace + Swarm",
       "author": "outsourc-e",
       "stars": "1.9K",
-      "desc": "Workspace web nativo + Swarm multi-agente v2.1 — Orchestrator Chat, Multi-Agent Control Plane, Kanban TaskBoard, Reports + Inbox, TUI View integrado.",
+      "desc": "Workspace web + Swarm multi-agente v2.1: Orchestrator, Kanban, Reports, TUI integrado.",
       "url": "https://github.com/outsourc-e/hermes-workspace",
       "swarm": true,
       "swarm_features": [
@@ -559,7 +559,7 @@
     },
     {
       "name": "overwatch",
-      "desc": "Local dashboard for Hermes Agent with sessions, analytics, tools, automation, memory, and system visibility",
+      "desc": "Dashboard local para Hermes Agent: sesiones, analíticas, herramientas, automatización.",
       "badge": "comunidad",
       "url": "https://github.com/stephenschoettler/hermes-overwatch",
       "author": "stephenschoettler",
@@ -567,7 +567,7 @@
     },
     {
       "name": "hermesdashboard",
-      "desc": "Standalone web dashboard for the Hermes AI agent runtime — chat, sessions, memory, skills, secrets, config, and graph visualization.",
+      "desc": "Dashboard standalone para Hermes Agent — chat, sesiones, memoria, skills, config y grafos.",
       "badge": "comunidad",
       "url": "https://github.com/mojomast/hermesdashboard",
       "author": "mojomast",
@@ -583,7 +583,7 @@
     },
     {
       "name": "mercury",
-      "desc": "Mercury — Blockchain Cash Flow Analyzer | Hermes Agent Skill for multi-chain analysis, fraud detection, trading strategy & interactive WebGL dashboard",
+      "desc": "Analizador blockchain multi-chain: fraudes, trading y dashboard WebGL para Hermes Agent.",
       "badge": "comunidad",
       "url": "https://github.com/hxsteric/mercury",
       "author": "hxsteric",
@@ -591,7 +591,7 @@
     },
     {
       "name": "waifu-sprites",
-      "desc": "Lightweight web-based display server and TTS engine for local AI agents. Sprite rendering, expression controls, agent hook integration, and Hermes Agent symlink compatibility. Single source of truth for waifu UI.",
+      "desc": "Servidor de display web y TTS para agentes IA. Sprites, expresiones, integración con Hermes.",
       "badge": "comunidad",
       "url": "https://github.com/waifuai/waifu-sprites",
       "author": "waifuai",
@@ -599,7 +599,7 @@
     },
     {
       "name": "agent-analytics-plugin",
-      "desc": "Hermes dashboard plugin for Agent Analytics — account connection, project selection, and read-only analytics inside Hermes.",
+      "desc": "Dashboard plugin para Agent Analytics — conexión de cuenta, proyectos y métricas en Hermes.",
       "badge": "comunidad",
       "url": "https://github.com/Agent-Analytics/agent-analytics-hermes-plugin",
       "author": "Agent-Analytics",
@@ -623,7 +623,7 @@
     },
     {
       "name": "Republic",
-      "desc": "Daedalus — a Hermes Agent dashboard theme in the visual language of The Designers Republic and Marathon (Kurppa Hosk × Bungie, 2026). Near-black, bone, radioactive yellow.",
+      "desc": "Dashboard theme estilo The Designers Republic + Bungie. Near-black, amarillo radioactivo.",
       "badge": "comunidad",
       "url": "https://github.com/JustinPerea/Republic",
       "author": "JustinPerea",
@@ -647,7 +647,7 @@
     },
     {
       "name": "TokenTracker",
-      "desc": "Track token usage across 13 AI agent CLIs — Claude Code, Codex, Cursor, Gemini, Kiro, OpenCode, OpenClaw, Every Code, Hermes, GitHub Copilot, Kimi Code, CodeBuddy, oh-my-pi. Local-first, zero-config, with a beautiful dashboard, native macOS menu bar app, and 4 desktop widgets.",
+      "desc": "Trackeo de tokens en 13 CLIs de agentes IA. Dashboard, widgets desktop y menu bar macOS.",
       "badge": "comunidad",
       "url": "https://github.com/mm7894215/TokenTracker",
       "author": "mm7894215",
