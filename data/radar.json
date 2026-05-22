@@ -1,9 +1,21 @@
 [
   {
+    "version": "v0.1.14",
+    "date": "22 mayo 2026",
+    "name": "Curso COMPLETO de Hermes en español — Benjamín Cordero",
+    "current": true,
+    "highlights": [
+      "Nuevo video: 'HERMES 2026: Curso COMPLETO en Español' por Benjamín Cordero — 4+ horas, 56 temas, 8 proyectos en vivo.",
+      "Cubre: instalación, AGENTS.md, Skills, Telegram/WhatsApp/Gmail vía MCP, Meta Ads, fábrica de Reels, GoHighLevel y deploy en VPS.",
+      "Totalmente en español. Publicado hoy 22 de mayo de 2026.",
+      "Bump de versión a v0.1.14"
+    ]
+  },
+  {
     "version": "v0.1.13",
     "date": "21 mayo 2026",
     "name": "276 casos de uso reales de Hermes Agent — artículo en X por @InduTripat82427",
-    "current": true,
+    "current": false,
     "highlights": [
       "Artículo en X compilando 276 casos de uso reales de Hermes Agents, con 89K vistas y 750+ likes en 1 día.",
       "Cubre categorías: research & inteligencia, creación de contenido, productividad personal, desarrollo, business ops, seguridad.",
