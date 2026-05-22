@@ -37,7 +37,7 @@ for i in $(seq 0 $((count-1))); do
     if [ "$eid" = "$id" ]; then already="true"; break; fi
   done
   if [ "$already" = "false" ]; then
-    new_videos=$(echo "$new_videos" "$entry" | jq -s 'add // []')
+    new_videos=$(echo "$new_videos" | jq --argjson new "$entry" '. + [$new]')
   fi
 done
 
