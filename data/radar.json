@@ -1,9 +1,21 @@
 [
   {
+    "version": "v0.1.15",
+    "date": "22 mayo 2026",
+    "name": "Skill Bundles + BrowserBase browse.sh en Hermes Agent",
+    "current": true,
+    "highlights": [
+      "Skill Bundles: grupos de skills predefinidos (YAML) cargables con un solo slash command. Ideal para workflows repetibles.",
+      "BrowserBase browse.sh integrado: Hermes ahora accede a cientos de skills de navegación web mantenidos por la comunidad, reemplazando Playwright frágil con skills confiables.",
+      "Nuevos comandos: hermes skills search/browse para explorar hubs de skills (browse.sh, ClawHub, skills.sh).",
+      "Anunciado por @Teknium el 20 de mayo de 2026. Disponible con hermes update."
+    ]
+  },
+  {
     "version": "v0.1.14",
     "date": "22 mayo 2026",
     "name": "Curso COMPLETO de Hermes en español — Benjamín Cordero",
-    "current": true,
+    "current": false,
     "highlights": [
       "Nuevo video: 'HERMES 2026: Curso COMPLETO en Español' por Benjamín Cordero — 4+ horas, 56 temas, 8 proyectos en vivo.",
       "Cubre: instalación, AGENTS.md, Skills, Telegram/WhatsApp/Gmail vía MCP, Meta Ads, fábrica de Reels, GoHighLevel y deploy en VPS.",
