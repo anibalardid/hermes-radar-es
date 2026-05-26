@@ -401,6 +401,16 @@
       "name": "linux-ricing",
       "url": "https://github.com/H-Ali13381/hermes-linux-ricing",
       "author": "H-Ali13381"
+    },
+    {
+      "name": "dragula",
+      "url": "https://github.com/denki-san/hermes-skin-dragula",
+      "author": "denki-san"
+    },
+    {
+      "name": "Hamr",
+      "url": "https://github.com/hrabanazviking/Hamr",
+      "author": "hrabanazviking"
     }
   ],
   "projects": [
@@ -716,6 +726,22 @@
       "url": "https://github.com/tonbistudio/hermes-canvas",
       "author": "tonbistudio",
       "stars": "27"
+    },
+    {
+      "name": "cronalytics",
+      "desc": "Hermes Agent plugin for cron analytics and observability. The dashboard for agentic automations in Hermes.",
+      "badge": "comunidad",
+      "url": "https://github.com/8bit64k/cronalytics",
+      "author": "8bit64k",
+      "stars": "73"
+    },
+    {
+      "name": "tokentelemetry",
+      "desc": "Token telemetry dashboard for AI autonomous and coding agents — tracks tokens, sessions, tool calls & reasoning across Hermes agent, Claude Code, Gemini CLI, Codex & more. 100% local.",
+      "badge": "comunidad",
+      "url": "https://github.com/VasiHemanth/tokentelemetry",
+      "author": "VasiHemanth",
+      "stars": "43"
     }
   ],
   "integraciones": [
