@@ -742,6 +742,14 @@
       "url": "https://github.com/VasiHemanth/tokentelemetry",
       "author": "VasiHemanth",
       "stars": "43"
+    },
+    {
+      "name": "desktop",
+      "desc": "All-in-one cross-platform desktop app for Hermes Agent — bundles Python + hermes-agent + hermes-web-ui",
+      "badge": "comunidad",
+      "url": "https://github.com/sir1st/hermes-desktop",
+      "author": "sir1st",
+      "stars": "31"
     }
   ],
   "integraciones": [
