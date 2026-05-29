@@ -1,10 +1,42 @@
 [
   {
+    "version": "v0.15.0",
+    "tag": "v2026.5.28",
+    "date": "28 mayo 2026",
+    "name": "v0.15.0",
+    "current": true,
+    "highlights": [
+      "The Big Refactor — <code>run_agent.py</code> is no longer 16,000 lines — The file at the heart of Hermes — the agent conversation loop — has been reduced from 16,083 lines to 3,821 (-76%), with the extracted code redistributed across 14 cohesive modules under <code>agent/</code>. Behavior is unchanged: every extraction keeps a thin forwarder on <co",
+      "Kanban grew into a real multi-agent platform — 104 PRs end to end — Triage auto-decomposes one task into a tree of sub-tasks. <code>hermes kanban swarm</code> creates a full Swarm v1 graph in one command — root, parallel workers, gated verifier, gated synthesizer, shared blackboard. Tasks support per-task model overrides (cheap models for boilerpla",
+      "Cold-start perf wave keeps going — another second saved, 47% fewer per-turn function calls — Three new optimization rounds: defer <code>openai._base_client</code> import (-240ms / -17MB on every CLI invocation), hot-path optimizations cut 47% of per-conversation function calls (399k → 213k for 31-turn chat), defer compression-feasibility check (-17",
+      "<code>session_search</code> rebuilt — no LLM, no cost, 4,500× faster — The old <code>session_search</code> was an aux-LLM-powered tool that cost ~$0.30/call and took ~30 seconds to summarize three sessions, sometimes confabulating when the right session wasn't even in the FTS5 hit list. The new shape is one tool with three modes (discovery, scroll,",
+      "Promptware defense — Brainworm-class attacks blocked at three chokepoints — Inspired by recent Brainworm / Promptware Kill Chain research (Origin HQ, arxiv 2601.09625), Hermes now defends the context window against prompt-injection attacks that try to hijack the agent via tool output, recalled memory, or stored skills. Single source of truth (<code",
+      "Bitwarden Secrets Manager — one bootstrap token replaces every per-provider API key — Stop keeping plaintext API keys in <code>~/.hermes/.env</code>. Install Bitwarden Secrets Manager (<code>bws</code> auto-installs lazily on first use), point Hermes at it with one bootstrap token (<code>BWS_ACCESS_TOKEN</code>), and every credential you need comes",
+      "ntfy as the 23rd messaging platform — push notifications without an account — ntfy is the self-hostable push-notification service with no signup, no API key, just a topic URL. Hermes now adapts to it as a platform plugin (zero edits to core), so your agent can send you push notifications from any cron job, kanban task completion, or chat <code>send"
+    ]
+  },
+  {
+    "version": "v0.15.1",
+    "tag": "v2026.5.29",
+    "date": "29 mayo 2026",
+    "name": "v0.15.1",
+    "current": false,
+    "highlights": [
+      "Dashboard 401 reload loop fixed — In loopback mode the dashboard's identity probe (<code>/api/auth/me</code>) returns 401 by design, but v0.15.0's stale-token reload guard treated every 401 as a rotated session token and full-page-reloaded to pick up a fresh one. Every successful sibling call cleared the one-shot reload guard, so the page reload-lo",
+      "Docker dashboard <code>--insecure</code> is now an explicit env opt-in, never derived from bind host — Previously the Docker entrypoint inferred <code>--insecure</code> when the dashboard bound to a non-loopback host. That conflated \"I want LAN access\" with \"I want to disable the same-origin guard.\" The fix splits them: bind host is bind host, and ",
+      "MCP bare command resolution under Docker — MCP servers configured with bare commands (<code>npx</code>, <code>npm</code>, <code>node</code>) now resolve against <code>/usr/local/bin</code> so they actually launch inside the Docker image where those binaries live. v0.15.0 left these failing silently in containers when the agent's effective PATH didn",
+      "Skills page sidebar / source pills restored — A stale <code>useMemo</code> dependency in the new dashboard skills page collapsed the source pills and category sidebar to \"All\" only. Fixed; both surfaces now reflect the live catalog state. (#34194)",
+      "Kanban worker can be killed again — <code>SIGTERM</code> on a kanban worker was being absorbed by an intermediate process and the worker stayed running. Closes #28181. (#34045)",
+      "Full skills.sh catalog (858 → 19,932 entries) — The skills hub page was pulling a partial paginated catalog. The fetch now walks the sitemap, so all 19,932 skills.sh entries surface in the picker instead of just the first 858. (#34025)",
+      "<code>/api/auth/me</code> 401 no longer triggers reload loop in loopback mode — (#30698 — @austinpickett)"
+    ]
+  },
+  {
     "version": "v0.14.0",
     "tag": "v2026.5.16",
     "date": "16 mayo 2026",
     "name": "v0.14.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "xAI Grok via SuperGrok OAuth — and grok-4.3 jumps to a 1M context window — If you pay for SuperGrok, you can now use Grok inside Hermes by signing in with your xAI account — no API key, no separate billing. The wire-through also bumps grok-4.3 to a 1M token context window, so you can drop whole codebases or research corpora into a single prompt. In",
       "OpenAI-compatible local proxy for OAuth providers — Run <code>hermes proxy</code> and you get a <code>http://localhost:port</code> endpoint that speaks the OpenAI API but is backed by whichever OAuth provider you're signed into — Claude Pro, ChatGPT Pro, SuperGrok. Now any tool that expects an OpenAI-compatible endpoint (Codex CLI, Aider, Cline, Co",
