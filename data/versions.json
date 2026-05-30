@@ -1,10 +1,23 @@
 [
   {
+    "version": "v0.15.2",
+    "tag": "v2026.5.29.2",
+    "date": "29 mayo 2026",
+    "name": "v0.15.2",
+    "current": true,
+    "highlights": [
+      "Packaging): ship bundled plugin.yaml manifests in wheel and sdist (<code>827f7f07</code>)",
+      "@outsourc-e (1 commit)",
+      "@dparikh79 (1 commit)",
+      "@ousiaresearch (1 commit)"
+    ]
+  },
+  {
     "version": "v0.15.0",
     "tag": "v2026.5.28",
     "date": "28 mayo 2026",
     "name": "v0.15.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "The Big Refactor — <code>run_agent.py</code> is no longer 16,000 lines — The file at the heart of Hermes — the agent conversation loop — has been reduced from 16,083 lines to 3,821 (-76%), with the extracted code redistributed across 14 cohesive modules under <code>agent/</code>. Behavior is unchanged: every extraction keeps a thin forwarder on <co",
       "Kanban grew into a real multi-agent platform — 104 PRs end to end — Triage auto-decomposes one task into a tree of sub-tasks. <code>hermes kanban swarm</code> creates a full Swarm v1 graph in one command — root, parallel workers, gated verifier, gated synthesizer, shared blackboard. Tasks support per-task model overrides (cheap models for boilerpla",
