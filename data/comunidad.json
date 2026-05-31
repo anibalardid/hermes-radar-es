@@ -750,6 +750,14 @@
       "url": "https://github.com/sir1st/hermes-desktop",
       "author": "sir1st",
       "stars": "31"
+    },
+    {
+      "name": "suite",
+      "desc": "All-in-one Docker/Podman image: hermes-agent + hermes-webui + hermes-dashboard in a single container",
+      "badge": "comunidad",
+      "url": "https://github.com/sunnysktsang/hermes-suite",
+      "author": "sunnysktsang",
+      "stars": "34"
     }
   ],
   "integraciones": [
