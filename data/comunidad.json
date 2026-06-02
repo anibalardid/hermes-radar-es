@@ -758,6 +758,14 @@
       "url": "https://github.com/sunnysktsang/hermes-suite",
       "author": "sunnysktsang",
       "stars": "34"
+    },
+    {
+      "name": "wesight",
+      "desc": "Open-source desktop AI agent workspace with one-click Claude Code, Codex, OpenClaw, Hermes Agent setup and custom LLM model routing.",
+      "badge": "comunidad",
+      "url": "https://github.com/freestylefly/wesight",
+      "author": "freestylefly",
+      "stars": "348"
     }
   ],
   "integraciones": [
