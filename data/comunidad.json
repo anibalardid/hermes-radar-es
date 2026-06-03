@@ -377,6 +377,14 @@
       "url": "https://github.com/xraysight/hermes-memory-ui",
       "author": "xraysight",
       "stars": "20"
+    },
+    {
+      "name": "awesome-agent",
+      "desc": "A curated list of skills, plugins, tools, integrations, and resources for Hermes Agent by Nous Research",
+      "badge": "comunidad",
+      "url": "https://github.com/SamurAIGPT/awesome-hermes-agent",
+      "author": "SamurAIGPT",
+      "stars": "1654"
     }
   ],
   "skins": [
