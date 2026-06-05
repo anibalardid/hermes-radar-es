@@ -385,6 +385,14 @@
       "url": "https://github.com/SamurAIGPT/awesome-hermes-agent",
       "author": "SamurAIGPT",
       "stars": "1654"
+    },
+    {
+      "name": "agents",
+      "desc": "Open-source marketing agents for Claude, ChatGPT, Codex, OpenClaw & Hermes. One plugin: SEO audits, GEO / AI-visibility, local SEO, KOL pricing, social listening & competitive intelligence from read-only public data over MCP.",
+      "badge": "comunidad",
+      "url": "https://github.com/unifapi-agent/agents",
+      "author": "unifapi-agent",
+      "stars": "482"
     }
   ],
   "skins": [
