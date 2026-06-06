@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.16.0",
+    "tag": "v2026.6.5",
+    "date": "6 junio 2026",
+    "name": "v0.16.0",
+    "current": true,
+    "highlights": [
+      "Hermes Desktop — a real native app, not a terminal wrapper — This is the headline. There's now a <code>apps/desktop/</code> Electron application that installs like any other desktop app on macOS, Linux, and Windows, updates itself in place from inside the app, and gives you a polished GUI for everything Hermes does. You get a proper chat window wit",
+      "Run the desktop app against a remote Hermes — sign in with OAuth or username/password — The desktop app doesn't have to run Hermes locally. Point it at a remote Hermes gateway (your homelab, a hosted box, a teammate's server) and it connects over a secure WebSocket, authenticating with OAuth or a username/password login — no fiddling with <code>--i",
+      "The web dashboard is now a full admin panel — configure everything from the browser — The dashboard grew from \"view your sessions\" into a complete administration surface. There's a Channels page that sets up every gateway messaging platform (Telegram, Discord, Slack, etc.) from the browser, an admin panel for the MCP catalog with enable/disable tog",
+      "Hermes Desktop speaks Simplified Chinese — full 简体中文 in the chat GUI — The desktop app now ships a complete Simplified Chinese (简体中文) translation across every UI surface — the chat window itself, sidebar, settings, command center, cron, messaging, profiles, skills, agents, the lot. English stays the default; switch language in Appearance settings a",
+      "Leaner default skill set — Hermes ships only what you actually need — The bundled skill set got a deliberate trim. Skills that were redundant or dead are gone (<code>spotify</code> — superseded by the native Spotify plugin's 7 tools; <code>linear</code> — superseded by <code>hermes mcp install linear</code>; <code>kanban-codex-lane</code>, <code>de",
+      "NVIDIA/skills is now a built-in trusted skills tap — <code>NVIDIA/skills</code> joins OpenAI, Anthropic, and HuggingFace as a default trusted tap in the Skills Hub — discoverable, browsable, searchable, and auto-updating through the same pipeline. NVIDIA's verified skills for CUDA-X, AIQ, cuOpt and the rest of their product stack are one install aw",
+      "Quick Setup via Nous Portal — from install to first message in seconds — First-time setup was thinned down to two clear paths: Quick Setup (sign in with Nous Portal, get a model picker, start chatting immediately) or Full Setup (the detailed wizard for power users). <code>hermes portal</code> is now the human-readable alias that runs the full quick"
+    ]
+  },
+  {
     "version": "v0.15.2",
     "tag": "v2026.5.29.2",
     "date": "29 mayo 2026",
     "name": "v0.15.2",
-    "current": true,
+    "current": false,
     "highlights": [
       "Packaging): ship bundled plugin.yaml manifests in wheel and sdist (<code>827f7f07</code>)",
       "@outsourc-e (1 commit)",
