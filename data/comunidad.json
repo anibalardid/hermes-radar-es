@@ -782,6 +782,14 @@
       "url": "https://github.com/freestylefly/wesight",
       "author": "freestylefly",
       "stars": "348"
+    },
+    {
+      "name": "link-curator",
+      "desc": "Hermes profile pack for archiving and browsing curated links + web dashboard app",
+      "badge": "comunidad",
+      "url": "https://github.com/dodo-reach/hermes-link-curator",
+      "author": "dodo-reach",
+      "stars": "54"
     }
   ],
   "integraciones": [
