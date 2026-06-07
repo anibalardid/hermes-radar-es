@@ -393,6 +393,14 @@
       "url": "https://github.com/unifapi-agent/agents",
       "author": "unifapi-agent",
       "stars": "482"
+    },
+    {
+      "name": "awesome-skills",
+      "desc": "Curated, install-ready skills for Hermes Agent. 85 built-in + 78 community skills, plugins, and tools for the self-improving AI agent from Nous Research. Cross-compatible with Claude Code, OpenClaw, Cursor, and Windsurf.",
+      "badge": "comunidad",
+      "url": "https://github.com/ZeroPointRepo/awesome-hermes-skills",
+      "author": "ZeroPointRepo",
+      "stars": "23"
     }
   ],
   "skins": [
