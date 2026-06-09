@@ -401,6 +401,14 @@
       "url": "https://github.com/ZeroPointRepo/awesome-hermes-skills",
       "author": "ZeroPointRepo",
       "stars": "23"
+    },
+    {
+      "name": "Sibyl-Memory",
+      "desc": "Sibyl Memory Plugin for Hermes enables persistent memory across long time horizons, and enables relational context previously unavailable. Self-learning and auto-skill creation creates an agent that grows with you.  Local SQLite, structured tiers, no vector DB. SDK, CLI, MCP server, Hermes plugin.",
+      "badge": "comunidad",
+      "url": "https://github.com/Sibyl-Labs/Sibyl-Memory",
+      "author": "Sibyl-Labs",
+      "stars": "48"
     }
   ],
   "skins": [
