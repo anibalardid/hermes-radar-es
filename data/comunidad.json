@@ -811,6 +811,14 @@
       "url": "https://github.com/dodo-reach/hermes-link-curator",
       "author": "dodo-reach",
       "stars": "54"
+    },
+    {
+      "name": "agent-desktop",
+      "desc": "Hermes Desktop github nous research hermes ai  agent local ai ollama github download open source pc windows app installation setup workspace llm models runtime",
+      "badge": "comunidad",
+      "url": "https://github.com/desktop-hermes/hermes-agent-desktop",
+      "author": "desktop-hermes",
+      "stars": "71"
     }
   ],
   "integraciones": [
