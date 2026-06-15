@@ -819,6 +819,14 @@
       "url": "https://github.com/desktop-hermes/hermes-agent-desktop",
       "author": "desktop-hermes",
       "stars": "71"
+    },
+    {
+      "name": "studio",
+      "desc": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics ",
+      "badge": "comunidad",
+      "url": "https://github.com/EKKOLearnAI/hermes-studio",
+      "author": "EKKOLearnAI",
+      "stars": "7932"
     }
   ],
   "integraciones": [
