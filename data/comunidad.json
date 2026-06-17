@@ -827,6 +827,14 @@
       "url": "https://github.com/EKKOLearnAI/hermes-studio",
       "author": "EKKOLearnAI",
       "stars": "7932"
+    },
+    {
+      "name": "reevesagents",
+      "desc": "ReevesAgents can be used by agents to create/control different types of agents (ClaudeCode, Codex, Hermes Agent and others. It is a Free and Open Source workspace manager for AI CLI agents. No API key needed. No changes needed to your Agent.md / Claude.md files. Tui WebUi Mcp Cli all in one package.",
+      "badge": "comunidad",
+      "url": "https://github.com/mertkayacs/reevesagents",
+      "author": "mertkayacs",
+      "stars": "78"
     }
   ],
   "integraciones": [
