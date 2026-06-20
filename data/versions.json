@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.17.0",
+    "tag": "v2026.6.19",
+    "date": "19 junio 2026",
+    "name": "v0.17.0",
+    "current": true,
+    "highlights": [
+      "Hermes reaches iMessage — Photon Spectrum, no Mac relay required — There's now an iMessage platform plugin built on Photon's managed line pool. Run <code>hermes photon login</code>, authenticate with a device code, and Hermes can send and receive iMessage — no Mac sitting in a closet running a relay, no BlueBubbles bridge to babysit. It's positione",
+      "Raft — Hermes joins the Raft agent network as a gateway channel — A new bundled Raft platform adapter lets Hermes connect to Raft as an external agent through a wake-channel bridge. Set <code>RAFT_PROFILE</code>, run the bridge, and Raft can wake Hermes to handle messages — with a privacy-by-contract design where wake payloads carry only metadata (",
+      "A substantially more capable desktop app — v0.16.0 shipped the desktop app; v0.17.0 deepened it across dozens of PRs. Rebindable keyboard shortcuts, native OS notifications with per-type toggles, live subagent watch-windows that stream a delegated agent's activity into its own pane, a composer model selector with per-model presets, automatic RTL/bi",
+      "Background / async subagents — delegate work and keep going — <code>delegate_task(background=true)</code> now dispatches a subagent that runs in the background and returns a handle immediately. You and the model keep working while it churns, and the full result re-enters the conversation as a new turn the moment it finishes. Kick off a long researc",
+      "Edit images, not just generate them — image-to-image in <code>image_generate</code> — <code>image_generate</code> can now edit and transform a source image, not only create one from scratch. Pass an existing image and a prompt and it routes to the backend's edit endpoint (same tool, same pattern as <code>video_generate</code>), across every support",
+      "Automation Blueprints — schedule things without learning cron — Pick an automation by name and Hermes asks you for what it needs — no cron syntax, no <code>slot=value</code> typing. One blueprint definition renders natively on every surface: a form in the dashboard, a slash command in the CLI/TUI/messenger, a conversation with the agent, an entry i",
+      "Cursor's Composer model, through your xAI Grok subscription — <code>grok-composer-2.5-fast</code> is now in the xAI OAuth model picker, with its context window reconciled to the full 200k. Composer is the fast coding model behind Cursor — and if you have an xAI Grok subscription, you can now point Hermes at it directly over OAuth, no separate API k"
+    ]
+  },
+  {
     "version": "v0.16.0",
     "tag": "v2026.6.5",
     "date": "6 junio 2026",
     "name": "v0.16.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "Hermes Desktop — a real native app, not a terminal wrapper — This is the headline. There's now a <code>apps/desktop/</code> Electron application that installs like any other desktop app on macOS, Linux, and Windows, updates itself in place from inside the app, and gives you a polished GUI for everything Hermes does. You get a proper chat window wit",
       "Run the desktop app against a remote Hermes — sign in with OAuth or username/password — The desktop app doesn't have to run Hermes locally. Point it at a remote Hermes gateway (your homelab, a hosted box, a teammate's server) and it connects over a secure WebSocket, authenticating with OAuth or a username/password login — no fiddling with <code>--i",
