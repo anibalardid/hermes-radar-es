@@ -448,6 +448,11 @@
       "name": "matrix-skin",
       "url": "https://github.com/lipebez/hermes-matrix-skin",
       "author": "lipebez"
+    },
+    {
+      "name": "pack",
+      "url": "https://github.com/Vitality-Johnny/hermes-skin-pack",
+      "author": "Vitality-Johnny"
     }
   ],
   "projects": [
