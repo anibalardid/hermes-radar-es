@@ -409,6 +409,14 @@
       "url": "https://github.com/Sibyl-Labs/Sibyl-Memory",
       "author": "Sibyl-Labs",
       "stars": "48"
+    },
+    {
+      "name": "voice-ha-integration",
+      "desc": "Home Assistant voice stack integration for Hermes Agent — on-device voice control, wake word → STT → LLM → TTS → HA media_player. No cloud. No latency. No subscription.",
+      "badge": "comunidad",
+      "url": "https://github.com/rusty4444/hermes-voice-ha-integration",
+      "author": "rusty4444",
+      "stars": "38"
     }
   ],
   "skins": [
