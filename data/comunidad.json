@@ -417,6 +417,14 @@
       "url": "https://github.com/rusty4444/hermes-voice-ha-integration",
       "author": "rusty4444",
       "stars": "38"
+    },
+    {
+      "name": "community-plugins",
+      "desc": "🎭 Battle-tested plugins for Hermes Agent — zero core patches. Native vision bypass, multi-agent context injection, and more.",
+      "badge": "comunidad",
+      "url": "https://github.com/kaishi00/hermes-community-plugins",
+      "author": "kaishi00",
+      "stars": "31"
     }
   ],
   "skins": [
