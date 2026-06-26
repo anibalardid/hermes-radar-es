@@ -425,6 +425,14 @@
       "url": "https://github.com/kaishi00/hermes-community-plugins",
       "author": "kaishi00",
       "stars": "31"
+    },
+    {
+      "name": "scope-recall-hermes",
+      "desc": "Hermes Agent memory plugin/provider for scope-aware recall, SQLite truth, LanceDB semantic search, and hybrid retrieval.",
+      "badge": "comunidad",
+      "url": "https://github.com/410979729/scope-recall-hermes",
+      "author": "410979729",
+      "stars": "142"
     }
   ],
   "skins": [
