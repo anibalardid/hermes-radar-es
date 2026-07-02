@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.18.0",
+    "tag": "v2026.7.1",
+    "date": "1 julio 2026",
+    "name": "v0.18.0",
+    "current": true,
+    "highlights": [
+      "Mixture-of-Agents is now a first-class model you can pick — MoA used to be a mode you toggled; now every named MoA preset shows up as a selectable model under a <code>moa</code> provider, right alongside Claude, GPT, and Grok in every model picker (CLI, TUI, desktop, gateway). Pick \"my-council\" the same way you'd pick any model, and Hermes routes y",
+      "See every model's reasoning, then watch the answer stream in — When a MoA ensemble runs, each reference model's full output now renders as its own labelled block — you can read what GPT-5 thought, what Claude thought, and what Grok thought, before the aggregator synthesizes them into one answer. And that final answer now streams to you live instead",
+      "The agent verifies its own work — \"done\" means proven, not claimed — Hermes now records verification evidence for coding work and can decide it's finished by actually running your project's checks, not by asserting success. <code>/goal</code> gained completion contracts: you state what \"done\" looks like, and the standing-goal loop judges completion",
+      "<code>/learn</code> — turn anything into a reusable skill by describing it — Run <code>/learn <anything></code> and Hermes distills a reusable skill out of whatever you point it at — a directory, a URL, or just the workflow you walked it through five minutes ago. It writes the skill to the standards in your CONTRIBUTING.md automatically. The next t",
+      "<code>/journey</code> — a playable timeline of everything Hermes has learned about you — The CLI and TUI gained <code>/journey</code>, a learning timeline that shows the memories and skills Hermes has accumulated over time — and you can edit or delete any of them right from the view. Pair it with the desktop's new memory graph (a top-down, playable",
+      "Delegate a pile of work and keep going — background fan-out — <code>delegate_task</code> can now fan out multiple subagents that all run in the background: your chat is never blocked, and when every subagent finishes, their results come back as a single consolidated turn. Kick off \"research these five competitors in parallel\" or \"audit these three ",
+      "First-class coding Projects in the desktop app — The desktop app gained real, per-profile Projects — a sidebar of your codebases, a coding rail, a review pane, git worktree management, and agent-facing project tools, all backed by a proper <code>project → repo → lane</code> model. Instead of scattered chat sessions, your coding work is organized in"
+    ]
+  },
+  {
     "version": "v0.17.0",
     "tag": "v2026.6.19",
     "date": "19 junio 2026",
     "name": "v0.17.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "Hermes reaches iMessage — Photon Spectrum, no Mac relay required — There's now an iMessage platform plugin built on Photon's managed line pool. Run <code>hermes photon login</code>, authenticate with a device code, and Hermes can send and receive iMessage — no Mac sitting in a closet running a relay, no BlueBubbles bridge to babysit. It's positione",
       "Raft — Hermes joins the Raft agent network as a gateway channel — A new bundled Raft platform adapter lets Hermes connect to Raft as an external agent through a wake-channel bridge. Set <code>RAFT_PROFILE</code>, run the bridge, and Raft can wake Hermes to handle messages — with a privacy-by-contract design where wake payloads carry only metadata (",
