@@ -433,6 +433,14 @@
       "url": "https://github.com/410979729/scope-recall-hermes",
       "author": "410979729",
       "stars": "142"
+    },
+    {
+      "name": "agenticros",
+      "desc": "ROS plugin for OpenClaw, Claude (Code,Desktop,Dispatch), Codex, Google Gemini, Hermes, MCP, etc.",
+      "badge": "comunidad",
+      "url": "https://github.com/agenticros/agenticros",
+      "author": "agenticros",
+      "stars": "113"
     }
   ],
   "skins": [
