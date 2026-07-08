@@ -1,10 +1,30 @@
 [
   {
+    "version": "v0.18.1",
+    "tag": "v2026.7.7",
+    "date": "8 julio 2026",
+    "name": "v0.18.1",
+    "current": true,
+    "highlights": [
+      "# Hermes Agent v0.18.1 (v2026.7.7)"
+    ]
+  },
+  {
+    "version": "v0.18.2",
+    "tag": "v2026.7.7.2",
+    "date": "8 julio 2026",
+    "name": "v0.18.2",
+    "current": false,
+    "highlights": [
+      "fix(whatsapp): unpin Baileys from git commit, use published 7.0.0-rc13 (#60643) — the WhatsApp bridge dependency now installs from the published npm release instead of a pinned git commit, making installs and Docker image builds reliable."
+    ]
+  },
+  {
     "version": "v0.18.0",
     "tag": "v2026.7.1",
     "date": "1 julio 2026",
     "name": "v0.18.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "Mixture-of-Agents is now a first-class model you can pick — MoA used to be a mode you toggled; now every named MoA preset shows up as a selectable model under a <code>moa</code> provider, right alongside Claude, GPT, and Grok in every model picker (CLI, TUI, desktop, gateway). Pick \"my-council\" the same way you'd pick any model, and Hermes routes y",
       "See every model's reasoning, then watch the answer stream in — When a MoA ensemble runs, each reference model's full output now renders as its own labelled block — you can read what GPT-5 thought, what Claude thought, and what Grok thought, before the aggregator synthesizes them into one answer. And that final answer now streams to you live instead",
