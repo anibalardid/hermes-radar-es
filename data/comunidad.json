@@ -441,6 +441,14 @@
       "url": "https://github.com/agenticros/agenticros",
       "author": "agenticros",
       "stars": "113"
+    },
+    {
+      "name": "tool-router",
+      "desc": "Standalone Hermes Agent plugin that reduces tool-schema prompt overhead with pre-turn toolset routing, small-model classification, fail-open fallback, and request_toolset recovery.",
+      "badge": "comunidad",
+      "url": "https://github.com/AtlasOmnia/hermes-tool-router",
+      "author": "AtlasOmnia",
+      "stars": "40"
     }
   ],
   "skins": [
