@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://anibalardid.github.io/hermes-radar-es/sitemap.xml
