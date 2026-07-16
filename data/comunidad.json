@@ -449,6 +449,14 @@
       "url": "https://github.com/AtlasOmnia/hermes-tool-router",
       "author": "AtlasOmnia",
       "stars": "40"
+    },
+    {
+      "name": "awesome-agent",
+      "desc": "Independent directory of useful skills, plugins, memory providers, tools, surfaces, and guides for Nous Research's open-source Hermes Agent.",
+      "badge": "comunidad",
+      "url": "https://github.com/0xNyk/awesome-hermes-agent",
+      "author": "0xNyk",
+      "stars": "4719"
     }
   ],
   "skins": [
