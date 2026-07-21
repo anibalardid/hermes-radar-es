@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.19.0",
+    "tag": "v2026.7.20",
+    "date": "20 julio 2026",
+    "name": "v0.19.0",
+    "current": true,
+    "highlights": [
+      "Hermes got dramatically faster — first token in a fraction of the time — Cold-start \"Initializing agent...\" used to eat ~4.3 seconds before your first turn even reached the model; it's now ~0.9s, an ~80% cut that applies to the CLI, gateway, TUI, desktop, and cron alike. Round 2 attacked what you see while waiting: reasoning models now stream their",
+      "The desktop app speed wave — 20+ targeted perf PRs — Long replies used to cost 14× more CPU in the markdown splitter than they do now; giant diffs froze the review pane until we virtualized it; switching sessions thrashes layout no more. Streaming no longer re-renders the sidebar and every tool row per token, profile backends pre-warm on hover inte",
+      "Manage your Nous plan from the terminal — <code>/subscription</code> and <code>/topup</code> — Changing your subscription used to mean a trip to the billing website. Now <code>/subscription</code> opens a full flow right in the TUI or classic CLI: see your plan and remaining allowance, preview exactly what an upgrade costs (\"Pay $46.30 & upgrade no",
+      "Smart approvals are now the default — When Hermes wants to run a flagged command, an LLM reviewer now assesses it independently instead of asking you to approve every single one — and each verdict covers only that exact command, so a later command matching the same pattern gets its own review. Combined with the new user-defined deny rules (which bl",
+      "Plug your password manager into Hermes — Bitwarden & 1Password secret sources — API keys no longer have to live in a plaintext <code>.env</code>. A new pluggable <code>SecretSource</code> interface lets Hermes fetch secrets from Bitwarden and 1Password (<code>op://</code> references) at load time, with multiple vaults enabled simultaneously, determ",
+      "Watch your subagents work — live transcripts + durable background delegation — <code>delegate_task</code> dispatches now return live transcript files you can <code>tail -f</code> the moment the subagents launch: every tool call, result, and streamed reply, one human-readable log per child. And background delegation completions are now durable — if ",
+      "A finished answer can no longer be lost — the delivery-obligation ledger — If the gateway died between generating your response and confirming the platform actually delivered it, that answer used to be silently gone (and you'd paid for the turn). Final responses are now recorded in a durable ledger in <code>state.db</code> around the platform send "
+    ]
+  },
+  {
     "version": "v0.18.1",
     "tag": "v2026.7.7",
     "date": "8 julio 2026",
     "name": "v0.18.1",
-    "current": true,
+    "current": false,
     "highlights": [
       "# Hermes Agent v0.18.1 (v2026.7.7)"
     ]
