@@ -893,6 +893,14 @@
       "url": "https://github.com/mertkayacs/reevesagents",
       "author": "mertkayacs",
       "stars": "78"
+    },
+    {
+      "name": "ui",
+      "desc": "Web UI for hermes, PWA installable app, extracted from hermes desktop, mobile app available.",
+      "badge": "comunidad",
+      "url": "https://github.com/przbadu/hermes-ui",
+      "author": "przbadu",
+      "stars": "69"
     }
   ],
   "integraciones": [
