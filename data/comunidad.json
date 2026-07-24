@@ -457,6 +457,22 @@
       "url": "https://github.com/0xNyk/awesome-hermes-agent",
       "author": "0xNyk",
       "stars": "4719"
+    },
+    {
+      "name": "oh-my-cassette",
+      "desc": "你的随身 AI 剪辑搭档 | Pocket AI co-editor for video montage — AI video editing plugin & MCP server for Claude Code, Codex, Hermes & OpenCode",
+      "badge": "comunidad",
+      "url": "https://github.com/Cassette-Editor/oh-my-cassette",
+      "author": "Cassette-Editor",
+      "stars": "138"
+    },
+    {
+      "name": "humalike-plugin",
+      "desc": "A Hermes Agent plugin that makes your bot feel like a person in the chat instead of a bot. It plugs into the Humalike APIs so the agent knows when to speak, how to say it, who it is, and who it's talking to.",
+      "badge": "comunidad",
+      "url": "https://github.com/Humalike/hermes-humalike-plugin",
+      "author": "Humalike",
+      "stars": "107"
     }
   ],
   "skins": [
