@@ -917,6 +917,14 @@
       "url": "https://github.com/przbadu/hermes-ui",
       "author": "przbadu",
       "stars": "69"
+    },
+    {
+      "name": "agent-mission-control",
+      "desc": "Hermy HQ — a self-hostable mission-control dashboard template that pairs with your own local Hermes agent over a Postgres message bus. Send it to your Hermes and it onboards you step by step.",
+      "badge": "comunidad",
+      "url": "https://github.com/sharbelxyz/hermes-agent-mission-control",
+      "author": "sharbelxyz",
+      "stars": "152"
     }
   ],
   "integraciones": [
