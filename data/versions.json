@@ -1,10 +1,20 @@
 [
   {
+    "version": "v0.19.1",
+    "tag": "v2026.7.30",
+    "date": "30 julio 2026",
+    "name": "v0.19.1",
+    "current": true,
+    "highlights": [
+      "# Hermes Agent v0.19.1 (v2026.7.30)"
+    ]
+  },
+  {
     "version": "v0.19.0",
     "tag": "v2026.7.20",
     "date": "20 julio 2026",
     "name": "v0.19.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "Hermes got dramatically faster — first token in a fraction of the time — Cold-start \"Initializing agent...\" used to eat ~4.3 seconds before your first turn even reached the model; it's now ~0.9s, an ~80% cut that applies to the CLI, gateway, TUI, desktop, and cron alike. Round 2 attacked what you see while waiting: reasoning models now stream their",
       "The desktop app speed wave — 20+ targeted perf PRs — Long replies used to cost 14× more CPU in the markdown splitter than they do now; giant diffs froze the review pane until we virtualized it; switching sessions thrashes layout no more. Streaming no longer re-renders the sidebar and every tool row per token, profile backends pre-warm on hover inte",
