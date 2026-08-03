@@ -473,6 +473,14 @@
       "url": "https://github.com/Humalike/hermes-humalike-plugin",
       "author": "Humalike",
       "stars": "107"
+    },
+    {
+      "name": "phoenix",
+      "desc": "不死鸟 Phoenix — Hermes Agent 插件：路由分档/风险防线/自愈/存档点提醒/审批策略自适应，官方钩子接入，不改 Hermes 核心代码",
+      "badge": "comunidad",
+      "url": "https://github.com/xyaz1313/phoenix",
+      "author": "xyaz1313",
+      "stars": "69"
     }
   ],
   "skins": [
@@ -522,6 +530,11 @@
       "name": "awesome-eva-skins",
       "url": "https://github.com/Chael-Chael/awesome-hermes-eva-skins",
       "author": "Chael-Chael"
+    },
+    {
+      "name": "skins-pack",
+      "url": "https://github.com/bchop-studio/hermes-skins-pack",
+      "author": "bchop-studio"
     }
   ],
   "projects": [
