@@ -535,6 +535,11 @@
       "name": "skins-pack",
       "url": "https://github.com/bchop-studio/hermes-skins-pack",
       "author": "bchop-studio"
+    },
+    {
+      "name": "web-themes",
+      "url": "https://github.com/bchop-studio/hermes-web-themes",
+      "author": "bchop-studio"
     }
   ],
   "projects": [
