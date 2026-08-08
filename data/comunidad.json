@@ -540,6 +540,11 @@
       "name": "web-themes",
       "url": "https://github.com/bchop-studio/hermes-web-themes",
       "author": "bchop-studio"
+    },
+    {
+      "name": "picker",
+      "url": "https://github.com/jdtimothy/hermes-theme-picker",
+      "author": "jdtimothy"
     }
   ],
   "projects": [
