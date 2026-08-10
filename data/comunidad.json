@@ -481,6 +481,14 @@
       "url": "https://github.com/xyaz1313/phoenix",
       "author": "xyaz1313",
       "stars": "69"
+    },
+    {
+      "name": "oh-my-hermes",
+      "desc": "Just install once plugin. Everyone can use hermes-agent professionally. the engineering intelligence & memory system packages ⚚  ",
+      "badge": "comunidad",
+      "url": "https://github.com/rlaope/oh-my-hermes",
+      "author": "rlaope",
+      "stars": "806"
     }
   ],
   "skins": [
@@ -948,6 +956,14 @@
       "url": "https://github.com/sharbelxyz/hermes-agent-mission-control",
       "author": "sharbelxyz",
       "stars": "152"
+    },
+    {
+      "name": "zhigui-openclaw-ui-second-brain-skill",
+      "desc": "An advanced, UI-powered AI second brain Agent Skill for OpenClaw, Hermes Agent, WorkBuddy, TRAE, and QClaw. ZhiGui uses long-term memory to help you make better decisions, automatically plan tomorrow, resolve conflicting notes, and deliver each day's plan through your existing agent channels.",
+      "badge": "comunidad",
+      "url": "https://github.com/CarlWangChina/zhigui-openclaw-ui-second-brain-skill",
+      "author": "CarlWangChina",
+      "stars": "103"
     }
   ],
   "integraciones": [
