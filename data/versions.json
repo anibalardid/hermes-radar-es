@@ -1,10 +1,21 @@
 [
   {
+    "version": "v0.20.1",
+    "tag": "v2026.8.13",
+    "date": "13 agosto 2026",
+    "name": "v0.20.1",
+    "current": true,
+    "highlights": [
+      "Existing installs: <code>hermes update</code>",
+      "Fresh install: see the installer one-liner in the README"
+    ]
+  },
+  {
     "version": "v0.20.0",
     "tag": "v2026.8.3",
     "date": "3 agosto 2026",
     "name": "v0.20.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "Talk to Hermes — streaming, conversational voice with barge-in — Voice mode used to mean: speak, wait for the whole reply to generate, then listen to one long audio file. Now Hermes speaks clause-by-clause as the response streams, you can interrupt it mid-sentence by just talking (it stops, listens, and the model is told you cut in), and busy-aware",
       "Wake words and hands-free control — Say your own open-vocabulary wake phrase (\"hey Hermes\", or anything you pick) and Hermes starts listening — detection runs on-device, so no audio leaves your machine while it waits. Multi-profile voice routing means different wake words can reach different profiles, and saying \"stop\" ends the voice chat on every ",
