@@ -489,6 +489,14 @@
       "url": "https://github.com/rlaope/oh-my-hermes",
       "author": "rlaope",
       "stars": "806"
+    },
+    {
+      "name": "Hermes-Bot-Mode",
+      "desc": "Bot Mode for the Hermes desktop: a roster of named agents with their own chats, avatars, routines, and bot-to-bot messaging. Desktop plugin, no core patches.",
+      "badge": "comunidad",
+      "url": "https://github.com/NousResearch/Hermes-Bot-Mode",
+      "author": "NousResearch",
+      "stars": "217"
     }
   ],
   "skins": [
