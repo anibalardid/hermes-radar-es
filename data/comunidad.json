@@ -972,6 +972,14 @@
       "url": "https://github.com/CarlWangChina/zhigui-openclaw-ui-second-brain-skill",
       "author": "CarlWangChina",
       "stars": "103"
+    },
+    {
+      "name": "agent-template",
+      "desc": "One-click Railway template for Hermes Agent. A web admin dashboard for provider/channel setup, gateway supervision, user pairing, and backup/restore, with the native Hermes UI proxied behind one login.",
+      "badge": "comunidad",
+      "url": "https://github.com/praveen-ks-2001/hermes-agent-template",
+      "author": "praveen-ks-2001",
+      "stars": "285"
     }
   ],
   "integraciones": [
