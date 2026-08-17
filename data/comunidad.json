@@ -497,6 +497,14 @@
       "url": "https://github.com/NousResearch/Hermes-Bot-Mode",
       "author": "NousResearch",
       "stars": "217"
+    },
+    {
+      "name": "violin",
+      "desc": "Violin — a supervised, agentic Hermes Agent pentest profile (31 playbooks, 17 references, guard plugin) for authorised recon, exploit validation, and reporting. Hermes-native, no extra keys.",
+      "badge": "comunidad",
+      "url": "https://github.com/Strategic-Automation/violin",
+      "author": "Strategic-Automation",
+      "stars": "66"
     }
   ],
   "skins": [
