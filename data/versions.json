@@ -1,10 +1,21 @@
 [
   {
+    "version": "v0.20.2",
+    "tag": "v2026.8.16",
+    "date": "16 agosto 2026",
+    "name": "v0.20.2",
+    "current": true,
+    "highlights": [
+      "<code>hermes update</code> from an existing install",
+      "Fresh install: <code>curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash</code>"
+    ]
+  },
+  {
     "version": "v0.20.1",
     "tag": "v2026.8.13",
     "date": "13 agosto 2026",
     "name": "v0.20.1",
-    "current": true,
+    "current": false,
     "highlights": [
       "Existing installs: <code>hermes update</code>",
       "Fresh install: see the installer one-liner in the README"
