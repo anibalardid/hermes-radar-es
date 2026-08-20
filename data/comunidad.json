@@ -577,6 +577,11 @@
       "name": "picker",
       "url": "https://github.com/jdtimothy/hermes-theme-picker",
       "author": "jdtimothy"
+    },
+    {
+      "name": "desktop-packs",
+      "url": "https://github.com/bchop-studio/hermes-desktop-packs",
+      "author": "bchop-studio"
     }
   ],
   "projects": [
