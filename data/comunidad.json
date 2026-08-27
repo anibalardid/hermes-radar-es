@@ -590,6 +590,11 @@
       "name": "desktop-packs",
       "url": "https://github.com/bchop-studio/hermes-desktop-packs",
       "author": "bchop-studio"
+    },
+    {
+      "name": "studio",
+      "url": "https://github.com/weiweiplus0527/hermes-skin-studio",
+      "author": "weiweiplus0527"
     }
   ],
   "projects": [
