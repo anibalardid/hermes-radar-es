@@ -595,6 +595,11 @@
       "name": "studio",
       "url": "https://github.com/weiweiplus0527/hermes-skin-studio",
       "author": "weiweiplus0527"
+    },
+    {
+      "name": "codex-skin",
+      "url": "https://github.com/FPSUnleashed/hermes-codex-skin",
+      "author": "FPSUnleashed"
     }
   ],
   "projects": [
@@ -1014,6 +1019,14 @@
       "url": "https://github.com/praveen-ks-2001/hermes-agent-template",
       "author": "praveen-ks-2001",
       "stars": "285"
+    },
+    {
+      "name": "cdesktop",
+      "desc": "Open-source Claude Code Desktop alternative. Use any provider/model. Web UI for Claude Code, Codex, Gemini CLI, OpenCode, Hermes.",
+      "badge": "comunidad",
+      "url": "https://github.com/cdesktop-ai/cdesktop",
+      "author": "cdesktop-ai",
+      "stars": "105"
     }
   ],
   "integraciones": [
