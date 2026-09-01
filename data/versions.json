@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.21.0",
+    "tag": "v2026.8.31",
+    "date": "31 agosto 2026",
+    "name": "v0.21.0",
+    "current": true,
+    "highlights": [
+      "Bot Mode — your agents become a society, built in — Bot Mode is now a bundled, default-on part of the desktop app: every agent profile gets a name, a deterministic avatar face (with randomize/lock controls), and a place in a shared roster. Create Discord-style group chats where multiple bots and you talk in one room, @-mention any bot from the comp",
+      "<code>hermes peer</code> — bot-to-bot DMs between your agents — Any Hermes agent can now message any other by handle, across profiles and gateways, from the CLI or from inside a conversation. Ask your research bot to hand findings to your coding bot and get the reply back where you can read it. Replies land in each agent's canonical Bot Chat, so co",
+      "Cron jobs that remember — Scheduled jobs stopped being goldfish. Cron agents now load and update persistent memory like every other agent, <code>continuity=true</code> carries each run's output into the next (so a monitor can dedupe against what it already reported), every job gets a durable notepad scratchpad, monitor-mode jobs skip the LLM entire",
+      "Steer your subagents while they run — <code>delegate_task</code> gained live orchestration: list running children, steer one mid-flight with a course correction, or stop it early and keep the partial result. Add optional JSON-schema validation on child outputs, per-delegation cost surfaced in results, and raised defaults (250 iterations, 10 concurr",
+      "The MCP command center — MCP servers and the catalog merged into one coherent desktop page with drag-in \"paste anything\" import, background health checks that nudge you to re-auth before a tool call fails, a fleet cost/usage overlay showing schema token estimates and 30-day usage per server, and <code>hermes://</code> deep links that install an MCP",
+      "A CLI power wave — Ctrl+P opens a fuzzy command palette, the <code>/model</code> picker filters as you type, <code>/status</code> shows reasoning mode, pending approvals, and context usage, and the status bar can display live cache-hit %, latency, and tokens/sec with per-field toggles. Plus: a global emergency stop, session pin/unpin, rotating task",
+      "The agent drives the desktop's browser — The in-app browser stopped being a window the agent could only look at: Hermes now navigates, clicks, and reads it directly, and pages can be popped out to your system browser with full link context menus. Ask it to walk a docs site or debug a web app and watch it happen inside your own app. (#90197, #89366 "
+    ]
+  },
+  {
     "version": "v0.20.6",
     "tag": "v2026.8.27",
     "date": "27 agosto 2026",
     "name": "v0.20.6",
-    "current": true,
+    "current": false,
     "highlights": [
       "<code>hermes update</code> from an existing install",
       "Fresh install: <code>curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash</code>"
