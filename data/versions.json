@@ -1,10 +1,22 @@
 [
   {
+    "version": "v0.21.1",
+    "tag": "v2026.9.7",
+    "date": "7 septiembre 2026",
+    "name": "v0.21.1",
+    "current": true,
+    "highlights": [
+      "Existing install: <code>hermes update</code>",
+      "Fresh install: <code>curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash</code>",
+      "Managed deployments should update through their deployment tooling using the new tag."
+    ]
+  },
+  {
     "version": "v0.21.0",
     "tag": "v2026.8.31",
     "date": "31 agosto 2026",
     "name": "v0.21.0",
-    "current": true,
+    "current": false,
     "highlights": [
       "Bot Mode — your agents become a society, built in — Bot Mode is now a bundled, default-on part of the desktop app: every agent profile gets a name, a deterministic avatar face (with randomize/lock controls), and a place in a shared roster. Create Discord-style group chats where multiple bots and you talk in one room, @-mention any bot from the comp",
       "<code>hermes peer</code> — bot-to-bot DMs between your agents — Any Hermes agent can now message any other by handle, across profiles and gateways, from the CLI or from inside a conversation. Ask your research bot to hand findings to your coding bot and get the reply back where you can read it. Replies land in each agent's canonical Bot Chat, so co",
