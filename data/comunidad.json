@@ -521,6 +521,14 @@
       "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills",
       "author": "aaron-he-zhu",
       "stars": "2612"
+    },
+    {
+      "name": "bot-kit",
+      "desc": "The Grok Bot experience for your Hermes fleet: iMessage-style chat bubbles + a live window into your bots' computers. Not affiliated with xAI.",
+      "badge": "comunidad",
+      "url": "https://github.com/thomasbek3/hermes-bot-kit",
+      "author": "thomasbek3",
+      "stars": "101"
     }
   ],
   "skins": [
