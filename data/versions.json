@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.21.2",
+    "tag": "v2026.9.11",
+    "date": "11 septiembre 2026",
+    "name": "v0.21.2",
+    "current": true,
+    "highlights": [
+      "No more second writers. Profile gateways wrote hosted-room state into the root <code>state.db</code> every 5 seconds; the dashboard opened a writable handle on startup; cron's lifecycle guard did a raw <code>open()</code> on a live database (which cancels the gateway's POSIX locks — the classic \"how to corrupt SQLite\" recipe); <code>doctor --fix</c",
+      "Healthy WAL databases stop wedging. OpenZFS <code>(deleted)</code> dentries and a <code>close()</code> racing an <code>append_message</code> both produced a sticky <code>DeletedWalGenerationError</code> on a perfectly good store; the read pool was handed out under an unconfirmed journal mode; a transient <code>disk I/O error</code> on WSL2 killed <",
+      "FTS damage no longer kills your turn. An error scoped to the full-text-search index was classified as whole-file corruption and fail-closed the conversation. It's now <code>fts_index</code>: search degrades, the index rebuilds later, the transcript store is untouched. Same PR: doctor names structural damage honestly instead of \"FTS write corruption",
+      "One corrupt row no longer kills <code>sessions list</code>, export, or insights. A TEXT timestamp or a <code>1e30</code> epoch used to crash the whole listing; malformed marker JSON crashed <code>json_extract</code>; more than 999 ids crashed bulk delete/prune. One <code>coerce_epoch()</code> helper on every reader (bad rows render <code>?</code> w",
+      "Sessions never bind to or read another profile's database. The Desktop launch backend could pin itself to the wrong profile's <code>state.db</code> under a HERMES_HOME override race; <code>session_search</code> by bare ID silently scanned every profile and returned someone else's transcript; recovery guidance pointed at the wrong file; profile dele",
+      "Opening state.db no longer takes the write lock when nothing needs writing. A one-shot <code>hermes</code> process opening the store behind a busy gateway stalled 4–20 s and then failed with \"database is locked\". Now 0.01 s. (#108067 — salvage #106751 @kshitijk4poor, #101881 @jonpol01)",
+      "A bare <code>display:</code> key in config.yaml no longer crashes every gateway turn (#106305); a queued-lane final refused by the platform is recorded and redelivered (#106316); a stalled WebSocket send no longer blocks every later event (#106581); the first turn no longer waits on the Python toolchain probe (#106556)."
+    ]
+  },
+  {
     "version": "v0.21.1",
     "tag": "v2026.9.7",
     "date": "7 septiembre 2026",
     "name": "v0.21.1",
-    "current": true,
+    "current": false,
     "highlights": [
       "Existing install: <code>hermes update</code>",
       "Fresh install: <code>curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash</code>",
