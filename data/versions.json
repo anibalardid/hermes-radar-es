@@ -1,10 +1,23 @@
 [
   {
+    "version": "v0.21.3",
+    "tag": "v2026.9.14",
+    "date": "14 septiembre 2026",
+    "name": "v0.21.3",
+    "current": true,
+    "highlights": [
+      "Remote dashboard sessions no longer expire on refresh bursts (#110061, fixes #55712; salvage #71548 @Doud-FR, #55717 @liuhao1024). Both refresh paths on the gateway (cookie gate and the desktop's native bearer route) now coalesce concurrent requests carrying the same rotating refresh token, so a Desktop wake burst can no longer replay an already-ro",
+      "Long-lived processes stop leaking duplicate state.db writer handles (#110934, fixes #100896 #103339; salvage #107974 @kshitijk4poor, mapping @Rroven): gateway, dashboard/Desktop backend, ACP and CLI readers attach read-only and in-process writers share the registry handle, so the <code>N live SessionDB handles</code> precursor stops firing on a hea",
+      "<code>hermes update</code> (git installs), or re-run the installer one-liner.",
+      "Docker / Hermes Cloud: images build from this tag (<code>nousresearch/hermes-agent:v2026.9.14</code>)."
+    ]
+  },
+  {
     "version": "v0.21.2",
     "tag": "v2026.9.11",
     "date": "11 septiembre 2026",
     "name": "v0.21.2",
-    "current": true,
+    "current": false,
     "highlights": [
       "No more second writers. Profile gateways wrote hosted-room state into the root <code>state.db</code> every 5 seconds; the dashboard opened a writable handle on startup; cron's lifecycle guard did a raw <code>open()</code> on a live database (which cancels the gateway's POSIX locks — the classic \"how to corrupt SQLite\" recipe); <code>doctor --fix</c",
       "Healthy WAL databases stop wedging. OpenZFS <code>(deleted)</code> dentries and a <code>close()</code> racing an <code>append_message</code> both produced a sticky <code>DeletedWalGenerationError</code> on a perfectly good store; the read pool was handed out under an unconfirmed journal mode; a transient <code>disk I/O error</code> on WSL2 killed <",
