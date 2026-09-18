@@ -529,6 +529,14 @@
       "url": "https://github.com/thomasbek3/hermes-bot-kit",
       "author": "thomasbek3",
       "stars": "101"
+    },
+    {
+      "name": "speech",
+      "desc": "Hermes Agent TTS and STT plugin for AllModels speech models and voices.",
+      "badge": "comunidad",
+      "url": "https://github.com/allmodels-io/hermes-speech",
+      "author": "allmodels-io",
+      "stars": "122"
     }
   ],
   "skins": [
