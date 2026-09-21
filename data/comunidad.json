@@ -616,6 +616,11 @@
       "name": "codex-skin",
       "url": "https://github.com/FPSUnleashed/hermes-codex-skin",
       "author": "FPSUnleashed"
+    },
+    {
+      "name": "grok-bot-skin",
+      "url": "https://github.com/guidsen/hermes-grok-bot-skin",
+      "author": "guidsen"
     }
   ],
   "projects": [
