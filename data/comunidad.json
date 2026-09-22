@@ -537,6 +537,14 @@
       "url": "https://github.com/allmodels-io/hermes-speech",
       "author": "allmodels-io",
       "stars": "122"
+    },
+    {
+      "name": "Hermes-Antigravity-OAuth-Plugin",
+      "desc": "Hermes Antigravity OAuth Plugin & Local Bridge",
+      "badge": "comunidad",
+      "url": "https://github.com/nguyenphap-mt/Hermes-Antigravity-OAuth-Plugin",
+      "author": "nguyenphap-mt",
+      "stars": "82"
     }
   ],
   "skins": [
