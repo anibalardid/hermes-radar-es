@@ -545,6 +545,14 @@
       "url": "https://github.com/nguyenphap-mt/Hermes-Antigravity-OAuth-Plugin",
       "author": "nguyenphap-mt",
       "stars": "82"
+    },
+    {
+      "name": "agent-skills",
+      "desc": "A collection of AI agent skills and plugins for Hermes Agent — research, creative, productivity, devops, and more. Each skill is self-contained and tested.",
+      "badge": "comunidad",
+      "url": "https://github.com/moonlight-lupin/agent-skills",
+      "author": "moonlight-lupin",
+      "stars": "83"
     }
   ],
   "skins": [
