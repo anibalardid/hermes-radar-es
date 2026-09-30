@@ -2,10 +2,10 @@
 # cronsite.sh — Wrapper para ejecutar los scripts del sitio
 # Se usa desde crontab del sistema
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:$HOME/.hermes/profiles/hermes-radar/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:$HOME/.hermes/profiles/hermes-radar/bin:$PATH"
 export HOME="$HOME"
 
-cd "/Users/anibal/.hermes/projects/hermes-radar-es" || exit 1
+cd "$HOME/.hermes/projects/hermes-radar-es" || exit 1
 
 # Cargar env del profile
 if [ -f "$HOME/.hermes/profiles/hermes-radar/.env" ]; then
