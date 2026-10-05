@@ -6,9 +6,19 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-MSG="${1:?Uso: deploy.sh \"mensaje del commit\"}"
+# Acepta --skip-audit en cualquier posición (como $1 o $2), y un mensaje de commit opcional
+MSG=""
 SKIP_AUDIT=false
-[[ "${2:-}" == "--skip-audit" ]] && SKIP_AUDIT=true
+for arg in "$@"; do
+  if [[ "$arg" == "--skip-audit" ]]; then
+    SKIP_AUDIT=true
+  elif [[ -z "$MSG" ]]; then
+    MSG="$arg"
+  fi
+done
+if [[ -z "$MSG" ]]; then
+  MSG="chore: site deploy $(date +%Y-%m-%d)"
+fi
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
