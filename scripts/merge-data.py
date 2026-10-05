@@ -104,6 +104,28 @@ def merge_versions():
         return False
 
 # ─── 2. Skills → comunidad.json ───
+JUNK_DESC_MARKERS = [
+    "automatically generated file", "config_target", "config_package",
+    "config_modules", "openwrt", "do not edit",
+]
+
+def is_junk_repo(item, max_desc_len=400):
+    """Reject repos that are clearly not Hermes-related.
+
+    GitHub keyword search can match a repo by README content while its short
+    `description` field is an unrelated dump (e.g. an OpenWrt `.config` file).
+    Legit Hermes plugin descriptions top out around ~340 chars; a config dump
+    is hundreds of KB. Guard against those plus dotfile/auto-generated names.
+    """
+    name = item.get("name") or ""
+    desc = item.get("description") or ""
+    if name.startswith("."):
+        return True
+    if len(desc) > max_desc_len:
+        return True
+    dl = desc.lower()
+    return any(marker in dl for marker in JUNK_DESC_MARKERS)
+
 def merge_skills():
     changed = False
     comunidad = load_json("comunidad.json", {
@@ -126,7 +148,7 @@ def merge_skills():
             if not item.get("description"):
                 continue
             name = item.get("name", "").replace("hermes-", "").replace("plugin-", "")
-            if len(name) > 3:
+            if len(name) > 3 and not is_junk_repo(item):
                 comunidad.setdefault("community_plugins", []).append({
                     "name": name,
                     "desc": item.get("description", "Sin descripcion"),
@@ -180,6 +202,8 @@ def merge_skills():
             if not url or url in existing:
                 continue
             name = item.get("name", "").replace("hermes-", "")
+            if is_junk_repo(item):
+                continue
             comunidad.setdefault("projects", []).append({
                 "name": name,
                 "desc": item.get("description", "Sin descripcion"),
