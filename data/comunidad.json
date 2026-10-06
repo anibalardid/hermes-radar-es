@@ -545,6 +545,14 @@
       "url": "https://github.com/moonlight-lupin/agent-skills",
       "author": "moonlight-lupin",
       "stars": "83"
+    },
+    {
+      "name": "claude-subscription-directsdk",
+      "desc": "Plugin de Hermes Agent para usar Claude Pro/Max vía Claude Code CLI (experimental)",
+      "badge": "comunidad",
+      "url": "https://github.com/NousResearch/hermes-plugin-claude-subscription-directsdk",
+      "author": "NousResearch",
+      "stars": "91"
     }
   ],
   "skins": [
