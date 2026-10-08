@@ -556,7 +556,7 @@
     },
     {
       "name": "bot-forge",
-      "desc": "Hermes Agent plugin: say 'make me a <role>' and your agent builds a complete, working Bot — name, face, SOUL.md, memory, tools, skills, routines, gateway.",
+      "desc": "Plugin: decí \"make me a <role>\" y arma un Bot completo (SOUL.md, memoria, tools, skills).",
       "badge": "comunidad",
       "url": "https://github.com/BkashJEE/hermes-bot-forge",
       "author": "BkashJEE",
