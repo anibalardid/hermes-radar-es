@@ -553,6 +553,14 @@
       "url": "https://github.com/NousResearch/hermes-plugin-claude-subscription-directsdk",
       "author": "NousResearch",
       "stars": "91"
+    },
+    {
+      "name": "bot-forge",
+      "desc": "Hermes Agent plugin: say 'make me a <role>' and your agent builds a complete, working Bot — name, face, SOUL.md, memory, tools, skills, routines, gateway.",
+      "badge": "comunidad",
+      "url": "https://github.com/BkashJEE/hermes-bot-forge",
+      "author": "BkashJEE",
+      "stars": "92"
     }
   ],
   "skins": [
