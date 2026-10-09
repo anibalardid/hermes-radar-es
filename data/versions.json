@@ -1,10 +1,26 @@
 [
   {
+    "version": "v0.21.6",
+    "tag": "v0.21.6",
+    "date": "8 octubre 2026",
+    "name": "v0.21.6",
+    "current": true,
+    "highlights": [
+      "Docker / Hermes Cloud: <code>nousresearch/hermes-agent:stable</code> (or <code>:latest</code>).",
+      "CLI (git installs): <code>hermes update</code>, or re-run the installer one-liner.",
+      "Desktop app and Termux: no change in this release; they update with the next bundled release.",
+      "Spoofed <code>X-Forwarded-For</code> headers could reset the password-login rate limit and get around the per-IP cap on native sign-in (#133367)",
+      "Unauthenticated login requests could write unbounded values to the auth audit log (#133369)",
+      "The public <code>/auth/</code> routes had no request-body size limit (#133370)",
+      "Native sign-in could send login codes to a non-loopback redirect, which allowed session takeover (#130685)"
+    ]
+  },
+  {
     "version": "v0.21.5",
     "tag": "v2026.9.24",
     "date": "24 septiembre 2026",
     "name": "v0.21.5",
-    "current": true,
+    "current": false,
     "highlights": [
       "<code>hermes update</code> (git installs), or re-run the installer one-liner.",
       "Docker / Hermes Cloud: images build from this tag (<code>nousresearch/hermes-agent:v2026.9.24</code>)."
